@@ -4,7 +4,7 @@ import React from "react";
 
 interface FeatureSectionProps {
   sectionTitle: string;
-  subtitle: String
+  subtitle: string,
   sectionTitleLink?: string; // Optional link for the section title
   description: string;
   imageSrc: string;

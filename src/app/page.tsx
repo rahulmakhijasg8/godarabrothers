@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Hero from '@/components/Hero';
 import Im from '@/components/Im';
 import Wrwe from '@/components/Wrwe';
