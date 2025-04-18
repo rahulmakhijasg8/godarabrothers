@@ -1,0 +1,290 @@
+import Image from "next/image";
+import Stats from '@/components/Stats';
+import Companies from '@/components/Companies';
+import Industries from '@/components/Industries';
+import FeatureSection from "@/components/FeatureSection";
+import Link from "next/link";
+import FeaturedSection from "@/components/Differentiation";
+
+export default function Home() {
+  const statsData = [
+    { value: "1,800+", label: "Students Educated" },
+    { value: "3,500+", label: "Metric Tons of Waste Removed" },
+    { value: "2000+", label: "Lives positively impacted" },
+    { value: "50+", label: "Community Infrastructure Projects" }
+  ];
+
+  const environmentalItems = [
+    {
+      title: "Reservoir Cleaning Initiative:",
+      description: " In 2018, a massive cleanup removed 35,000 metric tons of garbage from Kareli Nadi, restoring water access and promoting sustainability."
+    },
+    {
+      title: "Contributions to Swachh Bharat Abhiyan:",
+      description: " A ₹20 lakh donation to national cleanliness campaigns."
+    }
+  ];
+
+  const communityItems = [
+    {
+      title: "Panchayat Infrastructure:",
+      description: "  In 2021, a state-of-the-art ₹1 crore panchayat building was constructed."
+    },
+    {
+      title: "Financial Support for Development:",
+      description: " Donations exceeding ₹1.65 crore to enhance infrastructure across Bhinyad, Kanasar, and Undu villages."
+    }
+  ];
+
+
+  return (
+    <div>
+    <div className="border-b border-[#603812]">
+  <section className="text-center px-4 py-12 md:py-24 lg:py-32 max-w-[1440px] mx-auto">
+    <div className="max-w-3xl mx-auto">
+      <h1 
+        className="font-['Libre_Baskerville'] text-2xl sm:text-3xl md:text-4xl lg:text-[44px] leading-tight"
+      >
+        <span 
+          className="font-bold inline bg-clip-text text-transparent"
+          style={{
+            backgroundImage: "linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%)"
+          }}
+        >
+          Building a
+        </span>{' '}
+        <span className="text-[#603812] font-[400] italic inline">Better Future</span>{' '}
+        <span 
+          className="font-bold inline bg-clip-text text-transparent"
+          style={{
+            backgroundImage: "linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%)"
+          }}
+        >
+          , One Contribution at a Time
+        </span>
+      </h1>
+      
+      <p className="text-[#8b7e66] text-base sm:text-lg md:text-xl mt-6 md:mt-10 mb-6">
+        Godara Brothers are dedicated to education, environmental sustainability, and community welfare, transforming countless lives through impactful initiatives.
+      </p>
+    </div>
+  </section>
+</div>
+<div className=" border-t mt-12 border-[#603812]">
+  <section className="text-center px-4 py-12 md:py-24 lg:py-32 max-w-[1440px] mx-auto">
+    <div className="max-w-3xl mx-auto">
+      <h1 
+        className="font-['Libre_Baskerville'] text-2xl sm:text-3xl md:text-4xl lg:text-[44px] leading-tight"
+      >
+        <span 
+          className="font-bold inline bg-clip-text text-transparent"
+          style={{
+            backgroundImage: "linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%)"
+          }}
+        >
+          About Our <span className="italic">Philanthropy</span>
+        </span>
+      </h1>
+      
+      <p className="text-[#A08871] italic text-base sm:text-lg md:text-xl mt-6 md:mt-10 mb-6 max-w-[92%] sm:max-w-[95%] md:w-full md:max-w-none px-3 sm:px-0 mx-auto">
+        From humble beginnings to a legacy of giving, Nawal Kishore Godara has made a lasting impact through education, environmental conservation, and community development. His initiatives uplift lives and empower future generations.
+      </p>
+    </div>
+  </section>
+</div>
+<div className="my-6 border-b border-[#603812]">
+      <div className="flex flex-col border-t md:flex-row justify-center items-stretch mx-4 sm:mx-6 md:mx-8 lg:mx-[100px]">
+        {statsData.map((stat, index) => {
+          // Special conditional for border styling
+          const borderClasses = 
+            index === statsData.length - 1 
+              ? '' // No border for the last item
+              : index < statsData.length - 1 
+                ? 'border-b md:border-b-0 md:border-r border-[#603812]' 
+                : '';
+                
+          return (
+            <div 
+              key={index}
+              className={`
+                py-10 md:py-[132px] 
+                flex-1 
+                flex justify-center items-center
+                ${borderClasses}
+              `}
+            >
+              <div className="font-['Libre_Baskerville'] text-center">
+                <div className="text-3xl md:text-4xl font-bold text-[#603812]">
+                  {stat.value}
+                </div>
+                <div className="text-lg md:text-xl text-[#A08871] font-normal pt-6">
+                  {stat.label}
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+    <div className="border-b border-t border-[#603812] mt-6 md:mt-12">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-[100px] py-12 md:py-11.5">
+        <h2 className="font-['Libre_Baskerville'] text-center text-2xl sm:text-3xl md:text-3xl mb-10 md:mb-30">
+          <span className="font-bold inline bg-clip-text text-transparent" style={{
+            backgroundImage: "linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%)"
+          }}>Key</span>{" "}
+          <span className="text-[#603812] italic font-normal">Philanthropic Initiatives</span>
+        </h2>
+
+        <div className="flex flex-col md:flex-row">
+          {/* Left content section with increased padding */}
+          <div className="w-full md:w-3/5 md:pr-12 mb-12 md:mb-0 px-4 sm:px-6 md:px-8">
+            <h3 className="bg-clip-text text-transparent underline font-['Libre_Baskerville'] text-xl mb-6"style={{
+            backgroundImage: "linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%)"
+          }}><Link href='https://www.connectedtoindia.com/nri-in-rajasthan-takes-forward-modis-swachch-bharat-campaign/#google_vignette' target="_blank" passHref >
+              Education & Skill Development</Link>
+            </h3>
+            
+            <ul className="space-y-5 text-[#8b7e66]">
+              <li className="flex">
+                <span className="text-[#c9a750] mr-3 text-lg">•</span>
+                <div>
+                  <span className="font-medium">Saraswati Vidya Mandir:</span> Established in 2015, providing education to 1,800+ students, with 25% receiving free education.
+                </div>
+              </li>
+              
+              <li className="flex">
+                <span className="text-[#c9a750] mr-3 text-lg">•</span>
+                <div>
+                  <span className="font-medium">Kisan Boarding House:</span> A dedicated institution in Barmer for student development.
+                </div>
+              </li>
+              
+              <li className="flex">
+                <span className="text-[#c9a750] mr-3 text-lg">•</span>
+                <div>
+                  <span className="font-medium">Women's Education Support:</span> A ₹1.05 crore extension to Kisan Balika Hostel, ensuring rural girls have access to education.
+                </div>
+              </li>
+              
+              <li className="flex">
+                <span className="text-[#c9a750] mr-3 text-lg">•</span>
+                <div>
+                  <span className="font-medium">Scholarships & Libraries:</span> Funding libraries, coaching centers, and competitive exam preparation resources.
+                </div>
+              </li>
+            </ul>
+          </div>
+          
+          {/* Right image section with overlapping image */}
+          <div className="w-full md:w-2/5 relative">
+            <div className="relative w-full z-[10] h-[300px] md:h-[300px]">
+              {/* Gray background - left on mobile, right on desktop */}
+              <div className="absolute left-0 md:left-2/5 md:right-0 w-[50%] md:w-[60%] h-[300px] bottom-[300px] md:h-[430px] bg-[#e8e8e0] top-0 md:-top-[80px]"></div>
+              
+              {/* Image - left on mobile, right on desktop */}
+              <div className="absolute mt-12 top-[30px] md:top-0 md:mt-0 md:bottom-[10px] left-0 md:left-1/10 md:right-0 w-[95%] md:w-[90%] h-[90%]">
+                <Image
+                  src="/classroom-image.png"
+                  alt="Students in a classroom setting with colorful decorations"
+                  fill
+                  sizes="(max-width: 768px) 90vw, 40vw"
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <FeatureSection listItems={environmentalItems} imageSrc="/environmental-sustainability.png" 
+    sectionTitle="Environmental Sustainability" sectionTitleLink="https://www.connectedtoindia.com/nri-in-rajasthan-takes-forward-modis-swachch-bharat-campaign/#google_vignette" imageAlt="environmental" reverseLayout={true} />
+    <FeatureSection listItems={communityItems} imageSrc="/community.png" 
+    sectionTitle="Community Development" sectionTitleLink="https://www.jatland.com/home/Nawal_Kishor_Godara?utm_source=chatgpt.com" imageAlt="community dev" reverseLayout={false} />
+    <hr className="mt-12 border-t md:hidden border-black-200" />
+    <FeaturedSection mainTitle="Charitable Donations" leftColumn={{
+          sectionTitle: "Major Contributions",
+          listItems: [
+            { 
+              title: "₹11 lakh ", 
+              description: "for free RAS coaching & libraries in Jaipur."
+            },
+            { 
+              title: "₹54.48 lakh", 
+              description: "for Sri Gopal Gaushala, Barmer."
+            },
+            { 
+              title: "₹24 lakh", 
+              description: "for Veer Tejaji Vikas Samiti, Balotara."
+            },
+            { 
+              title: "₹19.51 lakh", 
+              description: "for Shri Ramdevji Avatar Dham Mandir Development."
+            },
+            { 
+              title: "₹15 lakh", 
+              description: "to Jat Charitable Trust, Barmer."
+            }
+          ]
+        }} rightColumn={{
+          sectionTitle: "Community Contributions",
+          listItems: [
+            { 
+              title: "₹10 lakh ", 
+              description: "for Bal Mandir Sancharini Samiti, Barmer."
+            },
+            { 
+              title: "₹10 lakh", 
+              description: "for Fifty Villagers Service Sansthan, Barmer."
+            },
+            { 
+              title: "₹5 lakh", 
+              description: "to Rajkiya Balika Uchch Prathmik Vidyalaya, Bhinyad."
+            },
+            { 
+              title: "₹5 lakh", 
+              description: "to Jila Shiksha Adhikari Karyalaya, Barmer (for sports infrastructure)."
+            }
+          ]
+        }} />
+    <div className=" border-t mt-6 md:hidden border-[#603812]">
+  <section className="text-center px-4 py-12 md:py-24 lg:py-32 max-w-[1440px] mx-auto">
+    <div className="max-w-3xl mx-auto">
+      <h1 
+        className="font-['Libre_Baskerville'] text-2xl sm:text-3xl md:text-4xl lg:text-[44px] leading-tight"
+      >
+        <span 
+          className="font-bold text-[#603812]"
+        >
+          Vision
+        </span>
+      </h1>
+      
+      <p className="text-[#A08871] font-['Roboto] italic text-base sm:text-lg md:text-xl mt-6 md:mt-10 mb-6 max-w-[92%] sm:max-w-[95%] md:w-full md:max-w-none px-5 sm:px-0 mx-auto">
+      “At Godara Brothers Holdings Limited, we aim to be a global leader in diversified investments, driven by innovation, sustainable growth, and long-term value creation. Our vision is to continuously optimize our portfolio, nurturing new opportunities and expanding across various industries.”
+      </p>
+    </div>
+  </section>
+</div>
+
+<div className="border-[#603812] md:hidden mx-4 sm:mx-6 md:mx-8 lg:mx-[100px] py-8 bg-[#EFEBE7]">
+  <section className="text-center px-4 py-0 md:py-24 lg:py-32 max-w-[1440px] mx-auto">
+    <div className="max-w-3xl mx-auto">
+      <h1 
+        className="font-['Libre_Baskerville'] text-2xl sm:text-3xl md:text-4xl lg:text-[44px] leading-tight"
+      >
+        <span 
+          className="font-bold text-[#603812]"
+        >
+          Mission
+        </span>
+      </h1>
+      
+      <p className="text-[#A08871] font-['Roboto] italic text-base sm:text-lg md:text-xl mt-6 md:mt-10 mb-6 max-w-[92%] sm:max-w-[95%] md:w-full md:max-w-none px-5 sm:px-0 mx-auto">
+      “Our mission is to create value through strategic investments, innovation, and responsible business practices. We strive to uphold excellence in every sector we operate in, ensuring growth for our businesses and stakeholders.”
+      </p>
+    </div>
+  </section>
+</div>
+    </div>
+  );
+}

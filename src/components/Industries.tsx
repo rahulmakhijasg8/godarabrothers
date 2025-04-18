@@ -1,73 +1,47 @@
 import Image from "next/image";
+import IndustryCard from "./industrycard";
 
 export default function Industries() {
-    return(
-        <div className="mt-[50px] border-[0px] border-t border-b border-[#603812] border-solid">
-  <div className="flex flex-col">
-  <div className="flex flex-row justify-center -m-4 border-[0px] border-b border-[#603812] border-solid items-center gap-4">
-    <div className="border-[0px] h-[205px] text-center py-[132px] px-[45px] border-r border-[#603812] border-solid flex-1 justify-center items-center">
-    <h2 style={{ fontFamily: "'Libre Baskerville', serif" }} className="w-[323px] text-[36px]">
-          <span className="text-[#c9a750] font-[700]">Industries We<span className="italic"> Operate In</span></span>
-        </h2>
-    </div>
-    <div className="border-[0px] h-[205px] py-[132px] px-[45px] border-r border-[#603812] border-solid flex-1 items-center">
-    <Image
-          src="/Rectangle 22.png"
-          alt="African"
-          height={205}
-          width={323}
-          className="block"
-        />
-    <div className="text-center block text-[#603812] text-[18px] font-[400] text-[#A08871] pt-[24px]">General Trading</div>
-    </div>
-    <div className="flex-1 h-[205px] py-[132px] px-[45px] justify-center items-center">
-    <Image
-          src="/Rectangle 23.png"
-          alt="African"
-          height={205}
-          width={323}
-          className="block"
-        />
-        <div className="text-center block text-[#603812] text-[18px] font-[400] text-[#A08871] pt-[24px]">Water & Beverage Production</div>
-    </div>
-  </div>
- 
+  // Industry data for cleaner code
+  const industries = [
+    { title: "Industries We Operate In", isHeading: true },
+    { image: "/Rectangle 22.png", title: "General Trading" },
+    { image: "/Rectangle 23.png", title: "Water & Beverage Production" },
+    { image: "/Rectangle 24.png", title: "Retail & Distribution" },
+    { image: "/Rectangle 25.png", title: "Cosmetics Manufacturing" },
+    { image: "/Rectangle 26.png", title: "Import-Export" }
+  ];
 
-
-  <div className="flex flex-row justify-center items-center gap-4 px-[100px]">
-    <div className="border-[0px] py-[132px] px-[45px] border-r border-[#603812] border-solid flex-1 justify-center items-center">
-    <Image
-          src="/Rectangle 24.png"
-          alt="African"
-          height={205}
-          width={323}
-          className="block"
-        />
-        <div className="text-center block text-[#603812] text-[18px] font-[400] text-[#A08871] pt-[24px]">Retail & Distribution</div>
+  return (
+    <div className="my-12 px-4 sm:px-6 md:px-8 lg:px-[100px] border-t border-b border-[#603812]">
+      <div className="grid grid-cols-1 md:grid-cols-3">
+        {industries.map((industry, index) => (
+          <div 
+            key={index}
+            className={`
+              flex flex-col justify-center items-center 
+              ${industry.isHeading ? 'pb-0 pt-8 px-0 md:p-12 -mb-4 md:mb-0' : 'p-8 md:p-12'}
+              ${industry.isHeading ? 'min-h-[160px] md:min-h-[300px]' : 'min-h-[300px]'}
+              ${index !== industries.length - 1 && index % 3 !== 2 ? 'md:border-r' : ''} 
+              ${index < 3 ? 'md:border-b' : ''} 
+              border-[#603812]
+            `}
+          >
+            {industry.isHeading ? (
+              <h2 className="font-['Libre_Baskerville'] text-2xl md:text-4xl text-center">
+                <span className="bg-clip-text text-transparent font-bold" 
+                  style={{
+                    backgroundImage: "linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%)"
+                  }}>
+                  Industries We<span className="italic"> Operate In</span>
+                </span>
+              </h2>
+            ) : (
+              <IndustryCard title={industry.title} image={industry.image!} />
+            )}
+          </div>
+        ))}
+      </div>
     </div>
-    <div className="border-[0px] py-[132px] px-[45px] border-r border-[#603812] border-solid flex-1 justify-center items-center">
-    <Image
-          src="/Rectangle 25.png"
-          alt="African"
-          height={205}
-          width={323}
-          className="block"
-        />
-    <div className="text-center block text-[#603812] text-[18px] font-[400] text-[#A08871] pt-[24px]">Cosmetics Manufacturing</div>
-    </div>
-    <div className="flex-1 py-[132px] px-[45px] justify-center items-center">
-    <Image
-          src="/Rectangle 26.png"
-          alt="African"
-          height={205}
-          width={323}
-          className="block"
-        />
-        <div className="text-center block text-[#603812] text-[18px] font-[400] text-[#A08871] pt-[24px]">Import-Export</div>
-    </div>
-  </div>
-</div>
-</div>
-    )
+  );
 }
-

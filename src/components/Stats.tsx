@@ -1,26 +1,45 @@
 export default function Stats() {
-    return (
-        <div className="my-[50px] border-[0px] border-t border-b border-[#603812] border-solid">
-  <div className="flex flex-col md:flex-row justify-center items-center gap-4 px-[100px]">
-    <div className="border-[0px] py-[132px] border-r border-[#603812] border-solid flex-1 flex justify-center items-center">
-    <h2 style={{ fontFamily: "'Libre Baskerville', serif" }} className="text-[36px] text-[400]">
-          <div className="text-[#603812] flex justify-center items-center font-[700]">23+</div>
-          <div className="align-center justify-center text-[#603812] text-[20px] font-[400] text-[#A08871] pt-[24px]">Companies</div>
-        </h2>
+  // Stats data array for DRY code
+  const statsData = [
+    { value: "23+", label: "Companies" },
+    { value: "$500M+", label: "Annual Revenue" },
+    { value: "5+", label: "Global Markets and Growing" }
+  ];
+
+  return (
+    <div className="my-12 border-t border-b border-[#603812]">
+      <div className="flex flex-col md:flex-row justify-center items-stretch px-4 sm:px-6 md:px-8 lg:px-[100px]">
+        {statsData.map((stat, index) => {
+          // Special conditional for border styling
+          const borderClasses = 
+            index === statsData.length - 1 
+              ? '' // No border for the last item
+              : index < statsData.length - 1 
+                ? 'border-b md:border-b-0 md:border-r border-[#603812]' 
+                : '';
+                
+          return (
+            <div 
+              key={index}
+              className={`
+                py-10 md:py-[132px] 
+                flex-1 
+                flex justify-center items-center
+                ${borderClasses}
+              `}
+            >
+              <div className="font-['Libre_Baskerville'] text-center">
+                <div className="text-3xl md:text-4xl font-bold text-[#603812]">
+                  {stat.value}
+                </div>
+                <div className="text-lg md:text-xl text-[#A08871] font-normal pt-6">
+                  {stat.label}
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
     </div>
-    <div className="border-[0px] py-[132px] border-r border-[#603812] border-solid flex-1 flex justify-center items-center">
-    <h2 style={{ fontFamily: "'Libre Baskerville', serif" }} className="text-[36px] text-[400]">
-          <div className="text-[#603812] flex justify-center items-center font-[700]">$500M+</div>
-          <div className="align-center justify-center text-[#603812] text-[20px] font-[400] text-[#A08871] pt-[24px]">Annual Revenue</div>
-        </h2>
-    </div>
-    <div className="flex-1 py-[132px] flex justify-center items-center">
-    <h2 style={{ fontFamily: "'Libre Baskerville', serif" }} className="text-[36px] text-[400]">
-          <div className="text-[#603812] flex justify-center items-center font-[700]">5+</div>
-          <div className="align-center justify-center text-[#603812] text-[20px] font-[400] text-[#A08871] pt-[24px]">Global Markets and Growing</div>
-        </h2>
-    </div>
-  </div>
-</div>
-    );
-  }
+  );
+}
