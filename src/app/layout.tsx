@@ -9,6 +9,14 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'Godara Brothers - A Legacy of Excellence & Innovation',
   description: 'A diversified business empire shaping industries across the globe',
+  icons: [
+    {
+        rel: 'icon',
+        url: '/favicon-gb.ico',
+        type: 'image/x-icon',
+        sizes: '16x16',
+    },
+],
 };
 
 export default function RootLayout({
