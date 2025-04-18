@@ -1,0 +1,18 @@
+<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Communication / Phone">
+<path id="Vector" d="M10.4452 5.08169C10.1345 4.30512 9.3824 3.7959 8.54601 3.7959H5.73272C4.6625 3.7959 3.79492 4.66327 3.79492 5.73349C3.79492 14.8303 11.1696 22.205 20.2664 22.205C21.3366 22.205 22.204 21.3373 22.204 20.2671L22.2045 17.4534C22.2045 16.617 21.6954 15.865 20.9188 15.5543L18.2225 14.4762C17.5249 14.1971 16.7307 14.3227 16.1535 14.8037L15.4576 15.3841C14.6449 16.0614 13.4491 16.0075 12.701 15.2594L10.7415 13.2981C9.99345 12.5501 9.93817 11.3552 10.6154 10.5425L11.1957 9.84666C11.6767 9.26949 11.8034 8.47504 11.5243 7.77747L10.4452 5.08169Z" stroke="url(#paint0_linear_141_1461)" stroke-width="1.63636" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_141_1461" x1="3.79492" y1="3.7959" x2="24.2756" y2="19.5047" gradientUnits="userSpaceOnUse">
+<stop stop-color="#B18A43"/>
+<stop offset="0.197115" stop-color="#C8A563"/>
+<stop offset="0.317308" stop-color="#D7B676"/>
+<stop offset="0.447115" stop-color="#C39F5A"/>
+<stop offset="0.5625" stop-color="#A88037"/>
+<stop offset="0.711538" stop-color="#C49E4A"/>
+<stop offset="0.798077" stop-color="#FCDE81"/>
+<stop offset="0.903846" stop-color="#DAB04B"/>
+<stop offset="1" stop-color="#C5952F"/>
+</linearGradient>
+</defs>
+</svg>

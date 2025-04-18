@@ -1,6 +1,6 @@
 import { Roboto } from 'next/font/google';
-import { MdEmail, MdPhone, MdLocationOn } from 'react-icons/md';
 import Link from 'next/link';
+import Image from 'next/image';
 
 // Initialize the font
 const roboto = Roboto({
@@ -13,17 +13,17 @@ export default function Footer() {
   // Navigation links
   const navLinks = [
     { href: '/', label: 'Home' },
-    { href: '/about', label: 'About Us' },
+    { href: '/philanthropy', label: 'Philanthropy' }, // Changed from 'About Us' to 'Philanthropy'
     { href: '/group-companies', label: 'Group Companies' },
     { href: '/leadership', label: 'Leadership' },
     { href: '/contact-us', label: 'Contact Us' },
   ];
 
-  // Contact information
+  // Contact information with SVG icons from public folder
   const contactInfo = [
-    { icon: <MdEmail className="text-amber-600 min-w-[20px] mr-2" />, content: 'info@godarabrothers.com' },
-    { icon: <MdPhone className="text-amber-600 min-w-[20px] mr-2" />, content: '+971508711333, +971565544111' },
-    { icon: <MdLocationOn className="text-amber-600 min-w-[20px] mr-2" />, content: 'Dubai, UAE' },
+    { icon: '/Mail.svg', alt: 'Email', content: 'info@godarabrothers.com' },
+    { icon: '/Phone.svg', alt: 'Phone', content: '+971508711333, +971565544111' },
+    { icon: '/Map_Pin.svg', alt: 'Location', content: 'Dubai, UAE' },
   ];
 
   return (
@@ -69,7 +69,13 @@ export default function Footer() {
               <ul className={`list-none p-0 ${roboto.className}`}>
                 {contactInfo.map((item, index) => (
                   <li key={index} className="mb-6 flex items-start text-base sm:text-lg text-[#603812] font-light">
-                    <span className="mt-1">{item.icon}</span>
+                    <Image 
+                      src={item.icon} 
+                      alt={item.alt} 
+                      width={20} 
+                      height={20} 
+                      className="min-w-[20px] mr-2 mt-1"
+                    />
                     <span className="break-words overflow-hidden">{item.content}</span>
                   </li>
                 ))}

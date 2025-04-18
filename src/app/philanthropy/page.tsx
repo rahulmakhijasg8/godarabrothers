@@ -1,7 +1,4 @@
 import Image from "next/image";
-import Stats from '@/components/Stats';
-import Companies from '@/components/Companies';
-import Industries from '@/components/Industries';
 import FeatureSection from "@/components/FeatureSection";
 import Link from "next/link";
 import FeaturedSection from "@/components/Differentiation";
