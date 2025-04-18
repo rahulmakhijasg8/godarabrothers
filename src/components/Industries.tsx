@@ -1,4 +1,3 @@
-import Image from "next/image";
 import IndustryCard from "./industrycard";
 
 export default function Industries() {

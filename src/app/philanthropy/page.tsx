@@ -159,7 +159,7 @@ export default function Home() {
               <li className="flex">
                 <span className="text-[#c9a750] mr-3 text-lg">•</span>
                 <div>
-                  <span className="font-medium">Women's Education Support:</span> A ₹1.05 crore extension to Kisan Balika Hostel, ensuring rural girls have access to education.
+                  <span className="font-medium">Women&apos;s Education Support:</span> A ₹1.05 crore extension to Kisan Balika Hostel, ensuring rural girls have access to education.
                 </div>
               </li>
               

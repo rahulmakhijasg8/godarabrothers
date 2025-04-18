@@ -6,16 +6,6 @@ import CompanyComponent from '@/components/CompanyComponent';
 const TabSelector = () => {
   const [selectedId, setSelectedId] = useState<'india' | 'africa' | 'dubai'>('india');
 
-  interface FeatureData {
-    sectionTitle: string;
-    subtitle: string;
-    description: string;
-    imageSrc: string;
-    imageAlt: string;
-    sectionTitleLink?: string;
-    reverseLayout?: boolean;
-  }
-
   const featuresData = {
     india: [
       {

@@ -11,7 +11,7 @@ export default function ContactPage() {
     message: ''
   });
 
-  const handleChange = (e:any) => {
+  const handleChange = (e:React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -19,7 +19,15 @@ export default function ContactPage() {
     }));
   };
 
-  const handleSubmit = (e:any) => {
+  const handleTextAreaChange = (e:React.ChangeEvent<HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e:React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
     setFormData({
@@ -98,7 +106,7 @@ export default function ContactPage() {
               <textarea
                 name="message"
                 value={formData.message}
-                onChange={handleChange}
+                onChange={handleTextAreaChange}
                 placeholder="how may help you ?"
                 rows={4}
                 className="p-2 border-b border-gray-200 rounded-md focus:outline-none focus:ring-1 focus:ring-[#B18A43] resize-none"

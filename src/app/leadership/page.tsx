@@ -1,9 +1,4 @@
 import Image from "next/image";
-import Im from '@/components/Im';
-import Wrwe from '@/components/Wrwe';
-import Stats from '@/components/Stats';
-import Companies from '@/components/Companies';
-import Industries from '@/components/Industries';
 import FeaturedSection from "@/components/AltDifferentiaton";
 
 export default function Home() {
@@ -133,7 +128,7 @@ export default function Home() {
             backgroundImage: "linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%)"
           }}
         >
-          growth of Ste NTH Sarl and Apex Group Int'l.
+          growth of Ste NTH Sarl and Apex Group Int&apos;l.
         </span>
       </p>
       </div>
@@ -150,7 +145,7 @@ export default function Home() {
             backgroundImage: "linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%)"
           }}
         >
-          growth of Ste NTH Sarl and Apex Group Int'l.
+          growth of Ste NTH Sarl and Apex Group Int&apos;l.
         </span>
       </p>
       </div>
@@ -172,7 +167,7 @@ export default function Home() {
       </h1>
       
       <p className="text-[#A08871] w-full text-center italic text-base sm:text-lg md:text-xl mt-6 md:mt-10 mb-6 text-center">
-      "Success is built on strong partnerships, innovative thinking, and a commitment to excellence. At Godara Brothers, we believe in creating value that lasts generations."
+      &quot;Success is built on strong partnerships, innovative thinking, and a commitment to excellence. At Godara Brothers, we believe in creating value that lasts generations.&quot;
       </p>
     </div>
   </section>
@@ -347,18 +342,18 @@ export default function Home() {
       </h1>
       
       <p className="text-[#A08871] w-full text-center italic text-base sm:text-lg md:text-xl mt-6 md:mt-10 mb-6 text-center">
-      "We believe in building businesses that not only thrive but also contribute to economic growth and social progress. Leadership is about vision, execution, and resilience."
+      &quot;We believe in building businesses that not only thrive but also contribute to economic growth and social progress. Leadership is about vision, execution, and resilience.&quot;
       </p>
     </div>
   </section>
 </div>
     <FeaturedSection leftColumn={{
     sectionTitle: "Vision",
-    paragraphText: '“At Godara Brothers Holdings Limited, we aim to be a global leader in diversified investments, driven by innovation, sustainable growth, and long-term value creation. Our vision is to continuously optimize our portfolio, nurturing new opportunities and expanding across various industries.”'
+    paragraphText: '"At Godara Brothers Holdings Limited, we aim to be a global leader in diversified investments, driven by innovation, sustainable growth, and long-term value creation. Our vision is to continuously optimize our portfolio, nurturing new opportunities and expanding across various industries."'
   }}
   rightColumn={{
     sectionTitle: "Mission",
-    paragraphText: '“Our mission is to create value through strategic investments, innovation, and responsible business practices. We strive to uphold excellence in every sector we operate in, ensuring growth for our businesses and stakeholders.”'
+    paragraphText: '"Our mission is to create value through strategic investments, innovation, and responsible business practices. We strive to uphold excellence in every sector we operate in, ensuring growth for our businesses and stakeholders."'
   }}
 />
 
