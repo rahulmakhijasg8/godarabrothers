@@ -75,7 +75,7 @@ export default function Home() {
                   className={`absolute mt-12 bottom-30  md:top-[150px] right-0 md:mt-0 w-[95%] md:w-[40%] h-[35.5%] md:h-[60%]`}
                 >
                   <Image
-                    src={'/kishore.jfif'}
+                    src={'/naval-kishore.svg'}
                     alt='Mr. Nawal Kishore'
                     fill
                     sizes="(max-width: 768px) 90vw, 40vw"
@@ -221,7 +221,7 @@ export default function Home() {
                 >
                   <Image
                     src={'/Rectangle 14.png'}
-                    alt='Mr. Nawal Kishore'
+                    alt='Mr. Teeku Singh Choudhary'
                     fill
                     sizes="(max-width: 768px) 90vw, 40vw"
                     className=""

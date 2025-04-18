@@ -17,8 +17,8 @@ const FeaturedSection: React.FC<FeatureSectionProps> = ({
   const renderContentBlock = (columnData: ColumnData, isRightColumn: boolean) => (
     <div className="w-full md:w-1/2 h-full md:h-full md:mt-0">
       <div
-        className={`h-full px-8 w-full text-center ${
-          isRightColumn ? "bg-[#EFEBE7] min-h-[420px]" : ""
+        className={`h-full px-8 text-center ${
+          isRightColumn ? "bg-[#EFEBE7] min-h-[420px] md:min-h-0 md:absolute md:h-full" : ""
         } flex py-12 flex-col`}
       >
         <h3 className="font-['Libre_Baskerville'] font-[700] md:pt-[30px] text-[26px] mb-6">
@@ -43,7 +43,7 @@ const FeaturedSection: React.FC<FeatureSectionProps> = ({
   return (
     <div className="border-t mb-12 border-b border-[#603812] mt-12">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-[100px] pt-6 md:py-0">
-        <div className="flex flex-col md:flex-row items-stretch">
+        <div className="flex flex-col relative md:flex-row items-stretch">
           {renderContentBlock(leftColumn, false)}
           {renderContentBlock(rightColumn, true)}
         </div>
