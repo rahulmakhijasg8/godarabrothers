@@ -25,7 +25,7 @@ export default function Hero() {
         </p>
         
         <Link 
-          href="/companies" 
+          href="/group-companies" target="_blank"
           className="font-['Roboto'] inline-block px-8 py-3 mt-4 md:mt-8 border border-[#603812] text-[#603812] rounded-full hover:bg-gray-50 transition-colors no-underline text-sm sm:text-base"
         >
           Explore Our Companies
