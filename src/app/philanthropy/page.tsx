@@ -25,11 +25,19 @@ export default function Home() {
   const communityItems = [
     {
       title: "Panchayat Infrastructure:",
-      description: "  In 2021, a state-of-the-art ₹1 crore panchayat building was constructed."
+      description: "  In 2021, a state-of-the-art ₹1.25 crore panchayat building was constructed."
     },
     {
       title: "Financial Support for Development:",
       description: " Donations exceeding ₹1.65 crore to enhance infrastructure across Bhinyad, Kanasar, and Undu villages."
+    },
+    {
+      title: "Prime Minister's Relief Fund:",
+      description: " A ₹1 crore contribution towards COVID-19 relief efforts nationwide."
+    },
+    {
+      title: "Employee Welfare Initiative:",
+      description: " A ₹10 lakh financial support provided to the family of an employee who lost his life in a road accident."
     }
   ];
 
@@ -152,7 +160,7 @@ export default function Home() {
               <li className="flex">
                 <span className="text-[#c9a750] mr-3 text-lg">•</span>
                 <div>
-                  <span className="font-medium">Kisan Boarding House:</span> A dedicated institution in Barmer for student development.
+                  <span className="font-medium">Kisan Boarding House:</span> A dedicated institution in Barmer for student development, supported by a ₹1.25 crore donation.
                 </div>
               </li>
               
@@ -202,10 +210,6 @@ export default function Home() {
           sectionTitle: "Major Contributions",
           listItems: [
             { 
-              title: "₹11 lakh ", 
-              description: "for free RAS coaching & libraries in Jaipur."
-            },
-            { 
               title: "₹54.48 lakh", 
               description: "for Sri Gopal Gaushala, Barmer."
             },
@@ -220,6 +224,10 @@ export default function Home() {
             { 
               title: "₹15 lakh", 
               description: "to Jat Charitable Trust, Barmer."
+            },
+            { 
+              title: "₹11 lakh ", 
+              description: "for free RAS coaching & libraries in Jaipur."
             }
           ]
         }} rightColumn={{

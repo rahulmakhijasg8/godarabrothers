@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import CompanyComponent from '@/components/CompanyComponent';
 
 const TabSelector = () => {
-  const [selectedId, setSelectedId] = useState<'india' | 'africa' | 'dubai'>('india');
+  const [selectedId, setSelectedId] = useState<'india' | 'africa' | 'dubai'>('dubai');
 
   const featuresData = {
     india: [
@@ -26,7 +26,7 @@ const TabSelector = () => {
       {
         sectionTitle: "LRT Hotel And Resort LLP",
         subtitle: "Hotel And Resort",
-        description: "LRT Hotel and Resort LLP, incorporated on 12th April 2024 is an exciting hospitality venture based in Jodhpur, Rajasthan. We are dedicated to offering exceptional accommodation and dining experiences, with a focus on delivering a unique blend of comfort, luxury, and personalized service. Our goal is to ensure that every guest enjoys a truly memorable stay. With a vision to become a premier destination for travelers seeking exceptional hospitality, we are committed to building a strong foundation of quality and excellence. As we prepare to launch our services, we eagerly look forward to welcoming guests and creating unforgettable experiences that reflect our passion for hospitality.",
+        description: "LRT Hotel and Resort, incorporated in 2024 is an exciting hospitality venture based in Jodhpur, Rajasthan. We are dedicated to offering exceptional accommodation and dining experiences, with a focus on delivering a unique blend of comfort, luxury, and personalized service. Our goal is to ensure that every guest enjoys a truly memorable stay. With a vision to become a premier destination for travelers seeking exceptional hospitality, we are committed to building a strong foundation of quality and excellence. As we prepare to launch our services, we eagerly look forward to welcoming guests and creating unforgettable experiences that reflect our passion for hospitality.",
         imageSrc: "/india-3.svg",
         imageAlt: "LRT hotel",
       },
@@ -34,8 +34,8 @@ const TabSelector = () => {
         sectionTitle: "Saraswati Vidya Mandir, Bhinyad",
         sectionTitleLink: "https://saraswatividyamandireducationa.godaddysites.com/",
         subtitle: "Education",
-        description: "Saraswati Vidya Mandir, Bhinyad, is a prominent educational institution dedicated to nurturing young minds and fostering academic excellence. Located in the heart of Bhinyad, Rajasthan, we are committed to providing a holistic learning environment where students can thrive academically, socially, and personally. Our curriculum is designed to blend traditional values with modern educational practices, ensuring that each student receives a well-rounded education. With a strong focus on discipline, creativity, and critical thinking, Saraswati Vidya Mandir aims to equip students with the knowledge and skills necessary to excel in today's world. Our dedicated team of educators, state-of-the-art facilities, and a supportive learning atmosphere make us a trusted choice for parents seeking quality education for their children.",
-        imageSrc: "/india-4.png",
+        description: "Saraswati Vidya Mandir, is a prominent educational institution dedicated to nurturing young minds and fostering academic excellence. Located in the heart of Bhinyad, Rajasthan, we are committed to providing a holistic learning environment where students can thrive academically, socially, and personally. Our curriculum is designed to blend traditional values with modern educational practices, ensuring that each student receives a well-rounded education. With a strong focus on discipline, creativity, and critical thinking, Saraswati Vidya Mandir aims to equip students with the knowledge and skills necessary to excel in today's world. Our dedicated team of educators, state-of-the-art facilities, and a supportive learning atmosphere make us a trusted choice for parents seeking quality education for their children.",
+        imageSrc: "/Saraswati-Vidya-Mandir.webp",
         imageAlt: "Saraswati Vidya Mandir",
       }
     ],
@@ -64,7 +64,7 @@ const TabSelector = () => {
     {
       sectionTitle: "Global Trading",
       subtitle: "Cosmetic",
-      description: "Global Trading has quickly established itself as a prominent player in the cosmetic industry since starting operations in 2019. With a strong presence in Brazzaville, Congo, the company has experienced consistent growth. Our dedicated team is supported by a robust logistical framework, including a warehouse and retail stores. Committed to delivering high-quality cosmetic products and services, Global Trading upholds the highest standards of customer satisfaction and continues to expand its reach across Congo and beyond.",
+      description: "Global Trading Congo has quickly established itself as a prominent player in the cosmetic industry since starting operations in 2019. With a strong presence in Brazzaville, Congo, the company has experienced consistent growth. Our dedicated team is supported by a robust logistical framework, including a warehouse and retail stores. Committed to delivering high-quality cosmetic products and services, Global Trading upholds the highest standards of customer satisfaction and continues to expand its reach across Congo and beyond.",
       imageSrc: "/africa-4.png",
       imageAlt: "global trading",
     },
@@ -78,7 +78,7 @@ const TabSelector = () => {
     {
       sectionTitle: "Fourtune Construction",
       subtitle: "Mining",
-      description: "Fourtune Construction, located at DR Congo, has been a leading force in the mining industry since its establishment in 2014. The company has steadily grown and now operates with a skilled team of employees. Fourtune Construction’s operations are supported by warehouses and a strong retail presence. We are committed to maintaining high standards in our mining operations while ensuring efficiency, safety, and sustainability. Our team works tirelessly to deliver exceptional results and contribute to the continued success of the company in DR Congo and beyond.",
+      description: "Fourtune Construction Congo, located at DR Congo, has been a leading force in the mining industry since its establishment in 2014. The company has steadily grown and now operates with a skilled team of employees. Fourtune Construction’s operations are supported by warehouses and a strong retail presence. We are committed to maintaining high standards in our mining operations while ensuring efficiency, safety, and sustainability. Our team works tirelessly to deliver exceptional results and contribute to the continued success of the company in DR Congo and beyond.",
       imageSrc: "/africa-6.png",
       imageAlt: "Fortune-construction",
     },
@@ -91,10 +91,10 @@ const TabSelector = () => {
     },
     {
       sectionTitle: "Prestige Group",
-      sectionTitleLink: "https://group-pgc.com/partners.html",
+      sectionTitleLink: "https://group-pgc.com/index.html",
       subtitle: "Electronics, Construction & Hardware",
-      description: "Prestige Group, based in Kinshasa, DR Congo, has been a leading force in the construction and hardware industry since its establishment in 2015. The company has experienced consistent growth and is recognized for its commitment to delivering high-quality products and services. Supported by a dedicated team of employees and a strong operational framework, Prestige Group continues to thrive in both retail and distribution. We are committed to maintaining the highest standards in electronics, construction and hardware solutions while driving the ongoing success and expansion of the company across DR Congo.",
-      imageSrc: "/africa-8.png",
+      description: "Prestige Group Congo, based in Kinshasa, DR Congo, has been a leading force in the construction and hardware industry since its establishment in 2015. The company has experienced consistent growth and is recognized for its commitment to delivering high-quality products and services. Supported by a dedicated team of employees and a strong operational framework, Prestige Group continues to thrive in both retail and distribution. We are committed to maintaining the highest standards in electronics, construction and hardware solutions while driving the ongoing success and expansion of the company across DR Congo.",
+      imageSrc: "/prestigegroup.jpg",
       imageAlt: "Prestige Group",
     },
     {
@@ -127,22 +127,23 @@ const TabSelector = () => {
     },
     {
       sectionTitle: "Golden African Resources",
+      sectionTitleLink: "https://www.goldendrc.com/",
       subtitle: "Mining of Copper Cathode",
-      description: "Golden African Resources, located in Kinshasa, DR Congo, has been a leading force in the mining industry since its establishment in 2007. Specializing in the mining of copper cathodes, the company has steadily grown to become a key player in the sector. With a focus on efficiency, sustainability, and safety, Golden African Resources is committed to maintaining the highest standards in mining operations. Our team works tirelessly to deliver high-quality products while contributing to the continued success and growth of the company both within DR Congo and internationally. The Company has a Manufacturing unit and a Mine.",
+      description: "Golden African Resources, located in Kinshasa, DR Congo, has been a leading force in the mining industry since its establishment in 2007. Specializing in the mining of copper cathodes, the company has steadily grown to become a key player in the sector. With a focus on efficiency, sustainability, and safety, Golden African Resources is committed to maintaining the highest standards in mining operations. Our team works tirelessly to deliver high-quality products while contributing to the continued success and growth of the company both within DR Congo and internationally. The Company has a Manufacturing unit and a Mine in DR Congo.",
       imageSrc: "/africa-13.png",
       imageAlt: "Golden African Resources",
     },
     {
       sectionTitle: "Ste Generale de Forage",
       subtitle: "Drilling and Bore well",
-      description: "Ste Generale de Forage (SGF) is established in 2024, based in Kinshasa, Democratic Republic of Congo. Focused on drilling projects, water supply, purification, and related infrastructure development, SGF is committed to delivering high-quality services and contributing to the region's water infrastructure development.",
+      description: "Ste Generale de Forage (SGF) is established in 2024, based in Kinshasa, DR Congo. Focused on drilling projects, water supply, purification, and related infrastructure development, SGF is committed to delivering high-quality services and contributing to the region's water infrastructure development.",
       imageSrc: "/africa-14.png",
       imageAlt: "Ste Generale de Forage",
     }],
     dubai:[{
       sectionTitle: "Godara Brothers Holdings Limited",
       subtitle: "Investment company",
-      description: "Godara Brothers Holdings Limited (Godara Brothers) is the flagship company of the Godara Family Office. With a legacy of strategic investments, Godara Brothers has successfully divested its holdings in a range of group companies across diversified sectors. As a forward-thinking entity, the company continues to focus on optimizing its portfolio, ensuring long-term growth and value creation. Driven by the vision of the Godara family, Godara Brothers remains committed to identifying and nurturing new opportunities for investment while maintaining a strong track record of financial success and corporate responsibility.The company is proudly owned by Mr. Nawal Kishore and Mr. Teeku Singh.",
+      description: "Godara Brothers Holdings(Godara Brothers) is the flagship company of the Godara Family Office. With a legacy of strategic investments, Godara Brothers has successfully divested its holdings in a range of group companies across diversified sectors. As a forward-thinking entity, the company continues to focus on optimizing its portfolio, ensuring long-term growth and value creation. Driven by the vision of the Godara family, Godara Brothers remains committed to identifying and nurturing new opportunities for investment while maintaining a strong track record of financial success and corporate responsibility.",
       imageSrc: "/dubai-1.svg",
       imageAlt: "Godra Brothers Holdings Ltd.",
     },
@@ -150,7 +151,7 @@ const TabSelector = () => {
       sectionTitle: "NHT International Trading",
       sectionTitleLink: "https://www.nhtae.com/",
       subtitle: "General trading",
-      description: "NHT International Trading, incorporated in 2020 in Jabel Ali Free Zone, is a leading trading company specializing in import, export, and distribution across industries such as consumer goods, industrial supplies, construction materials, automotive products, and technology. With a global network, customer-centric approach, and commitment to quality, the company delivers innovative and efficient trading solutions tailored to client needs. Leveraging the UAE’s strategic location and business-friendly environment, NHT International Trading ensures seamless operations and reliable service, driving growth and success for businesses worldwide.",
+      description: "NHT International Trading, incorporated in 2020 in Jabel Ali Free Zone, is a leading trading company specializing in import, export, and distribution across industries such as consumer goods, industrial supplies, construction materials, automotive products, and technology. With a global network, customer-centric approach, and commitment to quality, the company delivers innovative and efficient trading solutions tailored to client needs. Leveraging the UAE’s strategic location and business-friendly environment, NHT ensures seamless operations and reliable service, driving growth and success for businesses worldwide.",
       imageSrc: "/dubai-2.svg",
       imageAlt: "NHT International Trading",
     },
@@ -158,21 +159,21 @@ const TabSelector = () => {
       sectionTitle: "Lightech Audio Visual Rental",
       sectionTitleLink: "https://lightechav.com/about-us/profile/",
       subtitle: "Event management",
-      description: "LighTech Audio Visual Rental LLC, based in Dubai, specializes in providing high-quality audio, video, and lighting equipment for corporate, entertainment, and social events. Offering top-tier event production services, they cater to product launches, conferences, concerts, and private parties with industry-standard gear from renowned brands like Yamaha, Shure, and d&b audiotechnik. Whether you're hosting a corporate conference, wedding, or concert, LighTech ensures a seamless and memorable experience with their professional service and reliable equipment rental solutions.",
+      description: "LighTech Audio Visual Rental (LighTech), based in Dubai, specializes in providing high-quality audio, video, and lighting equipment for corporate, entertainment, and social events. Offering top-tier event production services, they cater to product launches, conferences, concerts, and private parties with industry-standard gear from renowned brands like Yamaha, Shure, and d&b audiotechnik. Whether you're hosting a corporate conference, wedding, or concert, LighTech ensures a seamless and memorable experience with their professional service and reliable equipment rental solutions.",
       imageSrc: "/dubai-3.svg",
       imageAlt: "Lightech audio visual rental",
     },
     {
       sectionTitle: "African Tradex",
       subtitle: "General Trading",
-      description: "African Tradex, established in 2015 in Sharjah Free Zone, UAE, is a trusted and dynamic trading company specializing in bridging commerce between Africa, the UAE, and global markets. Leveraging the strategic advantages of the free zone—such as tax exemptions, 100% foreign ownership, and seamless logistics—the company offers a wide range of high-quality products and services, including agricultural goods, manufactured items, and raw materials. With a strong commitment to excellence, customer satisfaction, and reliable trading solutions, African Tradex FZC continues to expand its reach, fostering international trade partnerships and meeting the evolving needs of diverse markets worldwide.",
+      description: "African Tradex, established in 2015 in Sharjah Free Zone, UAE, is a trusted and dynamic trading company specializing in bridging commerce between Africa, the UAE, and global markets. Leveraging the strategic advantages of the free zone—such as seamless logistics—the company offers a wide range of high-quality products and services, including agricultural goods, manufactured items, and raw materials. With a strong commitment to excellence, customer satisfaction, and reliable trading solutions, African Tradex continues to expand its reach, fostering international trade partnerships and meeting the evolving needs of diverse markets worldwide.",
       imageSrc: "/dubai-4.svg",
       imageAlt: "African Tradex",
     },
     {
       sectionTitle: "GLM General Trading",
       subtitle: "General trading",
-      description: "GLM General Trading LLC, based in the UAE, is a trusted and versatile trading company specializing in import, export, and distribution across industries such as construction, consumer goods, automotive, and food products. With a strong global network, efficient logistics, and a customer-centric approach, the company delivers high-quality, tailored solutions to meet the diverse needs of its clients. Committed to excellence, innovation, and reliability, GLM General Trading LLC continues to drive growth and success, leveraging the UAE’s strategic location as a global trade hub.",
+      description: "GLM General Trading, based in the UAE, is a trusted and versatile trading company specializing in import, export, and distribution across industries such as construction, consumer goods, automotive, and food products. With a strong global network, efficient logistics, and a customer-centric approach, the company delivers high-quality, tailored solutions to meet the diverse needs of its clients. Committed to excellence, innovation, and reliability, GLM continues to drive growth and success, leveraging the UAE’s strategic location as a global trade hub.",
       imageSrc: "/dubai-5.svg",
       imageAlt: "GLM general tading",
     },
@@ -187,15 +188,15 @@ const TabSelector = () => {
       <div className="flex justify-center mb-6 overflow-x-auto sm:overflow-visible">
         <div className="inline-flex gap-10 mt-4 md:gap-5 p-1">
         <button
-            onClick={() => setSelectedId('india')}
+            onClick={() => setSelectedId('dubai')}
             className={`
               px-[25px] md:px-[40px] py-2 text-sm font-medium border-[0.5px] border-[#603812] rounded-full transition-all duration-200
-              ${selectedId === 'india' 
+              ${selectedId === 'dubai' 
                 ? 'bg-[#EFEBE7] shadow-sm' 
                 : 'bg-transparent text-gray-500 hover:text-gray-700'}
             `}
           >
-            India
+            Dubai
           </button>
           <button
             onClick={() => setSelectedId('africa')}
@@ -209,15 +210,15 @@ const TabSelector = () => {
             Africa
           </button>
           <button
-            onClick={() => setSelectedId('dubai')}
+            onClick={() => setSelectedId('india')}
             className={`
               px-[25px] md:px-[40px] py-2 text-sm font-medium border-[0.5px] border-[#603812] rounded-full transition-all duration-200
-              ${selectedId === 'dubai' 
+              ${selectedId === 'india' 
                 ? 'bg-[#EFEBE7] shadow-sm' 
                 : 'bg-transparent text-gray-500 hover:text-gray-700'}
             `}
           >
-            Dubai
+            India
           </button>
         </div>
       </div>

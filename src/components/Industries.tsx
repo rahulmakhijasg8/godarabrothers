@@ -5,9 +5,9 @@ export default function Industries() {
   const industries = [
     { title: "Industries We Operate In", isHeading: true },
     { image: "/Rectangle 22.png", title: "General Trading" },
-    { image: "/Rectangle 23.png", title: "Water & Beverage Production" },
+    { image: "/Rectangle 23.png", title: "Purified Water and Speciality Bevarages" },
     { image: "/Rectangle 24.png", title: "Retail & Distribution" },
-    { image: "/Rectangle 25.png", title: "Cosmetics Manufacturing" },
+    { image: "/Rectangle 25.png", title: "Cosmetics Trading" },
     { image: "/Rectangle 26.png", title: "Import-Export" }
   ];
 

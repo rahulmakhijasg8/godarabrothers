@@ -13,16 +13,16 @@ export default function Footer() {
   // Navigation links
   const navLinks = [
     { href: '/', label: 'Home' },
-    { href: '/philanthropy', label: 'Philanthropy' }, // Changed from 'About Us' to 'Philanthropy'
-    { href: '/group-companies', label: 'Group Companies' },
     { href: '/leadership', label: 'Leadership' },
+    { href: '/group-companies', label: 'Group Companies' },
+    { href: '/philanthropy', label: 'Philanthropy' },
     { href: '/contact-us', label: 'Contact Us' },
   ];
 
   // Contact information with SVG icons from public folder
   const contactInfo = [
     { icon: '/Mail.svg', alt: 'Email', content: 'info@godarabrothers.com' },
-    { icon: '/Phone.svg', alt: 'Phone', content: '+971508711333, +971565544111' },
+    { icon: '/Phone.svg', alt: 'Phone', content: '+971 4575 9143' },
     { icon: '/Map_Pin.svg', alt: 'Location', content: 'Dubai, UAE' },
   ];
 

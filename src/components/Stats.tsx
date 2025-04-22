@@ -3,7 +3,8 @@ export default function Stats() {
   const statsData = [
     { value: "23+", label: "Companies" },
     { value: "$500M+", label: "Annual Revenue" },
-    { value: "5+", label: "Global Markets and Growing" }
+    { value: "5+", label: "Global Markets and Growing" },
+    { value: "3000+", label: "Employees" }
   ];
 
   return (

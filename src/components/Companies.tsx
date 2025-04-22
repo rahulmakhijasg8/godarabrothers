@@ -4,8 +4,9 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
 export default function Companies() {
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const [isScrolling, setIsScrolling] = useState(false);
+  const mobileScrollRef = useRef<HTMLDivElement>(null);
+  const desktopScrollRef = useRef<HTMLDivElement>(null);
+  const [isScrolling, setIsScrolling] = useState(true); // Always enable scrolling
   
   // Company logos data
   const companyLogos = [
@@ -13,45 +14,54 @@ export default function Companies() {
     { src: "/5.png", alt: "GLM" },
     { src: "/6.png", alt: "SG" },
     { src: "/1.png", alt: "Prestige" },
+    { src: "/NE-removebg-preview (1).png", alt: "New Electronics" },
+    { src: "/GARS.png", alt: "GARS" },
+    { src: "/nthlogo.png", alt: "NTH" },
     // Duplicate images for infinite scroll effect
     { src: "/4.png", alt: "African" },
     { src: "/5.png", alt: "GLM" },
     { src: "/6.png", alt: "SG" },
-    { src: "/1.png", alt: "Prestige" }
+    { src: "/1.png", alt: "Prestige" },
+    { src: "/NE-removebg-preview (1).png", alt: "New Electronics" },
+    { src: "/GARS.png", alt: "GARS" },
+    { src: "/nthlogo.png", alt: "NTH" },
   ];
 
-  // Setup infinite scrolling for mobile
+  // Setup infinite scrolling for both mobile and desktop
   useEffect(() => {
     const handleInfiniteScroll = () => {
-      if (!scrollRef.current || !isScrolling) return;
+      if (!isScrolling) return;
       
-      const container = scrollRef.current;
-      if (container.scrollLeft >= container.scrollWidth / 2) {
-        // Jump back to start when reached halfway
-        container.scrollLeft = 0;
-      } else {
-        // Continuously scroll
-        container.scrollLeft += 1;
+      // Handle mobile scrolling
+      if (mobileScrollRef.current) {
+        const container = mobileScrollRef.current;
+        if (container.scrollLeft >= container.scrollWidth / 2) {
+          // Jump back to start when reached halfway
+          container.scrollLeft = 0;
+        } else {
+          // Continuously scroll
+          container.scrollLeft += 1;
+        }
+      }
+      
+      // Handle desktop scrolling
+      if (desktopScrollRef.current) {
+        const container = desktopScrollRef.current;
+        if (container.scrollLeft >= container.scrollWidth / 2) {
+          // Jump back to start when reached halfway
+          container.scrollLeft = 0;
+        } else {
+          // Continuously scroll
+          container.scrollLeft += 1;
+        }
       }
     };
-
-    // Only auto-scroll on mobile
-    const checkMobile = () => {
-      setIsScrolling(window.innerWidth < 768);
-    };
-
-    // Initial check
-    checkMobile();
-    
-    // Handle window resize
-    window.addEventListener('resize', checkMobile);
 
     // Setup the animation interval
     const scrollInterval = setInterval(handleInfiniteScroll, 20);
     
     return () => {
       clearInterval(scrollInterval);
-      window.removeEventListener('resize', checkMobile);
     };
   }, [isScrolling]);
 
@@ -69,26 +79,36 @@ export default function Companies() {
         </h2>
       </div>
 
-      {/* Desktop view */}
-      <div className="hidden md:flex flex-row justify-center items-center gap-6 px-4 md:px-8 lg:px-24 xl:px-[150px] pb-16 md:pb-24">
-        {companyLogos.slice(0, 4).map((logo, index) => (
-          <div key={index} className="flex-1 flex justify-center items-center">
-            <div className="relative w-full h-auto aspect-[348/200]">
-              <Image
-                src={logo.src}
-                alt={logo.alt}
-                fill
-                sizes="(max-width: 768px) 80vw, (max-width: 1200px) 40vw, 25vw"
-                className="object-contain"
-              />
+      {/* Desktop view with infinite scroll */}
+      <div 
+        ref={desktopScrollRef}
+        className="hidden md:flex overflow-x-auto scrollbar-hide mx-4 sm:mx-6 md:mx-8 lg:mx-[100px] pb-16 md:pb-24"
+        style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+      >
+        <div className="flex gap-6">
+          {companyLogos.map((logo, index) => (
+            <div 
+              key={index} 
+              className="flex-shrink-0 flex justify-center items-center"
+              style={{ width: 'calc(20% - 20px)', minWidth: '180px', maxWidth: '220px' }}
+            >
+              <div className="relative w-full h-auto aspect-[348/200]">
+                <Image
+                  src={logo.src}
+                  alt={logo.alt}
+                  fill
+                  sizes="(max-width: 1200px) 40vw, 25vw"
+                  className="object-contain"
+                />
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
 
       {/* Mobile infinite scroll */}
       <div 
-        ref={scrollRef}
+        ref={mobileScrollRef}
         className="md:hidden mx-4 sm:mx-6 md:mx-8 lg:mx-[100px] flex overflow-x-auto scrollbar-hide pb-16 gap-4 px-4"
         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
       >
