@@ -11,6 +11,89 @@ export default function Home() {
     { value: "50+", label: "Community Infrastructure Projects" }
   ];
 
+  interface FeatureSectionData {
+    sectionTitle: string;
+    sectionTitleLink?: string;
+    listItems: Array<{
+      title: string;
+      description: string;
+    }>;
+    imageSrc: string;
+    imageAlt: string;
+    reverseLayout?: boolean;
+  }
+  
+  // Sample data for feature sections
+  const featureSectionsData: FeatureSectionData[] = [
+    {
+      sectionTitle: "Education & Skill Development",
+      sectionTitleLink: "/https://www.connectedtoindia.com/nri-in-rajasthan-takes-forward-modis-swachch-bharat-campaign/#google_vignette",
+      listItems: [
+        {
+          title: "Saraswati Vidya Mandir:",
+          description: "Established in 2015, providing education to 1,800+ students, with 25% receiving free education."
+        },
+        {
+          title: "Kisan Boarding House:",
+          description: "A dedicated institution in Barmer for student development, supported by a ₹1.25 crore donation."
+        },
+        {
+          title: "Women's Education Support:",
+          description: "A ₹1.05 crore extension to Kisan Balika Hostel, ensuring rural girls have access to education."
+        },
+        {
+          title: "Scholarships & Libraries:",
+          description: "Funding libraries, coaching centers, and competitive exam preparation resources."
+        }
+      ],
+      imageSrc: "/classroom-image.png",
+      imageAlt: "Students in a classroom setting with colorful decorations",
+      reverseLayout: false
+    },
+    {
+      sectionTitle: "Environmental Sustainability",
+      sectionTitleLink: "https://www.connectedtoindia.com/nri-in-rajasthan-takes-forward-modis-swachch-bharat-campaign/#google_vignette",
+      listItems: [
+        {
+          title: "Reservoir Cleaning Initiative:",
+          description: "In 2018, a massive cleanup removed 35,000 metric tons of garbage from Kareli Nadi, restoring water access and promoting sustainability."
+        },
+        {
+          title: "Contributions to Swachh Bharat Abhiyan:",
+          description: "A ₹20 lakh donation to national cleanliness campaigns."
+        }
+      ],
+      imageSrc: "/environmental-sustainability.png",
+      imageAlt: "environmental",
+      reverseLayout: true
+    },
+    {
+      sectionTitle: "Community Development",
+      sectionTitleLink: "https://www.jatland.com/home/Nawal_Kishor_Godara?utm_source=chatgpt.com",
+      listItems: [
+        {
+          title: "Panchayat Infrastructure:",
+          description: "In 2021, a state-of-the-art ₹1.25 crore panchayat building was constructed."
+        },
+        {
+          title: "Financial Support for Development:",
+          description: "Donations exceeding ₹1.65 crore to enhance infrastructure across Bhinyad, Kanasar, and Undu villages."
+        },
+        {
+          title: "Prime Minister's Relief Fund:",
+          description: "A ₹1 crore contribution towards COVID-19 relief efforts nationwide."
+        },
+        {
+          title: "Employee Welfare Initiative:",
+          description: "A ₹10 lakh financial support provided to the family of an employee who lost his life in a road accident."
+        }
+      ],
+      imageSrc: "/community.png",
+      imageAlt: "community dev",
+      reverseLayout: false
+    }
+  ];
+
   const environmentalItems = [
     {
       title: "Reservoir Cleaning Initiative:",
@@ -133,80 +216,27 @@ export default function Home() {
         })}
       </div>
     </div>
-    <div className="border-b border-t border-[#CFC3B8] md:border-[#603812] mt-6 md:mt-12">
+    <div className="border-t border-[#CFC3B8] md:border-[#603812] mt-6 md:mt-12">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-[100px] py-12 md:py-11.5">
-        <h2 className="text-center text-2xl sm:text-3xl md:text-3xl mb-10 md:mb-30">
+        <h2 className="text-center text-2xl sm:text-3xl md:text-3xl mb-0 md:mb-5">
           <span className="font-['Libre_Baskerville'] font-[700] inline bg-clip-text text-transparent" style={{
             backgroundImage: "linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%)"
           }}>Key</span>{" "}
           <span className="text-[#603812] font-['Libre_Baskerville'] font-[400] italic font-normal">Philanthropic Initiatives</span>
         </h2>
-
-        <div className="flex flex-col md:flex-row">
-          {/* Left content section with increased padding */}
-          <div className="w-full md:w-3/5 md:pr-12 mb-12 md:mb-0 px-4 sm:px-6 md:px-8">
-            <h3 className="bg-clip-text text-transparent underline text-xl mb-6"style={{
-            backgroundImage: "linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%)"
-          }}><Link className="font-['Libre_Baskerville'] font-[700]" href='https://www.connectedtoindia.com/nri-in-rajasthan-takes-forward-modis-swachch-bharat-campaign/#google_vignette' target="_blank" passHref >
-              Education & Skill Development</Link>
-            </h3>
-            
-            <ul className="space-y-5 text-[#8b7e66]">
-              <li className="flex">
-                <span className="text-[#A08871] font-[400] mr-3 text-lg">•</span>
-                <div>
-                  <span className="font-[500] font-['Roboto'] text-[#603812]">Saraswati Vidya Mandir:</span> Established in 2015, providing education to 1,800+ students, with 25% receiving free education.
-                </div>
-              </li>
-              
-              <li className="flex">
-                <span className="text-[#A08871] font-[400] mr-3 text-lg">•</span>
-                <div>
-                  <span className="font-[500] font-['Roboto'] text-[#603812]">Kisan Boarding House:</span> A dedicated institution in Barmer for student development, supported by a ₹1.25 crore donation.
-                </div>
-              </li>
-              
-              <li className="flex">
-                <span className="text-[#A08871] font-[400] mr-3 text-lg">•</span>
-                <div>
-                  <span className="font-[500] font-['Roboto'] text-[#603812]">Women&apos;s Education Support:</span> A ₹1.05 crore extension to Kisan Balika Hostel, ensuring rural girls have access to education.
-                </div>
-              </li>
-              
-              <li className="flex">
-                <span className="text-[#A08871] font-[400] mr-3 text-lg">•</span>
-                <div>
-                  <span className="font-[500] font-['Roboto'] text-[#603812]">Scholarships & Libraries:</span> Funding libraries, coaching centers, and competitive exam preparation resources.
-                </div>
-              </li>
-            </ul>
-          </div>
-          
-          {/* Right image section with overlapping image */}
-          <div className="w-full md:w-2/5 relative">
-            <div className="relative w-full z-[10] h-[300px] md:h-[300px]">
-              {/* Gray background - left on mobile, right on desktop */}
-              <div className="absolute left-0 md:left-2/5 md:right-0 w-[50%] md:w-[60%] h-[300px] bottom-[300px] md:h-[430px] bg-[#e8e8e0] top-0 md:-top-[80px]"></div>
-              
-              {/* Image - left on mobile, right on desktop */}
-              <div className="absolute mt-12 top-[30px] md:top-0 md:mt-0 md:bottom-[10px] left-0 md:left-1/10 md:right-0 w-[95%] md:w-[90%] h-[90%]">
-                <Image
-                  src="/classroom-image.png"
-                  alt="Students in a classroom setting with colorful decorations"
-                  fill
-                  sizes="(max-width: 768px) 90vw, 40vw"
-                  className="object-cover"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
-    <FeatureSection listItems={environmentalItems} imageSrc="/environmental-sustainability.png" 
-    sectionTitle="Environmental Sustainability" sectionTitleLink="https://www.connectedtoindia.com/nri-in-rajasthan-takes-forward-modis-swachch-bharat-campaign/#google_vignette" imageAlt="environmental" reverseLayout={true} />
-    <FeatureSection listItems={communityItems} imageSrc="/community.png" 
-    sectionTitle="Community Development" sectionTitleLink="https://www.jatland.com/home/Nawal_Kishor_Godara?utm_source=chatgpt.com" imageAlt="community dev" reverseLayout={false} />
+    {featureSectionsData.map((sectionData, index) => (
+        <FeatureSection
+          key={index}
+          sectionTitle={sectionData.sectionTitle}
+          sectionTitleLink={sectionData.sectionTitleLink}
+          listItems={sectionData.listItems}
+          imageSrc={sectionData.imageSrc}
+          imageAlt={sectionData.imageAlt}
+          reverseLayout={sectionData.reverseLayout}
+        />
+      ))}
     <hr className="mt-12 border-t md:hidden border-[#CFC3B8] md:border-[#603812]" />
     <FeaturedSection mainTitle="Charitable Donations" leftColumn={{
           sectionTitle: "Major Contributions",

@@ -63,13 +63,13 @@ export default function Home() {
               <div className="md:right-0 md:w-[35%] z-[10] h-[300px] md:h-[300px]">
                 {/* Gray background */}
                 <div
-                  className={`absolute w-[60%] right-0 md:top-0  md:w-[30%] h-[380px] md:h-[200px] bg-[#EFEBE7] 
+                  className={`absolute w-[60%] right-0 md:top-0  md:w-[30%] h-[350px] md:h-[200px] bg-[#EFEBE7] 
                     bottom-30`}
                 ></div>
 
                 {/* Image */}
                 <div
-                  className={`absolute mt-12 bottom-30  md:top-[150px] right-0 md:mt-0 w-[95%] md:w-[40%] h-[35.5%] md:h-[60%]`}
+                  className={`absolute mt-12 bottom-23  md:top-[150px] right-0 md:mt-0 w-[95%] md:w-[40%] h-[35.5%] md:h-[60%]`}
                 >
                   <Image
                     src={'/naval-kishore.svg'}
@@ -214,10 +214,10 @@ export default function Home() {
 
                 {/* Image */}
                 <div
-                  className={`absolute mt-12 bottom-20  md:top-[100px] left-0 md:mt-0 w-[95%] md:w-[40%] h-[35.5%] md:h-[260]`}
+                  className={`absolute mt-12 bottom-20  md:top-[70px] left-0 md:mt-0 w-[95%] md:w-[35%] h-[35.5%] md:h-[290]`}
                 >
                   <Image
-                    src={'/Rectangle 14.png'}
+                    src={'/teeku_singh-removebg-preview.png'}
                     alt='Mr. Teeku Singh Choudhary'
                     fill
                     sizes="(max-width: 768px) 90vw, 40vw"

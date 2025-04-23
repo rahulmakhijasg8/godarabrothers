@@ -26,12 +26,12 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
 }) => {
 
   return (
-    <div className="border-b md:border-b border-[#CFC3B8] md:border-[#603812] mt-8 md:mt-12">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-[100px] py-12 md:py-11.5">
+    <div className="relative border-b md:border-b border-[#CFC3B8] md:border-[#603812] mt-0 md:mt-0">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-[100px] py-8 md:py-30">
 
         <div className={`flex flex-col ${reverseLayout ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
           {/* Content section */}
-          <div className={`w-full md:w-3/5 ${reverseLayout ? 'md:pl-12' : 'md:pr-12'} mb-12 md:mb-0 px-4 sm:px-6 md:px-8`}>
+          <div className={`w-full md:w-3/5 ${reverseLayout ? 'md:pl-12' : 'md:pr-12'} mb-12 pb-80 md:mb-0 px-4 sm:px-6 md:px-8`}>
             <h3 className="font-['Libre_Baskerville'] text-xl mb-6 text-left">
               {sectionTitleLink ? (
                 <Link href={sectionTitleLink} target="_blank" passHref>
@@ -70,25 +70,28 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
             </ul>
           </div>
 
+
           {/* Image section */}
-          <div className="w-full md:w-2/5 relative">
-            <div className="relative w-full z-[10] bottom-[10px] h-[300px] md:h-[300px]">
-              {/* Gray background */}
-              <div
+          <div className="w-full md:w-2/5">
+            <div className="w-full z-[10] h-full md:h-[300px]">
+
+
+            {/* Grey Background */}
+          <div
                 className={`absolute ${
                   reverseLayout
-                    ? 'right-0 md:right-2/5 md:left-0'
-                    : ' md:right-0'
-                } w-[50%] md:w-[65%] h-[349px] bottom-[300px] md:h-[440px] bg-[#e8e8e0] top-2 md:-top-[84px]`}
+                    ? 'left-0 md:left-0'
+                    : 'right-0 md:right-0'
+                } w-[50%] md:w-[30%] h-[320px] bottom-0 md:top-0 mx-4 md:mt-0 sm:mx-6 md:mx-8 lg:mx-[100px] md:h-full bg-[#e8e8e0]`}
               ></div>
 
               {/* Image */}
               <div
-                className={`absolute mt-12 top-[40px] md:top-0 md:mt-0 md:bottom-[10px] ${
+                className={`absolute mt-12 bottom-0 md:mt-0 ${
                   reverseLayout
-                    ? 'right-0 md:right-1/10 md:left-0'
-                    : 'left-0 md:left-1/10 md:right-0'
-                } w-[95%] md:w-[90%] h-[90%]`}
+                    ? 'left-0 md:left-0'
+                    : 'right-0  md:right-0'
+                } w-[90%] md:w-[35%]  md:top-[15%] mx-4 sm:mx-6 md:mx-8 lg:mx-[100px] h-[250px] md:h-[70%]`}
               >
                 <Image
                   src={imageSrc}
