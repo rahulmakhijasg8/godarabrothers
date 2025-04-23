@@ -12,14 +12,14 @@ export default function Industries() {
   ];
 
   return (
-    <div className="my-12 px-4 sm:px-6 md:px-8 lg:px-[100px] border-t border-b border-[#603812]">
+    <div className="my-8 md:my-12 px-4 sm:px-6 md:px-8 lg:px-[100px] border-t border-b border-[#CFC3B8] md:border-[#603812]">
       <div className="grid grid-cols-1 md:grid-cols-3">
         {industries.map((industry, index) => (
           <div 
             key={index}
             className={`
-              flex flex-col justify-center items-center 
-              ${industry.isHeading ? 'pb-0 pt-8 px-0 md:p-12 -mb-4 md:mb-0' : 'p-8 md:p-12'}
+              flex flex-col items-center 
+              ${industry.isHeading ? 'pb-0 pt-8 px-0 justify-center md:p-12 -mb-4 md:mb-0' : 'relative p-8 md:p-12 md:pt-6'}
               ${industry.isHeading ? 'min-h-[160px] md:min-h-[300px]' : 'min-h-[300px]'}
               ${index !== industries.length - 1 && index % 3 !== 2 ? 'md:border-r' : ''} 
               ${index < 3 ? 'md:border-b' : ''} 
@@ -27,12 +27,12 @@ export default function Industries() {
             `}
           >
             {industry.isHeading ? (
-              <h2 className="font-['Libre_Baskerville'] text-2xl md:text-4xl text-center">
-                <span className="bg-clip-text text-transparent font-bold" 
+              <h2 className="text-2xl md:text-4xl">
+                <span className="bg-clip-text font-['Libre_Baskerville'] font-700 text-transparent font-bold" 
                   style={{
                     backgroundImage: "linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%)"
                   }}>
-                  Industries We<span className="italic"> Operate In</span>
+                  Industries We<span className="font-['Libre_Baskerville'] text-left font-[400] italic"> Operate In</span>
                 </span>
               </h2>
             ) : (

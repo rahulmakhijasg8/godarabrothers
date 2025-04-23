@@ -26,7 +26,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
 }) => {
 
   return (
-    <div className="border-b md:border-b border-[#603812] mt-12">
+    <div className="border-b md:border-b border-[#CFC3B8] md:border-[#603812] mt-8 md:mt-12">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-[100px] py-12 md:py-11.5">
 
         <div className={`flex flex-col ${reverseLayout ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
@@ -58,12 +58,12 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
               )}
             </h3>
 
-            <ul className="space-y-5 text-[#8b7e66]">
+            <ul className="space-y-5 text-[#A08871] font-['Roboto'] font-[400]">
               {listItems.map((item, index) => (
                 <li key={index} className="flex">
                   <span className="text-[#c9a750] mr-3 text-lg">•</span>
                   <div>
-                    <span className="font-medium">{item.title}</span> {item.description}
+                    <span className="font-[500] font-['Roboto'] text-[#603812]">{item.title}</span> {item.description}
                   </div>
                 </li>
               ))}

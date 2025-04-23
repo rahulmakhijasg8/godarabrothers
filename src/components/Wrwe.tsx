@@ -1,18 +1,18 @@
 export default function WhoWeAre() {
   return (
-    <div className="flex flex-col mt-12 md:mt-16 border-t 
+    <div className="flex flex-col mt-8 md:mt-16 border-t 
           border-b 
-          border-[#603812] 
+          border-[#CFC3B8] md:border-[#603812] 
           border-solid px-4 sm:px-6 md:px-8 lg:px-[100px] md:flex-row h-auto md:h-[450px] border-b border-[#603812]">
-      <div className="w-full md:w-[30%] md:border-r border-[#603812] text-center flex justify-center pt-4 md:pt-8">
+      <div className="w-full md:w-[30%] md:border-r border-[#603812] flex justify-center md:px-6 pt-4 md:pt-8">
         <h2 
-          className="font-['Libre_Baskerville'] text-center text-2xl md:text-3xl lg:text-3xl leading-tight text-center bg-clip-text text-transparent"
+          className="font-['Libre_Baskerville'] w-full font-[400] text-center text-2xl md:text-3xl lg:text-3xl leading-tight bg-clip-text text-transparent"
           style={{
             backgroundImage: "linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%)"
           }}
         >
-          <span className="font-bold">Who</span>{" "}
-          <span className="font-bold italic">We Are</span>
+          <span className="font-bold font-['Libre_Baskerville']">Who</span>{" "}
+          <span className="font-bold italic font-['Libre_Baskerville']">We Are</span>
         </h2>
       </div>
 

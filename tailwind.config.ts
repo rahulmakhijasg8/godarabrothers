@@ -11,6 +11,9 @@ const config: Config = {
       colors: {
         'godara-gold': '#c9a750',
       },
+      fontFamily: {
+        'libre-baskerville': ['Libre Baskerville', 'serif'],
+      },
     },
   },
   plugins: [],

@@ -183,7 +183,7 @@ const TabSelector = () => {
 
 
   return (
-    <div className="w-full border-[#CFC3B8] mb-12 border-b md:border-b-0 border-t md:border-[#603812] mt-16">
+    <div className="w-full border-[#CFC3B8] mb-8 md:mb-12 border-b md:border-b-0 border-t md:border-[#603812] mt-16">
       {/* Tabs container */}
       <div className="flex justify-center mb-6 overflow-x-auto sm:overflow-visible">
         <div className="inline-flex gap-10 mt-4 md:gap-5 p-1">

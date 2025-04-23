@@ -9,7 +9,9 @@ interface IndustryCardProps {
 export const IndustryCard: React.FC<IndustryCardProps> = ({ title, image }) => {
   return (
     <>
-      <div className="relative w-full h-56 sm:h-60 md:h-52 lg:h-56">
+      <div className={`absolute w-[60%] hidden md:block md:top-0 md:w-[70%] h-[380px] md:h-[200px] bg-[#EFEBE7] 
+                    bottom-30`}></div>
+      <div className="relative w-full z-[10] h-56 sm:h-60 md:h-52 lg:h-56">
         <Image
           src={image}
           alt={title}

@@ -27,7 +27,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="border-t border-[#603812] pt-12 md:pt-16 pb-12 px-4 sm:px-6 md:px-8 lg:px-[100px]">
+    <footer className="border-t border-b border-[#CFC3B8] md:border-[#603812] pt-12 md:pt-16 pb-12 px-4 sm:px-6 md:px-8 lg:px-[100px]">
       {/* Container with proper padding */}
       <div className="max-w-full mx-auto md:pl-4">
         {/* Mobile heading (appears only on mobile) */}

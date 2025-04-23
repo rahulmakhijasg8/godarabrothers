@@ -1,3 +1,5 @@
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet"></link>
+
 export default function Stats() {
   // Stats data array for DRY code
   const statsData = [
@@ -8,7 +10,7 @@ export default function Stats() {
   ];
 
   return (
-    <div className="my-12 border-t border-b border-[#603812]">
+    <div className="my-8 md:my-12 border-t border-b border-[#CFC3B8] md:border-[#603812]">
       <div className="flex flex-col md:flex-row justify-center items-stretch px-4 sm:px-6 md:px-8 lg:px-[100px]">
         {statsData.map((stat, index) => {
           // Special conditional for border styling
@@ -16,7 +18,7 @@ export default function Stats() {
             index === statsData.length - 1 
               ? '' // No border for the last item
               : index < statsData.length - 1 
-                ? 'border-b md:border-b-0 md:border-r border-[#603812]' 
+                ? 'border-b md:border-b-0 md:border-r border-[#CFC3B8] md:border-[#603812]' 
                 : '';
                 
           return (

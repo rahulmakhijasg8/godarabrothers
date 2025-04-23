@@ -39,7 +39,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="max-w-[1440px] mb-8 border-b mx-auto px-4 sm:px-6 md:px-8 lg:px-[100px] py-16 md:pb-24 md:pt-18">
+    <div className="max-w-[1440px] mb-6 md:mb-8 border-b border-[#CFC3B8] md:border-[#603812] mx-auto px-4 sm:px-6 md:px-8 lg:px-[100px] py-16 md:pb-24 md:pt-18">
       <div className="flex flex-col md:flex-row">
         {/* First column - Image */}
         <div className="w-full md:w-1/2 mb-8 md:mb-0 p-4 md:p-0 flex items-center justify-center">
@@ -56,15 +56,17 @@ export default function ContactPage() {
         
         {/* Second column - Contact Form */}
         <div className="w-full md:w-1/2 px-4 md:px-6">
-          <h2 className="text-2xl md:text-3xl mb-6 md:mb-8 font-['Libre_Baskerville']">
-            <span className="text-[#B18A43]">Contact</span>{" "}
-            <span className="text-[#B18A43] italic">Us</span>
+          <h2 className="text-2xl md:text-3xl mb-6 md:mb-8 bg-clip-text text-transparent"style={{
+            backgroundImage: "linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%)"
+          }}>
+            <span className="font-['Libre_Baskerville'] font-[700]">Contact</span>{" "}
+            <span className="font-['Libre_Baskerville'] font-[400] italic">Us</span>
           </h2>
           
           <form onSubmit={handleSubmit} className="flex flex-col space-y-4 md:space-y-5">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5">
               <div className="flex flex-col">
-                <label className="text-sm text-gray-700 mb-1">Your Name</label>
+                <label className="text-sm font-['Roboto'] font-[400] text-[#603812] mb-1">Your Name</label>
                 <input
                   type="text"
                   name="name"
@@ -77,7 +79,7 @@ export default function ContactPage() {
               </div>
               
               <div className="flex flex-col">
-                <label className="text-sm text-gray-700 mb-1">Your Email</label>
+                <label className="text-sm font-['Roboto'] font-[400] text-[#603812] mb-1">Your Email</label>
                 <input
                   type="email"
                   name="email"
@@ -91,7 +93,7 @@ export default function ContactPage() {
             </div>
             
             <div className="flex flex-col">
-              <label className="text-sm text-gray-700 mb-1">Company</label>
+              <label className="text-sm font-['Roboto'] font-[400] text-[#603812] mb-1">Company</label>
               <input
                 type="text"
                 name="company"
@@ -102,7 +104,7 @@ export default function ContactPage() {
             </div>
             
             <div className="flex flex-col">
-              <label className="text-sm text-gray-700 mb-1">Message</label>
+              <label className="text-sm font-['Roboto'] font-[400] text-[#603812] mb-1">Message</label>
               <textarea
                 name="message"
                 value={formData.message}

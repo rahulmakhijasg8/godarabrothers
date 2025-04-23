@@ -23,7 +23,7 @@ const FeaturedSection: React.FC<FeatureSectionProps> = ({
       >
         <h3 className="font-['Libre_Baskerville'] font-[700] md:pt-[30px] text-[26px] mb-6">
           <span
-            className="bg-clip-text text-transparent"
+            className="font-['Libre_Baskerville'] font-[700] bg-clip-text text-transparent"
             style={{
               backgroundImage:
                 "linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%)",
@@ -41,7 +41,7 @@ const FeaturedSection: React.FC<FeatureSectionProps> = ({
   );
 
   return (
-    <div className="border-t mb-12 border-b border-[#603812] mt-12">
+    <div className="border-t mb-8 md:mb-12 border-b border-[#CFC3B8] md:border-[#603812] mt-8 md:mt-12">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-[100px] pt-6 md:py-0">
         <div className="flex flex-col relative md:flex-row items-stretch">
           {renderContentBlock(leftColumn, false)}

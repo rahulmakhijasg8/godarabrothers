@@ -4,7 +4,7 @@ export default function ImageSection() {
   return (
     <section className="mt-12 md:mt-16 w-full relative overflow-x-hidden">
       {/* Top horizontal rule with proper positioning */}
-      <div className="relative pr-4 sm:pr-6 md:pr-8 lg:pr-[100px] w-screen">
+      <div className="relative hidden md:block pr-4 sm:pr-6 md:pr-8 lg:pr-[100px]">
         <hr className="border-0 w-full h-px bg-[#603812] z-10" />
       </div>
       
@@ -25,7 +25,7 @@ export default function ImageSection() {
       
       {/* Bottom horizontal rule */}
       <div className="relative pl-4 sm:pl-6 md:pl-8 lg:pl-[100px] w-screen">
-      <hr className="border-0 h-px bg-[#603812] w-screen" />
+      <hr className="border-0 h-px bg-[#CFC3B8] md:bg-[#603812] w-screen" />
       </div>
     </section>
   );

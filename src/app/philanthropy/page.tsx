@@ -44,68 +44,70 @@ export default function Home() {
 
   return (
     <div>
-    <div className="border-b border-[#603812]">
+    <div className="border-b border-[#CFC3B8] md:border-[#603812]">
   <section className="text-center px-4 py-12 md:py-24 lg:py-32 max-w-[1440px] mx-auto">
-    <div className="max-w-3xl mx-auto">
+    <div className="max-w-3xl px-4 mx-auto">
       <h1 
-        className="font-['Libre_Baskerville'] text-2xl sm:text-3xl md:text-4xl lg:text-[44px] leading-tight"
+        className="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] leading-tight"
       >
         <span 
-          className="font-bold inline bg-clip-text text-transparent"
+          className="font-['Libre_Baskerville'] font-[700] inline bg-clip-text text-transparent"
           style={{
             backgroundImage: "linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%)"
           }}
         >
           Building a
         </span>{' '}
-        <span className="text-[#603812] font-[400] italic inline">Better Future</span>{' '}
+        <span className="text-[#603812] font-['Libre_Baskerville'] font-[700] italic inline">Better Future,</span>{' '}
         <span 
-          className="font-bold inline bg-clip-text text-transparent"
+          className="font-[700] font-['Libre_Baskerville'] inline bg-clip-text text-transparent"
           style={{
             backgroundImage: "linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%)"
           }}
         >
-          , One Contribution at a Time
+           One Contribution at a Time
         </span>
       </h1>
       
-      <p className="text-[#8b7e66] text-base sm:text-lg md:text-xl mt-6 md:mt-10 mb-6">
+      <p className="text-[#8b7e66] font-['Roboto'] text-base sm:text-lg md:text-xl mt-6 md:mt-10 mb-6">
         Godara Brothers are dedicated to education, environmental sustainability, and community welfare, transforming countless lives through impactful initiatives.
       </p>
     </div>
   </section>
 </div>
-<div className=" border-t mt-12 border-[#603812]">
+<div className=" border-t mt-8 md:mt-12 border-[#CFC3B8] md:border-[#603812]">
   <section className="text-center px-4 py-12 md:py-24 lg:py-32 max-w-[1440px] mx-auto">
     <div className="max-w-3xl mx-auto">
       <h1 
-        className="font-['Libre_Baskerville'] text-2xl sm:text-3xl md:text-4xl lg:text-[44px] leading-tight"
+        className="text-2xl w-full sm:text-3xl md:text-4xl lg:text-[44px]"
       >
         <span 
-          className="font-bold inline bg-clip-text text-transparent"
+          className="font-[700] w-full font-['Libre_Baskerville'] bg-clip-text text-transparent"
           style={{
             backgroundImage: "linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%)"
           }}
         >
-          About Our <span className="italic">Philanthropy</span>
-        </span>
+          About Our</span> <span style={{
+            backgroundImage: "linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%)"
+          }} className="italic bg-clip-text text-transparent font-[400] font-['Libre_Baskerville']">Philanthropy</span>
+       
       </h1>
       
-      <p className="text-[#A08871] italic text-base sm:text-lg md:text-xl mt-6 md:mt-10 mb-6 max-w-[92%] sm:max-w-[95%] md:w-full md:max-w-none px-3 sm:px-0 mx-auto">
+      <p className="text-[#A08871] font-['Roboto'] italic text-base sm:text-lg md:text-xl mt-6 md:mt-10 mb-6 max-w-[92%] sm:max-w-[95%] md:w-full md:max-w-none px-3 sm:px-0 mx-auto">
         From humble beginnings to a legacy of giving, Nawal Kishore Godara has made a lasting impact through education, environmental conservation, and community development. His initiatives uplift lives and empower future generations.
       </p>
     </div>
   </section>
 </div>
-<div className="my-6 border-b border-[#603812]">
-      <div className="flex flex-col border-t md:flex-row justify-center items-stretch mx-4 sm:mx-6 md:mx-8 lg:mx-[100px]">
+<div className="my-6 border-b border-[#CFC3B8] md:border-[#603812]">
+      <div className="flex flex-col border-t border-[#CFC3B8] md:border-[#603812] md:flex-row justify-center items-stretch mx-4 sm:mx-6 md:mx-8 lg:mx-[100px]">
         {statsData.map((stat, index) => {
           // Special conditional for border styling
           const borderClasses = 
             index === statsData.length - 1 
               ? '' // No border for the last item
               : index < statsData.length - 1 
-                ? 'border-b md:border-b-0 md:border-r border-[#603812]' 
+                ? 'border-b md:border-b-0 md:border-r border-[#CFC3B8] md:border-[#603812]' 
                 : '';
                 
           return (
@@ -131,50 +133,50 @@ export default function Home() {
         })}
       </div>
     </div>
-    <div className="border-b border-t border-[#603812] mt-6 md:mt-12">
+    <div className="border-b border-t border-[#CFC3B8] md:border-[#603812] mt-6 md:mt-12">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-[100px] py-12 md:py-11.5">
-        <h2 className="font-['Libre_Baskerville'] text-center text-2xl sm:text-3xl md:text-3xl mb-10 md:mb-30">
-          <span className="font-bold inline bg-clip-text text-transparent" style={{
+        <h2 className="text-center text-2xl sm:text-3xl md:text-3xl mb-10 md:mb-30">
+          <span className="font-['Libre_Baskerville'] font-[700] inline bg-clip-text text-transparent" style={{
             backgroundImage: "linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%)"
           }}>Key</span>{" "}
-          <span className="text-[#603812] italic font-normal">Philanthropic Initiatives</span>
+          <span className="text-[#603812] font-['Libre_Baskerville'] font-[400] italic font-normal">Philanthropic Initiatives</span>
         </h2>
 
         <div className="flex flex-col md:flex-row">
           {/* Left content section with increased padding */}
           <div className="w-full md:w-3/5 md:pr-12 mb-12 md:mb-0 px-4 sm:px-6 md:px-8">
-            <h3 className="bg-clip-text text-transparent underline font-['Libre_Baskerville'] text-xl mb-6"style={{
+            <h3 className="bg-clip-text text-transparent underline text-xl mb-6"style={{
             backgroundImage: "linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%)"
-          }}><Link href='https://www.connectedtoindia.com/nri-in-rajasthan-takes-forward-modis-swachch-bharat-campaign/#google_vignette' target="_blank" passHref >
+          }}><Link className="font-['Libre_Baskerville'] font-[700]" href='https://www.connectedtoindia.com/nri-in-rajasthan-takes-forward-modis-swachch-bharat-campaign/#google_vignette' target="_blank" passHref >
               Education & Skill Development</Link>
             </h3>
             
             <ul className="space-y-5 text-[#8b7e66]">
               <li className="flex">
-                <span className="text-[#c9a750] mr-3 text-lg">•</span>
+                <span className="text-[#A08871] font-[400] mr-3 text-lg">•</span>
                 <div>
-                  <span className="font-medium">Saraswati Vidya Mandir:</span> Established in 2015, providing education to 1,800+ students, with 25% receiving free education.
+                  <span className="font-[500] font-['Roboto'] text-[#603812]">Saraswati Vidya Mandir:</span> Established in 2015, providing education to 1,800+ students, with 25% receiving free education.
                 </div>
               </li>
               
               <li className="flex">
-                <span className="text-[#c9a750] mr-3 text-lg">•</span>
+                <span className="text-[#A08871] font-[400] mr-3 text-lg">•</span>
                 <div>
-                  <span className="font-medium">Kisan Boarding House:</span> A dedicated institution in Barmer for student development, supported by a ₹1.25 crore donation.
+                  <span className="font-[500] font-['Roboto'] text-[#603812]">Kisan Boarding House:</span> A dedicated institution in Barmer for student development, supported by a ₹1.25 crore donation.
                 </div>
               </li>
               
               <li className="flex">
-                <span className="text-[#c9a750] mr-3 text-lg">•</span>
+                <span className="text-[#A08871] font-[400] mr-3 text-lg">•</span>
                 <div>
-                  <span className="font-medium">Women&apos;s Education Support:</span> A ₹1.05 crore extension to Kisan Balika Hostel, ensuring rural girls have access to education.
+                  <span className="font-[500] font-['Roboto'] text-[#603812]">Women&apos;s Education Support:</span> A ₹1.05 crore extension to Kisan Balika Hostel, ensuring rural girls have access to education.
                 </div>
               </li>
               
               <li className="flex">
-                <span className="text-[#c9a750] mr-3 text-lg">•</span>
+                <span className="text-[#A08871] font-[400] mr-3 text-lg">•</span>
                 <div>
-                  <span className="font-medium">Scholarships & Libraries:</span> Funding libraries, coaching centers, and competitive exam preparation resources.
+                  <span className="font-[500] font-['Roboto'] text-[#603812]">Scholarships & Libraries:</span> Funding libraries, coaching centers, and competitive exam preparation resources.
                 </div>
               </li>
             </ul>
@@ -205,7 +207,7 @@ export default function Home() {
     sectionTitle="Environmental Sustainability" sectionTitleLink="https://www.connectedtoindia.com/nri-in-rajasthan-takes-forward-modis-swachch-bharat-campaign/#google_vignette" imageAlt="environmental" reverseLayout={true} />
     <FeatureSection listItems={communityItems} imageSrc="/community.png" 
     sectionTitle="Community Development" sectionTitleLink="https://www.jatland.com/home/Nawal_Kishor_Godara?utm_source=chatgpt.com" imageAlt="community dev" reverseLayout={false} />
-    <hr className="mt-12 border-t md:hidden border-black-200" />
+    <hr className="mt-12 border-t md:hidden border-[#CFC3B8] md:border-[#603812]" />
     <FeaturedSection mainTitle="Charitable Donations" leftColumn={{
           sectionTitle: "Major Contributions",
           listItems: [
@@ -251,7 +253,8 @@ export default function Home() {
             }
           ]
         }} />
-    <div className=" border-t mt-6 md:hidden border-[#603812]">
+      <hr className="mb-12 border-t hidden md:block border-[#CFC3B8] md:border-[#603812]" />
+    <div className=" border-t mt-6 md:hidden border-[#CFC3B8] md:border-[#603812]">
   <section className="text-center px-4 py-12 md:py-24 lg:py-32 max-w-[1440px] mx-auto">
     <div className="max-w-3xl mx-auto">
       <h1 
@@ -290,6 +293,7 @@ export default function Home() {
     </div>
   </section>
 </div>
+<hr className="mb-8 border-t block md:hidden border-[#CFC3B8] md:border-[#603812]" />
     </div>
   );
 }

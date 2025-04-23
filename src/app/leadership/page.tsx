@@ -7,33 +7,35 @@ export default function Home() {
     <section className="text-center border-[#CFC3B8] md:border-[#603812] border-b-[1px] px-4 py-12 md:py-24 lg:py-32">
       <div className="max-w-3xl mx-auto">
         <h1 
-          className="font-['Libre_Baskerville'] text-2xl sm:text-3xl md:text-4xl lg:text-[44px] leading-tight"
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] leading-tight"
         >
           <span 
-            className="font-bold block mb-2 md:mb-0 md:inline bg-clip-text text-transparent"
+            className="font-['Libre_Baskerville'] inline font-[700] block mb-2 md:mb-0 md:inline bg-clip-text text-transparent"
             style={{
               backgroundImage: "linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%)"
             }}
           >
             Leadership
           </span>
-          <span className="hidden md:inline font-normal mx-2">—</span>
-          <span className="font-normal italic block mt-1 md:mt-0 md:inline">Meet Our Visionaries</span>
+          <span className="inline font-normal bg-clip-text text-transparent mx-2" style={{
+              backgroundImage: "linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%)"
+            }}>—</span>
+          <span className="font-[400] inline font-['Libre_Baskerville'] text-[#603812] italic block mt-1 md:mt-0 md:inline">Meet Our Visionaries</span>
         </h1>
         
-        <p className="text-[#8b7e66] text-base sm:text-lg md:text-xl mt-4 md:mt-6 mb-8">
+        <p className="text-[#A08871] font-['Roboto'] text-base sm:text-lg md:text-xl mt-4 md:mt-6 mb-8">
         At Godara Brothers, our leadership embodies a legacy of excellence, strategic growth, and unwavering commitment to success. Meet the visionaries who have built a diversified business empire spanning multiple industries and countries.
         </p>
       </div>
     </section>
-    <div className="mt-6 border-t border-b md:mt-24">
+    <div className="mt-6 border-t border-[#CFC3B8] md:border-[#603812] md:mt-12">
         <div className="max-w-[1440px] relative mx-4 sm:mx-6 md:mx-8 lg:mx-[100px] py-12 md:py-11.5">
           <div className='flex flex-col md:flex-row mx-auto'>
             {/* Content section */}
             <div className={`w-full md:mt[100px] md:w-[65%] pl-4 pt-[30px] pb-[60px] md:pt-[160px] md:pb-[90px] `}>
-              <h3 className="font-['Libre_Baskerville'] text-[24px] mb-1 text-left">
+              <h3 className="text-[24px] mb-1 text-left">
                   <span
-                    className="bg-clip-text text-transparent"
+                    className="font-['Libre_Baskerville'] font-[700] bg-clip-text text-transparent"
                     style={{
                       backgroundImage:
                         "linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%)",
@@ -47,11 +49,11 @@ export default function Home() {
                       backgroundImage:
                         "linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%)",
                     }} 
-              className="font-['Roboto'] bg-clip-text text-transparent text-[16px] md:text-[18px] font-[400] leading-[28px] capitalize mb-2">
-                Founder & Visionary Leader
+              className="bg-clip-text text-transparent text-[16px] md:text-[18px] font-[400] leading-[28px] capitalize mb-2">
+               <span className="font-['Libre_Baskerville'] font-[400]">Founder & Visionary Leader</span>
               </h4>
 
-              <p className="text-[#8b7e66] font-['Roboto'] pr-[10px] md:pr-[90px] mb-[120px] font-[300] text-[14px] italic leading-[24px]">
+              <p className="text-[#A08871] font-['Roboto'] pr-[10px] md:pr-[90px] mb-[120px] font-[300] text-[14px] italic leading-[24px]">
                 With a strong background in international business and strategic investments, Mr. Nawal Kishore has been instrumental in transforming Godara Brothers into a diversified conglomerate. His leadership has steered multiple businesses toward sustained growth and industry leadership.
               </p>
             </div>
@@ -82,25 +84,25 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col mt-12 md:mt-16 md:border-t
+      <div className="flex flex-col mt-12 md:mt-0 md:border-t
           border-b 
-          border-[#603812] 
+          border-[#CFC3B8] md:border-[#603812]
           border-solid px-4 sm:px-6 md:px-8 lg:px-[100px] md:flex-row h-auto md:h-[350px]">
       {/* First column - Title */}
-      <div className="w-full md:w-1/4 md:border-r border-[#603812] border-b md:border-b-0 text-center flex justify-center pb-6 pt-1 md:pt-16">
+      <div className="w-full md:w-1/4 md:border-r border-[#CFC3B8] md:border-[#603812] border-b md:border-b-0 text-center flex justify-center pb-6 pt-1 md:pt-16">
         <h2 
-          className="font-['Libre_Baskerville'] text-center md:text-left text-2xl md:text-3xl lg:text-3xl leading-tight text-center bg-clip-text text-transparent"
+          className="text-center md:text-left text-2xl md:text-3xl lg:text-3xl leading-tight text-center bg-clip-text text-transparent"
           style={{
             backgroundImage: "linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%)"
           }}
         >
-          <span className="font-bold">Key</span>{" "}<br className="hidden md:block"/>
-          <span className="italic">Achievements</span>
+          <span className="font-['Libre_Baskerville'] font-[700]">Key</span>{" "}<br className="hidden md:block"/>
+          <span className="italic font-['Libre_Baskerville'] font-[400]">Achievements</span>
         </h2>
       </div>
 
       {/* Second column */}
-      <div className="w-full md:w-1/4 px-[100px] border-b md:border-b-0 md:px-8 pt-8 pb-6 text-center md:pt-[60px] md:border-r border-[#603812] flex items-center">
+      <div className="w-full md:w-1/4 px-[100px] border-b md:border-b-0 md:px-8 pt-8 pb-6 text-center md:pt-[60px] md:border-r border-[#CFC3B8] md:border-[#603812] flex items-center">
       <p
         className="font-['Roboto'] text-base md:text-lg text-[#A08871] font-normal"
       >
@@ -117,7 +119,7 @@ export default function Home() {
       </div>
 
       {/* Third column */}
-      <div className="w-full md:w-1/4 px-[100px] md:border-b-0 md:px-8 pt-8 pb-6 border-b text-center md:pt-[60px] md:border-r border-[#603812] flex items-center">
+      <div className="w-full md:w-1/4 px-[100px] md:border-b-0 md:px-8 pt-8 pb-6 border-b text-center md:pt-[60px] md:border-r border-[#CFC3B8] md:border-[#603812] flex items-center">
       <p
         className="font-['Roboto'] text-base md:text-lg text-[#A08871] font-normal"
       >
@@ -134,7 +136,7 @@ export default function Home() {
       </div>
 
       {/* Fourth column */}
-      <div className="w-full md:w-1/4 px-[100px] md:border-b-0 md:px-8 pt-8 pb-6 text-center md:pt-[60px] md:border-r border-[#603812] flex items-center">
+      <div className="w-full md:w-1/4 px-[100px] md:border-b-0 md:px-8 pt-8 pb-6 text-center md:pt-[60px] md:border-r border-[#CFC3B8] md:border-[#603812] flex items-center">
       <p
         className="font-['Roboto'] text-base md:text-lg text-[#A08871] font-normal"
       >
@@ -150,36 +152,36 @@ export default function Home() {
       </p>
       </div>
     </div>
-    <div className=" border-b border-[#603812]">
+    <div className=" border-b border-[#CFC3B8] md:border-[#603812]">
   <section className="text-center px-8 py-12 md:py-24 lg:py-32 max-w-[1440px] ">
     <div className="md:px-55 mx-auto">
       <h1 
-        className="font-['Libre_Baskerville'] text-2xl sm:text-3xl md:text-3xl lg:text-[36px] leading-tight"
+        className="text-2xl sm:text-3xl md:text-3xl lg:text-[36px] leading-tight"
       >
         <span 
-          className="font-bold inline bg-clip-text text-transparent"
+          className="font-['Libre_Baskerville'] font-[400] inline bg-clip-text text-transparent"
           style={{
             backgroundImage: "linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%)"
           }}
         >
-          Business <span className="italic">Philosophy</span>
+          Business <span className="italic font-['Libre_Baskerville'] font-[400]">Philosophy</span>
         </span>
       </h1>
       
-      <p className="text-[#A08871] w-full text-center italic text-base sm:text-lg md:text-xl mt-6 md:mt-10 mb-6 text-center">
+      <p className="text-[#A08871] font-['Roboto'] w-full text-center italic text-base sm:text-lg md:text-xl mt-6 md:mt-10 mb-6 text-center">
       &quot;Success is built on strong partnerships, innovative thinking, and a commitment to excellence. At Godara Brothers, we believe in creating value that lasts generations.&quot;
       </p>
     </div>
   </section>
 </div>
-      <div className="mt-6 border-t border-b md:mt-24">
+      <div className="mt-6 border-t border-[#CFC3B8] md:border-[#603812] border-b md:mt-12">
         <div className="max-w-[1440px] relative mx-4 sm:mx-6 md:mx-8 lg:mx-[100px] py-12 md:pt-11.5 md:pb-8">
           <div className='flex flex-col md:flex-row mx-auto'>
             {/* Content section */}
             <div className={`w-full md:mt[100px] md:hidden md:w-[65%] pl-[10px] pt-[1px] pr-[10px] pb-[140px] md:pt-[80px] md:pb-[120px] `}>
-              <h3 className="font-['Libre_Baskerville'] text-[24px] mb-1">
+              <h3 className="text-[24px] mb-1">
                   <span
-                    className="bg-clip-text text-transparent"
+                    className="font-['Libre_Baskerville'] font-[700] bg-clip-text text-transparent"
                     style={{
                       backgroundImage:
                         "linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%)",
@@ -193,11 +195,11 @@ export default function Home() {
                       backgroundImage:
                         "linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%)",
                     }} 
-              className="font-['Roboto'] bg-clip-text text-transparent text-[16px] md:text-[18px] font-[400] leading-[28px] capitalize mb-2">
-                Founder & Business Leader
+              className="bg-clip-text text-transparent text-[16px] md:text-[18px] font-[400] leading-[28px] capitalize mb-2">
+                <span className="font-['Libre_Baskerville'] font-[400]">Founder & Business Leader</span>
               </h4>
 
-              <p className="text-[#8b7e66] font-['Roboto'] pr-[10px]  mb-[0px] font-[300] text-[14px] italic leading-[24px]">
+              <p className="text-[#A08871] font-['Roboto'] pr-[10px]  mb-[0px] font-[300] text-[14px] italic leading-[24px]">
               A dynamic entrepreneur with decades of experience, Mr. Teeku Singh Choudhary has been a driving force in expanding the operations of Godara Brothers across diverse industries. His expertise in business operations, strategic expansion, and financial management has played a crucial role in scaling the company’s global footprint.
               </p>
             </div>
@@ -228,7 +230,7 @@ export default function Home() {
             <div className={`w-full md:mt[100px] hidden md:block md:w-[65%] pl-[80px] pt-[1px] pr-[10px] pb-[140px] md:pt-[80px] md:pb-[120px] `}>
               <h3 className="font-['Libre_Baskerville'] text-[24px] mb-1">
                   <span
-                    className="bg-clip-text text-transparent"
+                    className="font-['Libre_Baskerville'] font-[700] bg-clip-text text-transparent"
                     style={{
                       backgroundImage:
                         "linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%)",
@@ -242,11 +244,11 @@ export default function Home() {
                       backgroundImage:
                         "linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%)",
                     }} 
-              className="font-['Roboto'] bg-clip-text text-transparent text-[16px] md:text-[18px] font-[400] leading-[28px] capitalize mb-2">
-                Founder & Business Leader
+              className="bg-clip-text text-transparent text-[16px] md:text-[18px] font-[400] leading-[28px] capitalize mb-2">
+                <span className="font-['Libre_Baskerville'] font-[400]">Founder & Business Leader</span>
               </h4>
 
-              <p className="text-[#8b7e66] font-['Roboto'] pr-[10px]  mb-[0px] font-[300] text-[14px] italic leading-[24px]">
+              <p className="text-[#A08871] font-['Roboto'] pr-[10px]  mb-[0px] font-[300] text-[14px] italic leading-[24px]">
               A dynamic entrepreneur with decades of experience, Mr. Teeku Singh Choudhary has been a driving force in expanding the operations of Godara Brothers across diverse industries. His expertise in business operations, strategic expansion, and financial management has played a crucial role in scaling the company’s global footprint.
               </p>
             </div>
@@ -255,23 +257,23 @@ export default function Home() {
       </div>
       <div className="flex flex-col mt-12 md:mt-0
           border-b
-          border-[#603812] 
+          border-[#CFC3B8] md:border-[#603812]
           border-solid px-4 sm:px-6 md:px-8 lg:px-[100px] md:flex-row h-auto md:h-[350px]">
       {/* First column - Title */}
-      <div className="w-full md:w-1/4 md:border-r border-[#603812] border-b md:border-b-0 text-center flex justify-center pb-6 pt-1 md:pt-16">
+      <div className="w-full md:w-1/4 md:border-r border-[#CFC3B8] md:border-[#603812] border-b md:border-b-0 text-center flex justify-center pb-6 pt-1 md:pt-16">
         <h2 
           className="font-['Libre_Baskerville'] text-center md:text-left text-2xl md:text-3xl lg:text-3xl leading-tight text-center bg-clip-text text-transparent"
           style={{
             backgroundImage: "linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%)"
           }}
         >
-          <span className="font-bold">Key</span>{" "}<br className="hidden md:block"/>
-          <span className="italic">Achievements</span>
+          <span className="font-['Libre_Baskerville'] font-[700]">Key</span>{" "}<br className="hidden md:block"/>
+          <span className="italic font-['Libre_Baskerville'] font-[400]">Achievements</span>
         </h2>
       </div>
 
       {/* Second column */}
-      <div className="w-full md:w-1/4 px-[100px] border-b md:border-b-0 md:px-8 pt-8 pb-6 text-center md:pt-[60px] md:border-r border-[#603812] flex items-center">
+      <div className="w-full md:w-1/4 px-[100px] border-b md:border-b-0 md:px-8 pt-8 pb-6 text-center md:pt-[60px] md:border-r border-[#CFC3B8] md:border-[#603812] flex items-center">
       <p
         className="font-['Roboto'] text-base md:text-lg text-[#A08871] font-normal"
       >
@@ -289,7 +291,7 @@ export default function Home() {
       </div>
 
       {/* Third column */}
-      <div className="w-full md:w-1/4 px-[100px] md:border-b-0 md:px-8 pt-8 pb-6 border-b text-center md:pt-[60px] md:border-r border-[#603812] flex items-center">
+      <div className="w-full md:w-1/4 px-[100px] md:border-b-0 md:px-8 pt-8 pb-6 border-b text-center md:pt-[60px] md:border-r border-[#CFC3B8] md:border-[#603812] flex items-center">
       <p
         className="font-['Roboto'] text-base md:text-lg text-[#A08871] font-normal"
       >
@@ -307,7 +309,7 @@ export default function Home() {
       </div>
 
       {/* Fourth column */}
-      <div className="w-full md:w-1/4 px-[100px] md:border-b-0 md:px-8 pt-8 pb-6 text-center md:pt-[60px] md:border-r border-[#603812] flex items-center">
+      <div className="w-full md:w-1/4 px-[100px] md:border-b-0 md:px-8 pt-8 pb-6 text-center md:pt-[60px] md:border-r border-[#CFC3B8] md:border-[#603812] flex items-center">
       <p
         className="font-['Roboto'] text-base md:text-lg text-[#A08871] font-normal"
       >
@@ -325,14 +327,14 @@ export default function Home() {
       
 
     </div>
-    <div className=" border-b border-[#603812]">
+    <div className=" border-b border-[#CFC3B8] md:border-[#603812]">
   <section className="text-center px-8 py-12 md:py-24 lg:py-32 max-w-[1440px] ">
     <div className="md:px-55 mx-auto">
       <h1 
-        className="font-['Libre_Baskerville'] text-2xl sm:text-3xl md:text-3xl lg:text-[36px] leading-tight"
+        className="text-2xl sm:text-3xl md:text-3xl lg:text-[36px] leading-tight"
       >
         <span 
-          className="font-bold inline bg-clip-text text-transparent"
+          className="font-['Libre_Baskerville'] font-[700] inline bg-clip-text text-transparent"
           style={{
             backgroundImage: "linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%)"
           }}
@@ -341,7 +343,7 @@ export default function Home() {
         </span>
       </h1>
       
-      <p className="text-[#A08871] w-full text-center italic text-base sm:text-lg md:text-xl mt-6 md:mt-10 mb-6 text-center">
+      <p className="text-[#A08871] font-['Roboto'] w-full text-center italic text-base sm:text-lg md:text-xl mt-6 md:mt-10 mb-6 text-center">
       &quot;We believe in building businesses that not only thrive but also contribute to economic growth and social progress. Leadership is about vision, execution, and resilience.&quot;
       </p>
     </div>

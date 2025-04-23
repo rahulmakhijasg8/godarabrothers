@@ -75,7 +75,7 @@ export default function Navbar() {
         }
       `}</style>
 
-      <div className="mt-6 sm:mt-8 md:mt-10 border-t border-b border-[#603812] border-solid">
+      <div className="mt-6 sm:mt-8 md:mt-10 border-t border-b border-[#CFC3B8] md:border-[#603812] border-solid">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-[100px]">
           <nav 
             className={`

@@ -29,11 +29,11 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
           <div className={`flex flex-col mx-auto ${reverseLayout ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
             {/* Content section */}
             <div className={`w-full md:w-[65%] pl-4 ${reverseLayout ? 'md:pl-12' : 'md:pl-6'} mb-12 pb-6 md:mb-0 sm:px-6`}>
-              <h3 className="font-['Libre_Baskerville'] text-[24px] mb-6 text-left">
+              <h3 className="text-[24px] mb-6 text-left">
                 {sectionTitleLink ? (
                   <Link href={sectionTitleLink} target="_blank" passHref>
                     <span
-                      className="bg-clip-text text-transparent cursor-pointer"
+                      className="font-['Libre_Baskerville'] font-[700] bg-clip-text text-transparent cursor-pointer"
                       style={{
                         backgroundImage:
                           "linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%)",
@@ -44,7 +44,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
                   </Link>
                 ) : (
                   <span
-                    className="bg-clip-text text-transparent"
+                    className="font-['Libre_Baskerville'] font-[700] bg-clip-text text-transparent"
                     style={{
                       backgroundImage:
                         "linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%)",
@@ -100,7 +100,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
       </div>
       
       {/* Full width border - separate from the content */}
-      <div className="w-full h-[1px] bg-[#603812]"></div>
+      <div className="w-full h-[1px] bg-[#CFC3B8] md:bg-[#603812]"></div>
     </>
   );
 };
