@@ -33,6 +33,13 @@ export default function Companies() {
       height: 70,
       extraMargin: true // Add a flag for extra margin
     },
+    { 
+      src: "/lightech-logo-v1-Photoroom.png", 
+      alt: "Lightech", 
+      width: 170, 
+      height: 70,
+      extraMargin: true // Add a flag for extra margin
+    }
   ];
 
   // Create multiple sets of logos to ensure smooth scrolling

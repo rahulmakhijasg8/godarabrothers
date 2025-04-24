@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState } from 'react';
-import Image from 'next/image';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -41,15 +40,17 @@ export default function ContactPage() {
   return (
     <div className="max-w-[1440px] mb-6 md:mb-8 border-b border-[#CFC3B8] md:border-[#603812] mx-auto px-4 sm:px-6 md:px-8 lg:px-[100px] py-16 md:pb-24 md:pt-18">
       <div className="flex flex-col md:flex-row">
-        {/* First column - Image */}
+        {/* First column - iframe (replacing Image) */}
         <div className="w-full md:w-1/2 mb-8 md:mb-0 p-4 md:p-0 flex items-center justify-center">
-          <div className="relative w-full h-[300px] md:h-[430px]">
-            <Image
-              src="/Basemap image.png" // Replace with your image path
-              alt="Contact Us"
-              fill
-              className="object-cover rounded-md"
-              priority
+          <div className="relative w-full h-[400px] md:h-[430px]">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1806.848694365125!2d55.07919995!3d24.9651667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f0d9082ca1bd5%3A0x5b2b8f41ba57a008!2sJAFZA%20ONE!5e0!3m2!1sen!2sus!4v1714025887123!5m2!1sen!2sus"
+              title="JAFZA ONE Location"
+              className="w-full h-full rounded-md"
+              style={{ border: 'none' }}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
             />
           </div>
         </div>

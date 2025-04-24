@@ -160,7 +160,7 @@ const TabSelector = () => {
       sectionTitleLink: "https://lightechav.com/about-us/profile/",
       subtitle: "Event management",
       description: "LighTech Audio Visual Rental (LighTech), based in Dubai, specializes in providing high-quality audio, video, and lighting equipment for corporate, entertainment, and social events. Offering top-tier event production services, they cater to product launches, conferences, concerts, and private parties with industry-standard gear from renowned brands like Yamaha, Shure, and d&b audiotechnik. Whether you're hosting a corporate conference, wedding, or concert, LighTech ensures a seamless and memorable experience with their professional service and reliable equipment rental solutions.",
-      imageSrc: "/dubai-3.svg",
+      imageSrc: "/lightech-photo.jpeg",
       imageAlt: "Lightech audio visual rental",
     },
     {

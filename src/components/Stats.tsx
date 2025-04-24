@@ -1,5 +1,3 @@
-<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet"></link>
-
 export default function Stats() {
   // Stats data array for DRY code
   const statsData = [
