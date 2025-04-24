@@ -11,8 +11,8 @@ export default function WhoWeAre() {
             backgroundImage: "linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%)"
           }}
         >
-          <span className="font-bold font-['Libre_Baskerville']">Who</span>{" "}
-          <span className="font-bold italic font-['Libre_Baskerville']">We Are</span>
+          <span className="font-[700] font-['Libre_Baskerville']">Who</span>{" "}
+          <span className="font-[400] italic font-['Libre_Baskerville']">We Are</span>
         </h2>
       </div>
 

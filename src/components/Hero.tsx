@@ -1,5 +1,12 @@
 // src/components/Hero.tsx
 import Link from "next/link";
+import localFont from 'next/font/local'
+
+
+const swiss721 = localFont({
+  src: '../fonts/Swiss 721 Condensed Bold.otf', // Path relative to your component
+  // If your component is in src/components and the font is in src/fonts
+})
 
 export default function Hero() {
   return (
@@ -9,13 +16,13 @@ export default function Hero() {
           className="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] leading-tight"
         >
           <span 
-            className="font-[700] font-['Libre_Baskerville'] block mb-2 md:mb-0 md:inline bg-clip-text text-transparent"
-            style={{
-              backgroundImage: "linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%)"
-            }}
-          >
-            Godara Brothers
-          </span>
+  className={`${swiss721.className} text-[#542F0D] block mb-2 md:mb-0 md:inline`}
+  // style={{
+  //   backgroundImage: "linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%)"
+  // }}
+>
+  GODARA BROTHERS
+</span>
           <span className="hidden text-[#603812] font-['Libre_Baskerville'] font-[400] md:inline font-normal mx-2">—</span>
           <span className="font-normal text-[#603812] font-['Libre_Baskerville'] font-[400] italic block mt-1 md:mt-0 md:inline">A Legacy of Excellence & Innovation</span>
         </h1>
