@@ -1,6 +1,4 @@
-import Image from "next/image";
 import FeatureSection from "@/components/FeatureSection";
-import Link from "next/link";
 import FeaturedSection from "@/components/Differentiation";
 
 export default function Home() {
@@ -93,37 +91,6 @@ export default function Home() {
       reverseLayout: false
     }
   ];
-
-  const environmentalItems = [
-    {
-      title: "Reservoir Cleaning Initiative:",
-      description: " In 2018, a massive cleanup removed 35,000 metric tons of garbage from Kareli Nadi, restoring water access and promoting sustainability."
-    },
-    {
-      title: "Contributions to Swachh Bharat Abhiyan:",
-      description: " A ₹20 lakh donation to national cleanliness campaigns."
-    }
-  ];
-
-  const communityItems = [
-    {
-      title: "Panchayat Infrastructure:",
-      description: "  In 2021, a state-of-the-art ₹1.25 crore panchayat building was constructed."
-    },
-    {
-      title: "Financial Support for Development:",
-      description: " Donations exceeding ₹1.65 crore to enhance infrastructure across Bhinyad, Kanasar, and Undu villages."
-    },
-    {
-      title: "Prime Minister's Relief Fund:",
-      description: " A ₹1 crore contribution towards COVID-19 relief efforts nationwide."
-    },
-    {
-      title: "Employee Welfare Initiative:",
-      description: " A ₹10 lakh financial support provided to the family of an employee who lost his life in a road accident."
-    }
-  ];
-
 
   return (
     <div>
