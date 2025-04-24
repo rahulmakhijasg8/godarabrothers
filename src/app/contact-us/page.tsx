@@ -118,13 +118,13 @@ export default function ContactPage() {
             </div>
             
             <div className="mt-2">
-              <button
-                type="submit"
-                className="px-6 py-2 border border-[#B18A43] text-[#B18A43] md:rounded-full hover:bg-[#B18A43] hover:text-white transition-colors"
-              >
-                Submit
-              </button>
-            </div>
+  <button
+    type="submit"
+    className="px-6 py-2 border border-[#B18A43] text-[#B18A43] md:rounded-full hover:bg-[#B18A43] hover:text-white hover:scale-105 transition-all duration-300 ease-in-out"
+  >
+    Submit
+  </button>
+</div>
           </form>
         </div>
       </div>

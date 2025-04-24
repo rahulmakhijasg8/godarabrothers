@@ -16,7 +16,7 @@ export const IndustryCard: React.FC<IndustryCardProps> = ({ title, image }) => {
           src={image}
           alt={title}
           fill
-          className="object-contain"
+          className="object-contain transition-all duration-300 ease-out hover:scale-105 hover:shadow-md"
           sizes="(max-width: 768px) 90vw, (max-width: 1200px) 30vw, 323px"
           priority
         />

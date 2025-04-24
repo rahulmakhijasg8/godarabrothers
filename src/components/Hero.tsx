@@ -32,11 +32,12 @@ export default function Hero() {
         </p>
         
         <Link 
-          href="/group-companies" target="_blank"
-          className="font-['Roboto'] font-[300] inline-block px-8 py-3 mt-4 md:mt-8 border border-[#CFC3B8] text-[#603812] rounded-full hover:bg-gray-50 transition-colors no-underline text-sm sm:text-base"
-        >
-          Explore Our Companies
-        </Link>
+  href="/group-companies" 
+  target="_blank"
+  className="font-['Roboto'] font-[300] inline-block px-8 py-3 mt-4 md:mt-8 border border-[#CFC3B8] text-[#603812] rounded-full hover:bg-gray-200 hover:scale-105 transition-all duration-300 ease-in-out no-underline text-sm sm:text-base"
+>
+  Explore Our Companies
+</Link>
       </div>
     </section>
   );
