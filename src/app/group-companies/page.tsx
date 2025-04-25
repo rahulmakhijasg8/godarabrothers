@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import CompanyComponent from '@/components/CompanyComponent';
+import ScrollReveal from '@/components/ScrollReveal';
 
 const TabSelector = () => {
   const [selectedId, setSelectedId] = useState<'india' | 'africa' | 'dubai'>('dubai');
@@ -185,6 +186,7 @@ const TabSelector = () => {
   return (
     <div className="w-full border-[#CFC3B8] mb-8 md:mb-12 border-b md:border-b-0 border-t md:border-[#603812] mt-16">
       {/* Tabs container */}
+      <ScrollReveal>
       <div className="flex justify-center mb-6 overflow-x-auto sm:overflow-visible">
         <div className="inline-flex gap-10 mt-4 md:gap-5 p-1">
         <button
@@ -222,9 +224,11 @@ const TabSelector = () => {
           </button>
         </div>
       </div>
+      </ScrollReveal>
 
       {/* Content area */}
       {featuresData[selectedId!].map((feature, index) => (
+            <ScrollReveal key={index} delay={index * 0.1}>
             <CompanyComponent
               key={index}
               sectionTitle={feature.sectionTitle}
@@ -235,6 +239,7 @@ const TabSelector = () => {
               sectionTitleLink={feature.sectionTitleLink}
               reverseLayout={index % 2 !== 0}
             />
+            </ScrollReveal>
           ))}
     </div>
   );

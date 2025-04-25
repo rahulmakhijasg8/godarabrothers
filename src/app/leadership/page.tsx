@@ -71,17 +71,19 @@ export default function Home() {
                   ></div>
 
                   {/* Image */}
-                  <div
-                    className={`absolute mt-12 bottom-23  md:top-[150px] right-0 md:mt-0 w-[95%] md:w-[40%] h-[35.5%] md:h-[60%]`}
-                  >
-                    <Image
-                      src={'/naval-kishore.svg'}
-                      alt='Mr. Nawal Kishore'
-                      fill
-                      sizes="(max-width: 768px) 90vw, 40vw"
-                      className=""
-                    />
-                  </div>
+                  {/* Image for Mr. Nawal Kishore */}
+{/* Image for Mr. Nawal Kishore */}
+<div
+  className={`absolute mt-12 bottom-23 md:top-[150px] z-10 right-0 md:mt-0 w-[95%] md:w-[40%] h-[35.5%] md:h-[60%] overflow-hidden hover:scale-105 transition-transform duration-300 ease-out`}
+>
+  <Image
+    src={'/naval-kishore.svg'}
+    alt='Mr. Nawal Kishore'
+    fill
+    sizes="(max-width: 768px) 90vw, 40vw"
+    className=""
+  />
+</div>
                 </div>
               </div>
             </div>
@@ -216,17 +218,20 @@ export default function Home() {
                   ></div>
 
                   {/* Image */}
-                  <div
-                    className={`absolute mt-12 bottom-20  md:top-[70px] left-0 md:mt-0 w-[95%] md:w-[35%] h-[35.5%] md:h-[290]`}
-                  >
-                    <Image
-                      src={'/teeku_singh-removebg-preview.png'}
-                      alt='Mr. Teeku Singh Choudhary'
-                      fill
-                      sizes="(max-width: 768px) 90vw, 40vw"
-                      className=""
-                    />
-                  </div>
+                  {/* Image for Mr. Teeku Singh Choudhary */}
+                 {/* Image for Mr. Teeku Singh Choudhary */}
+                 {/* Image */}
+<div
+  className={`absolute mt-12 bottom-20 z-10 transition-transform duration-300 ease-out hover:scale-105 md:top-[70px] left-0 md:mt-0 w-[95%] md:w-[35%] h-[35.5%] md:h-[290] overflow-hidden`}
+>
+  <Image
+    src={'/teeku_singh-removebg-preview.png'}
+    alt='Mr. Teeku Singh Choudhary'
+    fill
+    sizes="(max-width: 768px) 90vw, 40vw"
+    className=""
+  />
+</div>
                 </div>
               </div>
               

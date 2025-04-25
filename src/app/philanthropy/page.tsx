@@ -1,5 +1,8 @@
+'use client'
+
 import FeatureSection from "@/components/FeatureSection";
 import FeaturedSection from "@/components/Differentiation";
+import ScrollReveal from "@/components/ScrollReveal";
 
 export default function Home() {
   const statsData = [
@@ -94,6 +97,7 @@ export default function Home() {
 
   return (
     <div>
+      <ScrollReveal>
     <div className="border-b border-[#CFC3B8] md:border-[#603812]">
   <section className="text-center px-4 py-12 md:py-24 lg:py-32 max-w-[1440px] mx-auto">
     <div className="max-w-3xl px-4 mx-auto">
@@ -125,6 +129,8 @@ export default function Home() {
     </div>
   </section>
 </div>
+</ScrollReveal>
+<ScrollReveal>
 <div className=" border-t mt-8 md:mt-12 border-[#CFC3B8] md:border-[#603812]">
   <section className="text-center px-4 py-12 md:py-24 lg:py-32 max-w-[1440px] mx-auto">
     <div className="max-w-3xl mx-auto">
@@ -149,6 +155,7 @@ export default function Home() {
     </div>
   </section>
 </div>
+</ScrollReveal>
 <div className="my-6 border-b border-[#CFC3B8] md:border-[#603812]">
       <div className="flex flex-col border-t border-[#CFC3B8] md:border-[#603812] md:flex-row justify-center items-stretch mx-4 sm:mx-6 md:mx-8 lg:mx-[100px]">
         {statsData.map((stat, index) => {
@@ -161,6 +168,7 @@ export default function Home() {
                 : '';
                 
           return (
+            <ScrollReveal key={index} delay={index * 0.1}>
             <div 
               key={index}
               className={`
@@ -179,10 +187,12 @@ export default function Home() {
                 </div>
               </div>
             </div>
+            </ScrollReveal>
           );
         })}
       </div>
     </div>
+    <ScrollReveal>
     <div className="border-t border-[#CFC3B8] md:border-[#603812] mt-6 md:mt-12">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-[100px] py-12 md:py-11.5">
         <h2 className="text-center text-2xl sm:text-3xl md:text-3xl mb-0 md:mb-5">
@@ -193,7 +203,9 @@ export default function Home() {
         </h2>
       </div>
     </div>
+    </ScrollReveal>
     {featureSectionsData.map((sectionData, index) => (
+      <ScrollReveal key={index} delay={index * 0.1}>
         <FeatureSection
           key={index}
           sectionTitle={sectionData.sectionTitle}
@@ -203,7 +215,9 @@ export default function Home() {
           imageAlt={sectionData.imageAlt}
           reverseLayout={sectionData.reverseLayout}
         />
+        </ScrollReveal>
       ))}
+      <ScrollReveal>
     <hr className="mt-12 border-t md:hidden border-[#CFC3B8] md:border-[#603812]" />
     <FeaturedSection mainTitle="Charitable Donations" leftColumn={{
           sectionTitle: "Major Contributions",
@@ -250,6 +264,8 @@ export default function Home() {
             }
           ]
         }} />
+        </ScrollReveal>
+        <ScrollReveal>
       <hr className="mb-12 border-t hidden md:block border-[#CFC3B8] md:border-[#603812]" />
     <div className=" border-t mt-6 md:hidden border-[#CFC3B8] md:border-[#603812]">
   <section className="text-center px-4 py-12 md:py-24 lg:py-32 max-w-[1440px] mx-auto">
@@ -270,7 +286,9 @@ export default function Home() {
     </div>
   </section>
 </div>
+</ScrollReveal>
 
+<ScrollReveal>
 <div className="border-[#603812] md:hidden mx-4 sm:mx-6 md:mx-8 lg:mx-[100px] py-8 bg-[#EFEBE7]">
   <section className="text-center px-4 py-0 md:py-24 lg:py-32 max-w-[1440px] mx-auto">
     <div className="max-w-3xl mx-auto">
@@ -291,6 +309,7 @@ export default function Home() {
   </section>
 </div>
 <hr className="mb-8 border-t block md:hidden border-[#CFC3B8] md:border-[#603812]" />
+</ScrollReveal>
     </div>
   );
 }

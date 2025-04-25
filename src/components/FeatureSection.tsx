@@ -31,7 +31,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
 
         <div className={`flex flex-col ${reverseLayout ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
           {/* Content section */}
-          <div className={`w-full md:w-3/5 ${reverseLayout ? 'md:pl-12' : 'md:pr-12'} mb-12 pb-80 md:mb-0 px-4 sm:px-6 md:px-8`}>
+          <div className={`w-full md:w-3/5 ${reverseLayout ? 'md:pl-12' : 'md:pr-12'} mb-12 pb-80 md:pb-0 md:mb-0 px-4 sm:px-6 md:px-8`}>
             <h3 className="font-['Libre_Baskerville'] text-xl mb-6 text-left">
               {sectionTitleLink ? (
                 <Link href={sectionTitleLink} target="_blank" passHref>
@@ -87,20 +87,20 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
 
               {/* Image */}
               <div
-                className={`absolute mt-12 bottom-0 md:mt-0 ${
-                  reverseLayout
-                    ? 'left-0 md:left-0'
-                    : 'right-0  md:right-0'
-                } w-[90%] md:w-[35%]  md:top-[15%] mx-4 sm:mx-6 md:mx-8 lg:mx-[100px] h-[250px] md:h-[70%]`}
-              >
-                <Image
-                  src={imageSrc}
-                  alt={imageAlt}
-                  fill
-                  sizes="(max-width: 768px) 90vw, 40vw"
-                  className="object-cover"
-                />
-              </div>
+  className={`absolute mt-12 bottom-0 md:mt-0 ${
+    reverseLayout
+      ? 'left-0 md:left-0'
+      : 'right-0  md:right-0'
+  } w-[90%] md:w-[35%]  md:top-[15%] z-10 mx-4 sm:mx-6 md:mx-8 lg:mx-[100px] h-[250px] md:h-[70%] overflow-hidden hover:scale-105 transition-transform duration-300 ease-out`}
+>
+  <Image
+    src={imageSrc}
+    alt={imageAlt}
+    fill
+    sizes="(max-width: 768px) 90vw, 40vw"
+    className="object-cover"
+  />
+</div>
             </div>
           </div>
         </div>
