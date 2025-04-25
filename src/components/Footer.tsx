@@ -66,21 +66,41 @@ export default function Footer() {
 
             {/* Contact information */}
             <div className="w-1/2 md:w-1/2 pl-2 pr-4 md:pl-6">
-              <ul className={`list-none p-0 ${roboto.className}`}>
-                {contactInfo.map((item, index) => (
-                  <li key={index} className="mb-6 flex items-start text-base sm:text-lg text-[#603812] font-light">
-                    <Image 
-                      src={item.icon} 
-                      alt={item.alt} 
-                      width={20} 
-                      height={20} 
-                      className="min-w-[20px] mr-2 mt-1"
-                    />
-                    <span className="break-words overflow-hidden">{item.content}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+  <ul className={`list-none p-0 ${roboto.className}`}>
+    {contactInfo.map((item, index) => {
+      let href = "#";
+
+      if (item.alt.toLowerCase() === "email") {
+        href = `mailto:${item.content}`;
+      } else if (item.alt.toLowerCase() === "phone") {
+        href = `tel:${item.content.replace(/\s+/g, '')}`;
+      } else if (item.alt.toLowerCase() === "location") {
+        href = `https://maps.app.goo.gl/7WmtkTWRs5zkvb3GA`;
+      }
+
+      return (
+        <li key={index} className="mb-6 flex items-start text-base sm:text-lg text-[#603812] font-light">
+          <Image 
+            src={item.icon} 
+            alt={item.alt} 
+            width={20} 
+            height={20} 
+            className="min-w-[20px] mr-2 mt-1"
+          />
+          <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="break-words overflow-hidden hover:underline"
+          >
+            {item.content}
+          </a>
+        </li>
+      );
+    })}
+  </ul>
+</div>
+
           </div>
         </div>
       </div>
