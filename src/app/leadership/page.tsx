@@ -25,7 +25,7 @@ export default function Home() {
               <span className="font-[400] inline font-['Libre_Baskerville'] text-[#603812] italic block mt-1 md:mt-0 md:inline">Meet Our Visionaries</span>
             </h1>
             
-            <p className="text-[#A08871] font-['Roboto'] text-base sm:text-lg md:text-xl mt-4 md:mt-6 mb-8">
+            <p className="text-[#A08871] mx-[3%] font-['Roboto'] text-base sm:text-lg md:text-xl mt-4 md:mt-6 mb-8">
               At Godara Brothers, our leadership embodies a legacy of excellence, strategic growth, and unwavering commitment to success. Meet the visionaries who have built a diversified business empire spanning multiple industries and countries.
             </p>
           </div>
@@ -213,8 +213,8 @@ export default function Home() {
                 <div className="md:right-0 md:w-[35%] z-[10] h-[300px] md:h-[300px]">
                   {/* Gray background */}
                   <div
-                    className={`absolute w-[60%] left-0 md:bottom-[0px]  md:w-[30%] h-[280px] md:h-[200px] bg-[#EFEBE7] 
-                      bottom-40`}
+                    className={`absolute w-[60%] left-0 md:bottom-[0px]  md:w-[30%] h-[300px] md:h-[200px] bg-[#EFEBE7] 
+                      bottom-35`}
                   ></div>
 
                   {/* Image */}
@@ -222,7 +222,7 @@ export default function Home() {
                  {/* Image for Mr. Teeku Singh Choudhary */}
                  {/* Image */}
 <div
-  className={`absolute mt-12 bottom-20 z-10 transition-transform duration-300 ease-out hover:scale-105 md:top-[70px] left-0 md:mt-0 w-[95%] md:w-[35%] h-[35.5%] md:h-[290] overflow-hidden`}
+  className={`absolute mt-12 bottom-15 z-10 transition-transform duration-300 ease-out hover:scale-105 md:top-[70px] left-0 md:mt-0 w-[95%] md:w-[35%] h-[40%] md:h-[290] overflow-hidden`}
 >
   <Image
     src={'/teeku_singh-removebg-preview.png'}

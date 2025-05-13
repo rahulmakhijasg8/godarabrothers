@@ -27,7 +27,7 @@ export default function Hero() {
           <span className="font-normal text-[#603812] font-['Libre_Baskerville'] font-[400] italic block mt-1 md:mt-0 md:inline">A Legacy of Excellence & Innovation</span>
         </h1>
         
-        <p className="text-[#A08871] font-['Roboto'] text-base sm:text-lg md:text-xl mt-4 md:mt-6 mb-8">
+        <p className="text-[#A08871] mx-[6px]  font-['Roboto'] text-base sm:text-lg md:text-xl mt-4 md:mt-6 mb-8">
           A diversified business empire shaping industries across the globe.
         </p>
         

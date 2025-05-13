@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import ScrollReveal from '@/components/ScrollReveal';
 
 export default function ContactPage() {
@@ -10,8 +10,11 @@ export default function ContactPage() {
     company: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<null | 'success' | 'error'>(null);
+  const messageRef = useRef<HTMLTextAreaElement>(null);
 
-  const handleChange = (e:React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -19,23 +22,83 @@ export default function ContactPage() {
     }));
   };
 
-  const handleTextAreaChange = (e:React.ChangeEvent<HTMLTextAreaElement>) => {
+  const handleTextAreaChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
     }));
+    
+    // Auto-resize the textarea
+    adjustTextAreaHeight();
   };
 
-  const handleSubmit = (e:React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    setFormData({
-      name: '',
-      email: '',
-      company: '',
-      message: ''
+  // Function to adjust textarea height based on content
+  const adjustTextAreaHeight = () => {
+    const textArea = messageRef.current;
+    if (textArea) {
+      // Reset height to calculate correct scrollHeight
+      textArea.style.height = 'auto';
+      // Set new height based on content
+      textArea.style.height = `${textArea.scrollHeight}px`;
+    }
+  };
+
+  // Adjust height on component mount and when message content changes
+  useEffect(() => {
+    adjustTextAreaHeight();
+  }, [formData.message]);
+
+  const submitToGoogleSheets = async (formData: any) => {
+  // Your Google Apps Script Web App URL
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzmmIj3yCFvYJ_MJG5ZpjlycmCvJV-z34zErJxmcWSRdJoY7-KDxF6jrHAZZx2Req5y/exec';
+
+  try {
+        // Using 'no-cors' mode as a last resort
+    const response = await fetch(scriptURL, {
+      method: 'POST',
+      body: JSON.stringify(formData),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      mode: 'no-cors', // Add this line
     });
+
+    return true;
+  } catch (error) {
+    return false;
+  }
+};
+
+  // Add the missing handleSubmit function
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    // Add timestamp to the form data
+    const formDataWithTimestamp = {
+      ...formData,
+      timestamp: new Date().toISOString(),
+    };
+
+    // Submit to Google Sheets
+    const success = await submitToGoogleSheets(formDataWithTimestamp);
+
+    if (success) {
+      setSubmitStatus('success');
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        message: ''
+      });
+    } else {
+      setSubmitStatus('error');
+    }
+
+    setIsSubmitting(false);
   };
 
   return (
@@ -78,6 +141,7 @@ export default function ContactPage() {
                     placeholder="John Trangely"
                     className="p-2 border-b border-gray-200 rounded-md focus:outline-none focus:ring-1 focus:ring-[#B18A43]"
                     required
+                    disabled={isSubmitting}
                   />
                 </div>
                 
@@ -91,6 +155,7 @@ export default function ContactPage() {
                     placeholder="hello@rrs.com"
                     className="p-2 border-b border-gray-200 rounded-md focus:outline-none focus:ring-1 focus:ring-[#B18A43]"
                     required
+                    disabled={isSubmitting}
                   />
                 </div>
               </div>
@@ -103,29 +168,48 @@ export default function ContactPage() {
                   value={formData.company}
                   onChange={handleChange}
                   className="p-2 border-b border-gray-200 rounded-md focus:outline-none focus:ring-1 focus:ring-[#B18A43]"
+                  disabled={isSubmitting}
                 />
               </div>
               
               <div className="flex flex-col">
                 <label className="text-sm font-['Roboto'] font-[400] text-[#603812] mb-1">Message</label>
                 <textarea
+                  ref={messageRef}
                   name="message"
                   value={formData.message}
                   onChange={handleTextAreaChange}
-                  placeholder="how may help you ?"
-                  rows={4}
-                  className="p-2 border-b border-gray-200 rounded-md focus:outline-none focus:ring-1 focus:ring-[#B18A43] resize-none"
+                  placeholder="how may we help you ?"
+                  rows={1}
+                  className="p-2 border-b border-gray-200 rounded-md focus:outline-none focus:ring-1 focus:ring-[#B18A43] resize-none overflow-hidden min-h-[40px]"
                   required
+                  disabled={isSubmitting}
+                  style={{ height: 'auto' }}
                 />
               </div>
               
-              <div className="mt-2">
+              <div className="mt-2 flex items-center">
                 <button
                   type="submit"
-                  className="px-6 py-2 border border-[#B18A43] text-[#B18A43] md:rounded-full hover:bg-[#B18A43] hover:text-white hover:scale-105 transition-all duration-300 ease-in-out"
+                  disabled={isSubmitting}
+                  className={`px-6 py-2 border border-[#B18A43] text-[#B18A43] md:rounded-full hover:bg-[#B18A43] hover:text-white hover:scale-105 transition-all duration-300 ease-in-out ${
+                    isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
+                  }`}
                 >
-                  Submit
+                  {isSubmitting ? 'Submitting...' : 'Submit'}
                 </button>
+                
+                {submitStatus === 'success' && (
+                  <span className="ml-4 text-green-600 text-sm">
+                    Thank you! Your message has been sent successfully.
+                  </span>
+                )}
+                
+                {submitStatus === 'error' && (
+                  <span className="ml-4 text-red-600 text-sm">
+                    There was an error submitting your message. Please try again.
+                  </span>
+                )}
               </div>
             </form>
           </div>
