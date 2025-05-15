@@ -2,12 +2,12 @@
 
 import Image from "next/image";
 import FeaturedSection from "@/components/AltDifferentiaton";
-import ScrollReveal from "@/components/ScrollReveal";
+// import ScrollReveal from "@/components/ScrollReveal";
 
 export default function Home() {
   return (
     <div>
-      <ScrollReveal>
+      {/* <ScrollReveal> */}
         <section className="text-center border-[#CFC3B8] md:border-[#603812] border-b-[1px] px-4 py-12 md:py-24 lg:py-32">
           <div className="max-w-3xl mx-auto">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] leading-tight">
@@ -30,9 +30,9 @@ export default function Home() {
             </p>
           </div>
         </section>
-      </ScrollReveal>
+      {/* </ScrollReveal> */}
 
-      <ScrollReveal delay={0.2}>
+      {/* <ScrollReveal delay={0.2}> */}
         <div className="mt-6 border-t border-[#CFC3B8] md:border-[#603812] md:mt-12">
           <div className="max-w-[1440px] relative mx-4 sm:mx-6 md:mx-8 lg:mx-[100px] py-12 md:py-11.5">
             <div className='flex flex-col md:flex-row mx-auto'>
@@ -66,46 +66,46 @@ export default function Home() {
                 <div className="md:right-0 md:w-[35%] z-[10] h-[300px] md:h-[300px]">
                   {/* Gray background */}
                   <div
-                    className={`absolute w-[60%] right-0 md:top-0  md:w-[30%] h-[350px] md:h-[200px] bg-[#EFEBE7] 
+                    className={`absolute w-[60%] right-0 md:right-0 md:top-0  md:w-[30%] h-[350px] md:h-[200px] bg-[#EFEBE7] 
                       bottom-30`}
                   ></div>
 
                   {/* Image */}
                   {/* Image for Mr. Nawal Kishore */}
-{/* Image for Mr. Nawal Kishore */}
-<div
-  className={`absolute mt-12 bottom-23 md:top-[150px] z-10 right-0 md:mt-0 w-[95%] md:w-[40%] h-[35.5%] md:h-[60%] overflow-hidden hover:scale-105 transition-transform duration-300 ease-out`}
->
-  <Image
-    src={'/naval-kishore.svg'}
-    alt='Mr. Nawal Kishore'
-    fill
-    sizes="(max-width: 768px) 90vw, 40vw"
-    className=""
-  />
-</div>
+                  {/* Image for Mr. Nawal Kishore */}
+                  <div
+                    className={`absolute mt-12 bottom-23 sm:right-0 md:right-0 md:top-[150px] z-10 right-0 md:mt-0 w-[95%] md:w-[40%] h-[35.5%] md:h-[60%] overflow-hidden hover:scale-105 transition-transform duration-300 ease-out`}
+                  >
+                    <Image
+                      src={'/naval-kishore.svg'}
+                      alt='Mr. Nawal Kishore'
+                      fill
+                      sizes="(max-width: 768px) 90vw, 40vw"
+                      className=""
+                    />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </ScrollReveal>
+      {/* </ScrollReveal> */}
 
-      <ScrollReveal direction="left" delay={0.3}>
+      {/* <ScrollReveal direction="left" delay={0.3}> */}
         <div className="flex flex-col mt-12 md:mt-0 md:border-t
             border-b 
             border-[#CFC3B8] md:border-[#603812]
             border-solid px-4 sm:px-6 md:px-8 lg:px-[100px] md:flex-row h-auto md:h-[350px]">
           {/* First column - Title */}
-          <div className="w-full md:w-1/4 md:border-r border-[#CFC3B8] md:border-[#603812] border-b md:border-b-0 text-center flex justify-center pb-6 pt-1 md:pt-16">
+          <div className="w-full px-4 md:px-4 md:w-1/4 md:border-r border-[#CFC3B8] md:border-[#603812] border-b md:border-b-0 flex flex-col items-center md:items-start pb-6 pt-1 md:pt-16">
             <h2 
-              className="text-center md:text-left text-2xl md:text-3xl lg:text-3xl leading-tight text-center bg-clip-text text-transparent"
+              className="text-center md:text-left text-xl sm:text-2xl md:text-3xl leading-tight bg-clip-text text-transparent max-w-full overflow-hidden"
               style={{
                 backgroundImage: "linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%)"
               }}
             >
               <span className="font-['Libre_Baskerville'] font-[700]">Key</span>{" "}<br className="hidden md:block"/>
-              <span className="italic font-['Libre_Baskerville'] font-[400]">Achievements</span>
+              <span className="italic font-['Libre_Baskerville'] inline-block font-[400]">Achievements</span>
             </h2>
           </div>
 
@@ -151,9 +151,9 @@ export default function Home() {
             </p>
           </div>
         </div>
-      </ScrollReveal>
+      {/* </ScrollReveal> */}
 
-      <ScrollReveal direction="up" delay={0.2}>
+      {/* <ScrollReveal direction="up" delay={0.2}> */}
         <div className="border-b border-[#CFC3B8] md:border-[#603812]">
           <section className="text-center px-8 py-12 md:py-24 lg:py-32 max-w-[1440px] ">
             <div className="md:px-55 mx-auto">
@@ -174,9 +174,9 @@ export default function Home() {
             </div>
           </section>
         </div>
-      </ScrollReveal>
+      {/* </ScrollReveal> */}
 
-      <ScrollReveal delay={0.3} direction="right">
+      {/* <ScrollReveal delay={0.3} direction="right"> */}
         <div className="mt-6 border-t border-[#CFC3B8] md:border-[#603812] border-b md:mt-12">
           <div className="max-w-[1440px] relative mx-4 sm:mx-6 md:mx-8 lg:mx-[100px] py-12 md:pt-11.5 md:pb-8">
             {/* Rest of the content for Mr. Teeku Singh Choudhary */}
@@ -219,19 +219,19 @@ export default function Home() {
 
                   {/* Image */}
                   {/* Image for Mr. Teeku Singh Choudhary */}
-                 {/* Image for Mr. Teeku Singh Choudhary */}
-                 {/* Image */}
-<div
-  className={`absolute mt-12 bottom-15 z-10 transition-transform duration-300 ease-out hover:scale-105 md:top-[70px] left-0 md:mt-0 w-[95%] md:w-[35%] h-[40%] md:h-[290] overflow-hidden`}
->
-  <Image
-    src={'/teeku_singh-removebg-preview.png'}
-    alt='Mr. Teeku Singh Choudhary'
-    fill
-    sizes="(max-width: 768px) 90vw, 40vw"
-    className=""
-  />
-</div>
+                  {/* Image for Mr. Teeku Singh Choudhary */}
+                  {/* Image */}
+                  <div
+                    className={`absolute mt-12 bottom-15 z-10 transition-transform duration-300 ease-out hover:scale-105 md:top-[70px] left-0 md:mt-0 w-[95%] md:w-[35%] h-[40%] md:h-[290] overflow-hidden`}
+                  >
+                    <Image
+                      src={'/teeku_singh-removebg-preview.png'}
+                      alt='Mr. Teeku Singh Choudhary'
+                      fill
+                      sizes="(max-width: 768px) 90vw, 40vw"
+                      className=""
+                    />
+                  </div>
                 </div>
               </div>
               
@@ -264,9 +264,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </ScrollReveal>
+      {/* </ScrollReveal> */}
 
-      <ScrollReveal direction="left" delay={0.2}>
+      {/* <ScrollReveal direction="left" delay={0.2}> */}
         <div className="flex flex-col mt-12 md:mt-0
             border-b
             border-[#CFC3B8] md:border-[#603812]
@@ -333,9 +333,9 @@ export default function Home() {
             </p>
           </div>
         </div>
-      </ScrollReveal>
+      {/* </ScrollReveal> */}
 
-      <ScrollReveal direction="up" delay={0.2}>
+      {/* <ScrollReveal direction="up" delay={0.2}> */}
         <div className=" border-b border-[#CFC3B8] md:border-[#603812]">
           <section className="text-center px-8 py-12 md:py-24 lg:py-32 max-w-[1440px] ">
             <div className="md:px-55 mx-auto">
@@ -356,9 +356,9 @@ export default function Home() {
             </div>
           </section>
         </div>
-      </ScrollReveal>
+      {/* </ScrollReveal> */}
 
-      <ScrollReveal direction="up" delay={0.3}>
+      {/* <ScrollReveal direction="up" delay={0.3}> */}
         <FeaturedSection 
           leftColumn={{
             sectionTitle: "Vision",
@@ -369,7 +369,7 @@ export default function Home() {
             paragraphText: '"Our mission is to create value through strategic investments, innovation, and responsible business practices. We strive to uphold excellence in every sector we operate in, ensuring growth for our businesses and stakeholders."'
           }}
         />
-      </ScrollReveal>
+      {/* </ScrollReveal> */}
     </div>
   );
 }

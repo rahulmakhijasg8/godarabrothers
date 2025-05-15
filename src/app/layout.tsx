@@ -12,9 +12,9 @@ export const metadata: Metadata = {
   icons: [
     {
         rel: 'icon',
-        url: '/favicon-gb.ico',
+        url: '/godaranewlogo.ico',
         type: 'image/x-icon',
-        sizes: '16x16',
+        sizes: '30x30',
     },
 ],
 };

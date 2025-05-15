@@ -22,6 +22,13 @@ export default function ContactPage() {
     }));
   };
 
+  interface FormSubmissionData {
+  [key: string]: string | number | boolean | File[] | { [fieldId: string]: File[] } | undefined;
+  files?: {
+    [fieldId: string]: File[];
+  };
+}
+
   const handleTextAreaChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -49,7 +56,7 @@ export default function ContactPage() {
     adjustTextAreaHeight();
   }, [formData.message]);
 
-  const submitToGoogleSheets = async (formData: any) => {
+  const submitToGoogleSheets = async (formData: FormSubmissionData) => {
   // Your Google Apps Script Web App URL
   const scriptURL = 'https://script.google.com/macros/s/AKfycbzmmIj3yCFvYJ_MJG5ZpjlycmCvJV-z34zErJxmcWSRdJoY7-KDxF6jrHAZZx2Req5y/exec';
 
@@ -63,9 +70,10 @@ export default function ContactPage() {
       },
       mode: 'no-cors', // Add this line
     });
-
+    console.log(response)
     return true;
   } catch (error) {
+    console.error(error)
     return false;
   }
 };

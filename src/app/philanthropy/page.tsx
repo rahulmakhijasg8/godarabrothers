@@ -174,15 +174,15 @@ export default function Home() {
               className={`
                 py-10 md:py-[132px] 
                 flex-1 
-                flex justify-center items-center
+                flex justify-center h-full items-center
                 ${borderClasses}
               `}
             >
               <div className="font-['Libre_Baskerville'] text-center">
-                <div className="text-3xl md:text-4xl font-bold text-[#603812]">
+                <div className="text-3xl md:text-3xl font-bold text-[#603812]">
                   {stat.value}
                 </div>
-                <div className="text-lg md:text-xl text-[#A08871] font-normal pt-6">
+                <div className="text-lg md:text-xl md:px-2 text-[#A08871] font-normal pt-6">
                   {stat.label}
                 </div>
               </div>

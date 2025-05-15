@@ -94,11 +94,11 @@ export default function Navbar() {
             {/* Logo */}
             <Link href="/" className="flex items-center">
               <Image
-                src="/Godara_Logo-01 1.png"
+                src="/godaranewlogo.svg"
                 alt="Godara Logo"
-                height={44}
-                width={177}
-                className="h-11 w-auto"
+                height={500}
+                width={500}
+                className="h-20 w-auto"
               />
             </Link>
 
