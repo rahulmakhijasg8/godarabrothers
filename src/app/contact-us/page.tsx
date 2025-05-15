@@ -110,7 +110,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="max-w-[1440px] mb-6 md:mb-8 border-b border-[#CFC3B8] md:border-[#603812] mx-auto px-4 sm:px-6 md:px-8 lg:px-[100px] py-16 md:pb-24 md:pt-18">
+    <div className="mb-6 md:mb-8 border-b border-[#CFC3B8] md:border-[#603812] mx-auto px-4 sm:px-6 md:px-8 lg:px-[100px] py-16 md:pb-24 md:pt-18">
       <ScrollReveal>
         <div className="flex flex-col md:flex-row">
           {/* First column - iframe (replacing Image) */}

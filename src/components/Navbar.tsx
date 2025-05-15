@@ -44,9 +44,9 @@ export default function Navbar() {
   // Navigation links array for DRY code
   const navLinks = [
     { href: '/', label: 'Home' },
-    { href: '/philanthropy', label: 'Philanthropy' },
-    { href: '/group-companies', label: 'Group Companies' },
     { href: '/leadership', label: 'Leadership' },
+    { href: '/group-companies', label: 'Group Companies' },
+    { href: '/philanthropy', label: 'Philanthropy' },
     { href: '/contact-us', label: 'Contact Us' },
   ];
 
@@ -63,11 +63,11 @@ export default function Navbar() {
       {/* Add this to your global CSS file or a style tag */}
       <style jsx global>{`
         .nav-link-gradient {
-          background-image: linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%);
+          background-image: linear-gradient(127deg, #D4B75A 0%, #D9BE6B 10%, #E5D59D 25%, #DDCA80 40%, #C9A745 55%, #D8C177 70%, #F0E4AD 85%, #D4B75A 100%);
         }
         
         .nav-link:hover:not(.active) {
-          background-image: linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%);
+          background-image: linear-gradient(127deg, #D4B75A 0%, #D9BE6B 10%, #E5D59D 25%, #DDCA80 40%, #C9A745 55%, #D8C177 70%, #F0E4AD 85%, #D4B75A 100%);
           -webkit-background-clip: text;
           background-clip: text;
           -webkit-text-fill-color: transparent;
@@ -83,7 +83,7 @@ export default function Navbar() {
               flex 
               items-center 
               justify-between 
-              h-20
+              h-[50px] md:h-[80px]
               px-4 sm:px-6 md:px-8 lg:px-[70px]
               bg-white
               transition-all
@@ -94,11 +94,12 @@ export default function Navbar() {
             {/* Logo */}
             <Link href="/" className="flex items-center">
               <Image
-                src="/godaranewlogo.svg"
+                src="/Frame 2.svg"
                 alt="Godara Logo"
-                height={500}
-                width={500}
-                className="h-20 w-auto"
+                height={89}
+                width={80}
+                className="h-[50px] w-[55px] md:w-auto md:h-20" // Keeping the logo size as is
+                priority
               />
             </Link>
 
@@ -128,17 +129,25 @@ export default function Navbar() {
               ))}
             </div>
 
-            {/* Hamburger Menu Button (Mobile) */}
+            {/* Custom Hamburger Menu Button (Mobile) */}
             <div className="relative lg:hidden" ref={menuRef}>
               <button 
-                className="flex flex-col justify-center items-center w-8 h-8 focus:outline-none" 
+                className="flex items-center justify-center w-16 h-16 p-3 focus:outline-none" 
                 onClick={toggleMenu}
                 aria-label="Toggle menu"
                 aria-expanded={isMenuOpen}
               >
-                <span className={`block w-6 h-0.5 bg-[#603812] transition-all duration-300 ease-out ${isMenuOpen ? 'rotate-45 translate-y-1' : ''}`}></span>
-                <span className={`block w-6 h-0.5 bg-[#603812] mt-1.5 transition-opacity duration-300 ease-out ${isMenuOpen ? 'opacity-0' : ''}`}></span>
-                <span className={`block w-6 h-0.5 bg-[#603812] mt-1.5 transition-all duration-300 ease-out ${isMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
+                {isMenuOpen ? (
+                  // X icon when menu is open
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="#603812" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                ) : (
+                  // Custom hamburger icon when menu is closed
+                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="20" viewBox="0 0 28 20" fill="none">
+                    <path d="M26.5225 11.1472H1.15315C0.516613 11.1472 0 10.6306 0 9.99409C0 9.35755 0.516613 8.84094 1.15315 8.84094H26.5225C27.1591 8.84094 27.6757 9.35755 27.6757 9.99409C27.6757 10.6306 27.1591 11.1472 26.5225 11.1472ZM26.5225 2.30631H1.15315C0.516613 2.30631 0 1.78969 0 1.15315C0 0.516613 0.516613 0 1.15315 0H26.5225C27.1591 0 27.6757 0.516613 27.6757 1.15315C27.6757 1.78969 27.1591 2.30631 26.5225 2.30631ZM26.5225 19.9879H1.15315C0.516613 19.9879 0 19.4713 0 18.8347C0 18.1982 0.516613 17.6816 1.15315 17.6816H26.5225C27.1591 17.6816 27.6757 18.1982 27.6757 18.8347C27.6757 19.4713 27.1591 19.9879 26.5225 19.9879Z" fill="#603812"/>
+                  </svg>
+                )}
               </button>
 
               {/* Dropdown Menu */}

@@ -150,51 +150,49 @@ export default function Home() {
       </h1>
       
       <p className="text-[#A08871] font-['Roboto'] italic text-base sm:text-lg md:text-xl mt-6 md:mt-10 mb-6 max-w-[92%] sm:max-w-[95%] md:w-full md:max-w-none px-3 sm:px-0 mx-auto">
-        From humble beginnings to a legacy of giving, Nawal Kishore Godara has made a lasting impact through education, environmental conservation, and community development. His initiatives uplift lives and empower future generations.
+        From humble beginnings to a legacy of giving, Godara Family has made a lasting impact through education, environmental conservation, and community development. Their initiatives uplift lives and empower future generations.
       </p>
     </div>
   </section>
 </div>
-</ScrollReveal>
+</ScrollReveal >
 <div className="my-6 border-b border-[#CFC3B8] md:border-[#603812]">
-      <div className="flex flex-col border-t border-[#CFC3B8] md:border-[#603812] md:flex-row justify-center items-stretch mx-4 sm:mx-6 md:mx-8 lg:mx-[100px]">
-        {statsData.map((stat, index) => {
-          // Special conditional for border styling
-          const borderClasses = 
-            index === statsData.length - 1 
-              ? '' // No border for the last item
-              : index < statsData.length - 1 
-                ? 'border-b md:border-b-0 md:border-r border-[#CFC3B8] md:border-[#603812]' 
-                : '';
-                
-          return (
-            <ScrollReveal key={index} delay={index * 0.1}>
-            <div 
-              key={index}
-              className={`
-                py-10 md:py-[132px] 
-                flex-1 
-                flex justify-center h-full items-center
-                ${borderClasses}
-              `}
-            >
-              <div className="font-['Libre_Baskerville'] text-center">
-                <div className="text-3xl md:text-3xl font-bold text-[#603812]">
-                  {stat.value}
-                </div>
-                <div className="text-lg md:text-xl md:px-2 text-[#A08871] font-normal pt-6">
-                  {stat.label}
-                </div>
+  <div className="flex flex-col border-t border-[#CFC3B8] md:border-[#603812] md:flex-row mx-4 sm:mx-6 md:mx-8 lg:mx-[100px]">
+    {statsData.map((stat, index) => {
+      const borderClasses = 
+        index === statsData.length - 1 
+          ? '' 
+          : index < statsData.length - 1 
+            ? 'border-b md:border-b-0 md:border-r border-[#CFC3B8] md:border-[#603812]' 
+            : '';
+            
+      return (
+        <ScrollReveal key={index} className="w-full md:w-1/4"> {/* Add md:w-1/4 here */}
+          <div 
+            className={`
+              py-10 md:py-[132px] 
+              w-full {/* Change to w-full */}
+              flex justify-center h-full items-center
+              ${borderClasses}
+            `}
+          >
+            <div className="font-['Libre_Baskerville'] text-center">
+              <div className="text-3xl md:text-3xl font-bold text-[#603812]">
+                {stat.value}
+              </div>
+              <div className="text-lg md:text-xl md:px-15 text-[#A08871] font-normal pt-6">
+                {stat.label}
               </div>
             </div>
-            </ScrollReveal>
-          );
-        })}
-      </div>
-    </div>
+          </div>
+        </ScrollReveal>
+      );
+    })}
+  </div>
+</div>
     <ScrollReveal>
     <div className="border-t border-[#CFC3B8] md:border-[#603812] mt-6 md:mt-12">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-[100px] py-12 md:py-11.5">
+      <div className="mx-auto px-4 sm:px-6 md:px-8 lg:px-[100px] py-12 md:py-11.5">
         <h2 className="text-center text-2xl sm:text-3xl md:text-3xl mb-0 md:mb-5">
           <span className="font-['Libre_Baskerville'] font-[700] inline bg-clip-text text-transparent" style={{
             backgroundImage: "linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%)"

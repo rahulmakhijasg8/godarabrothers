@@ -60,7 +60,7 @@ const FeaturedSection: React.FC<FeatureSectionProps> = ({
 
   return (
     <div className="border-t hidden md:block border-[#603812] mt-12">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-[100px] py-12 md:py-0">
+      <div className=" mx-auto px-4 sm:px-6 md:px-8 lg:px-[100px] py-12 md:py-0">
         {/* Main Heading */}
         <h2 className="font-['Libre_Baskerville'] md:pt-[75px] md:pb-[35px] border-b text-center text-2xl sm:text-3xl md:text-[36px] mb-10 md:mb-0">
           <span

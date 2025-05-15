@@ -34,7 +34,7 @@ export default function Home() {
 
       {/* <ScrollReveal delay={0.2}> */}
         <div className="mt-6 border-t border-[#CFC3B8] md:border-[#603812] md:mt-12">
-          <div className="max-w-[1440px] relative mx-4 sm:mx-6 md:mx-8 lg:mx-[100px] py-12 md:py-11.5">
+          <div className=" relative mx-4 sm:mx-6 md:mx-8 lg:mx-[100px] py-12 md:py-11.5">
             <div className='flex flex-col md:flex-row mx-auto'>
               {/* Content section */}
               <div className={`w-full md:mt[100px] md:w-[65%] pl-4 pt-[30px] pb-[60px] md:pt-[160px] md:pb-[90px] `}>
@@ -56,7 +56,7 @@ export default function Home() {
                     className="bg-clip-text text-transparent text-[16px] md:text-[18px] font-[400] leading-[28px] capitalize mb-2">
                     <span className="font-['Libre_Baskerville'] font-[400]">Founder & Visionary Leader</span>
                 </h4>
-                <p className="text-[#A08871] font-['Roboto'] pr-[10px] md:pr-[90px] mb-[120px] font-[300] text-[14px] italic leading-[24px]">
+                <p className="text-[#A08871] font-['Roboto'] pr-[10px] md:pr-[90px] mb-[120px] lg:pr-[110px] font-[300] text-[14px] italic leading-[24px]">
                   With a strong background in international business and strategic investments, Mr. Nawal Kishore has been instrumental in transforming Godara Brothers into a diversified conglomerate. His leadership has steered multiple businesses toward sustained growth and industry leadership.
                 </p>
               </div>
@@ -66,22 +66,21 @@ export default function Home() {
                 <div className="md:right-0 md:w-[35%] z-[10] h-[300px] md:h-[300px]">
                   {/* Gray background */}
                   <div
-                    className={`absolute w-[60%] right-0 md:right-0 md:top-0  md:w-[30%] h-[350px] md:h-[200px] bg-[#EFEBE7] 
+                    className={`absolute sm:w-[45%] w-[60%] right-0 md:right-0 md:top-0  md:w-[30%] h-[350px] md:h-[200px] bg-[#EFEBE7] 
                       bottom-30`}
                   ></div>
 
                   {/* Image */}
                   {/* Image for Mr. Nawal Kishore */}
-                  {/* Image for Mr. Nawal Kishore */}
                   <div
-                    className={`absolute mt-12 bottom-23 sm:right-0 md:right-0 md:top-[150px] z-10 right-0 md:mt-0 w-[95%] md:w-[40%] h-[35.5%] md:h-[60%] overflow-hidden hover:scale-105 transition-transform duration-300 ease-out`}
+                    className={`absolute mt-12 bottom-23 sm:right-0 md:right-0 md:top-20 z-10 right-0 md:mt-0 sm:w-[50%] w-[380px] md:w-[40%] lg:w-[375px] h-[35.5%] md:h-[60%] lg:h-[65%] xl:w-[425px] xl:h-[60%] 2xl:w-[32%] 2xl:h-[85%] overflow-hidden hover:scale-105 transition-transform duration-300 ease-out`}
                   >
                     <Image
-                      src={'/naval-kishore.svg'}
+                      src={'/naval-kishore1.svg'}
                       alt='Mr. Nawal Kishore'
                       fill
                       sizes="(max-width: 768px) 90vw, 40vw"
-                      className=""
+                      className="lg:object-cover"
                     />
                   </div>
                 </div>
@@ -123,39 +122,42 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="w-full md:w-1/4 px-[100px] md:border-b-0 md:px-8 pt-8 pb-6 border-b text-center md:pt-[60px] md:border-r border-[#CFC3B8] md:border-[#603812] flex items-center">
+          <div className="w-full md:w-1/4 px-[100px] md:border-b-0 md:px-8 pt-8 pb-6 text-center md:pt-[60px] md:border-r border-[#CFC3B8] md:border-[#603812] flex items-center">
             <p className="font-['Roboto'] text-base md:text-lg text-[#A08871] font-normal">
-              <span className="text-[#603812] font-[300] inline">Played a pivotal role in the</span>{' '}
+              <span className="text-[#603812] font-[300] inline">Pioneered</span>{' '}
               <span 
                 className="font-bold inline bg-clip-text text-transparent"
                 style={{
                   backgroundImage: "linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%)"
                 }}
               >
-                growth of Ste NTH Sarl and Apex Group Int&apos;l.
+                strategic trading enterprises
               </span>
+              {' '}<span className="text-[#603812] font-[300] inline">with exceptional growth across multiple sectors.</span>
             </p>
           </div>
 
-          <div className="w-full md:w-1/4 px-[100px] md:border-b-0 md:px-8 pt-8 pb-6 text-center md:pt-[60px] md:border-r border-[#CFC3B8] md:border-[#603812] flex items-center">
+          <div className="w-full md:w-1/4 px-[100px] md:border-b-0 md:px-8 pt-8 pb-6 border-b text-center md:pt-[60px] md:border-r border-[#CFC3B8] md:border-[#603812] flex items-center">
             <p className="font-['Roboto'] text-base md:text-lg text-[#A08871] font-normal">
-              <span className="text-[#603812] font-[300] inline">Played a pivotal role in the</span>{' '}
+              <span className="text-[#603812] font-[300] inline">Orchestrated</span>{' '}
               <span 
                 className="font-bold inline bg-clip-text text-transparent"
                 style={{
                   backgroundImage: "linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%)"
                 }}
               >
-                growth of Ste NTH Sarl and Apex Group Int&apos;l.
+                strategic diversification
               </span>
+              <span className="text-[#603812] font-[300] inline"> transforming the business into a global conglomerate.</span>
             </p>
           </div>
+
         </div>
       {/* </ScrollReveal> */}
 
       {/* <ScrollReveal direction="up" delay={0.2}> */}
         <div className="border-b border-[#CFC3B8] md:border-[#603812]">
-          <section className="text-center px-8 py-12 md:py-24 lg:py-32 max-w-[1440px] ">
+          <section className="text-center px-8 py-12 md:py-24 lg:py-32 ">
             <div className="md:px-55 mx-auto">
               <h1 className="text-2xl sm:text-3xl md:text-3xl lg:text-[36px] leading-tight">
                 <span 
@@ -178,7 +180,7 @@ export default function Home() {
 
       {/* <ScrollReveal delay={0.3} direction="right"> */}
         <div className="mt-6 border-t border-[#CFC3B8] md:border-[#603812] border-b md:mt-12">
-          <div className="max-w-[1440px] relative mx-4 sm:mx-6 md:mx-8 lg:mx-[100px] py-12 md:pt-11.5 md:pb-8">
+          <div className=" relative mx-4 sm:mx-6 md:mx-8 lg:mx-[100px] py-12 md:pt-11.5 md:pb-8">
             {/* Rest of the content for Mr. Teeku Singh Choudhary */}
             <div className='flex flex-col md:flex-row mx-auto'>
               {/* Mobile content section */}
@@ -219,17 +221,15 @@ export default function Home() {
 
                   {/* Image */}
                   {/* Image for Mr. Teeku Singh Choudhary */}
-                  {/* Image for Mr. Teeku Singh Choudhary */}
-                  {/* Image */}
                   <div
-                    className={`absolute mt-12 bottom-15 z-10 transition-transform duration-300 ease-out hover:scale-105 md:top-[70px] left-0 md:mt-0 w-[95%] md:w-[35%] h-[40%] md:h-[290] overflow-hidden`}
+                    className={`absolute mt-12 bottom-15 z-10 transition-transform duration-300 ease-out hover:scale-105 md:top-[70px] left-0 md:mt-0 sm:w-[62%] w-[83%] md:w-[38%] lg:w-[39%] h-[40%] md:h-[330px] xl:w-[35%] 2xl:h-[90%] 2xl:top-0 2xl:w-[32%] overflow-hidden`}
                   >
                     <Image
                       src={'/teeku_singh-removebg-preview.png'}
                       alt='Mr. Teeku Singh Choudhary'
                       fill
-                      sizes="(max-width: 768px) 90vw, 40vw"
-                      className=""
+                      // sizes="(max-width: 768px) 90vw, 40vw"
+                      className="md:object-cover lg:object-top"
                     />
                   </div>
                 </div>
@@ -273,9 +273,9 @@ export default function Home() {
             border-solid px-4 sm:px-6 md:px-8 lg:px-[100px] md:flex-row h-auto md:h-[350px]">
           {/* Key Achievements for Mr. Teeku Singh */}
           {/* First column - Title */}
-          <div className="w-full md:w-1/4 md:border-r border-[#CFC3B8] md:border-[#603812] border-b md:border-b-0 text-center flex justify-center pb-6 pt-1 md:pt-16">
+          <div className="w-full px-4 md:px-4 md:w-1/4 md:border-r border-[#CFC3B8] md:border-[#603812] border-b md:border-b-0 flex flex-col items-center md:items-start pb-6 pt-1 md:pt-16">
             <h2 
-              className="font-['Libre_Baskerville'] text-center md:text-left text-2xl md:text-3xl lg:text-3xl leading-tight text-center bg-clip-text text-transparent"
+              className="text-center inline md:text-left text-xl sm:text-2xl md:text-3xl leading-tight bg-clip-text text-transparent max-w-full overflow-hidden"
               style={{
                 backgroundImage: "linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%)"
               }}
@@ -289,16 +289,16 @@ export default function Home() {
           {/* Second column */}
           <div className="w-full md:w-1/4 px-[100px] border-b md:border-b-0 md:px-8 pt-8 pb-6 text-center md:pt-[60px] md:border-r border-[#CFC3B8] md:border-[#603812] flex items-center">
             <p className="font-['Roboto'] text-base md:text-lg text-[#A08871] font-normal">
-              <span className="text-[#603812] font-[300] inline">Co-founded</span>{' '}
+              <span className="text-[#603812] font-[300] inline">Established</span>{' '}
               <span 
                 className="font-bold inline bg-clip-text text-transparent"
                 style={{
                   backgroundImage: "linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%)"
                 }}
               >
-                Aqua Beverages Sarlu
+                market-leading beverage production
               </span>
-              <span className="text-[#603812] font-[300] inline">, a leading name in the beverage industry.</span>
+              <span className="text-[#603812] font-[300] inline"> across Central Africa.</span>
             </p>
           </div>
           
@@ -337,7 +337,7 @@ export default function Home() {
 
       {/* <ScrollReveal direction="up" delay={0.2}> */}
         <div className=" border-b border-[#CFC3B8] md:border-[#603812]">
-          <section className="text-center px-8 py-12 md:py-24 lg:py-32 max-w-[1440px] ">
+          <section className="text-center px-8 py-12 md:py-24 lg:py-32 ">
             <div className="md:px-55 mx-auto">
               <h1 className="text-2xl sm:text-3xl md:text-3xl lg:text-[36px] leading-tight">
                 <span 

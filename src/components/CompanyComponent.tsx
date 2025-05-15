@@ -25,7 +25,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
   return (
     <>
       <div className="mt-6 md:mt-24">
-        <div className="max-w-[1440px] relative mx-4 sm:mx-6 md:mx-8 lg:mx-[100px] py-12 md:py-11.5">
+        <div className="relative mx-4 sm:mx-6 md:mx-8 lg:mx-[100px] py-12 md:py-11.5">
           <div className={`flex flex-col mx-auto ${reverseLayout ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
             {/* Content section */}
             <div className={`w-full md:w-[65%] pl-4 ${reverseLayout ? 'md:pl-12' : 'md:pl-6'} mb-12 pb-6 md:mb-0 sm:px-6`}>
@@ -59,7 +59,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
                 {subtitle}
               </h4>
 
-              <p className="text-[#8b7e66] font-['Roboto'] font-[300] text-[14px] italic leading-[24px]">
+              <p className="text-[#8b7e66] md:pr-5 font-['Roboto'] font-[300] text-[14px] italic leading-[24px]">
                 {description}
               </p>
             </div>

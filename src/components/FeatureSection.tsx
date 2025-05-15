@@ -27,7 +27,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
 
   return (
     <div className="relative border-b md:border-b border-[#CFC3B8] md:border-[#603812] mt-0 md:mt-0">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-[100px] py-8 md:py-30">
+      <div className="max-w mx-auto px-4 sm:px-6 md:px-8 lg:px-[100px] py-8 md:py-30">
 
         <div className={`flex flex-col ${reverseLayout ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
           {/* Content section */}
