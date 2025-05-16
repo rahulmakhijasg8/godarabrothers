@@ -2,12 +2,12 @@
 
 import Image from "next/image";
 import FeaturedSection from "@/components/AltDifferentiaton";
-// import ScrollReveal from "@/components/ScrollReveal";
+import ScrollReveal from "@/components/ScrollReveal";
 
 export default function Home() {
   return (
     <div>
-      {/* <ScrollReveal> */}
+      <ScrollReveal>
         <section className="text-center border-[#CFC3B8] md:border-[#603812] border-b-[1px] px-4 py-12 md:py-24 lg:py-32">
           <div className="max-w-3xl mx-auto">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] leading-tight">
@@ -30,9 +30,9 @@ export default function Home() {
             </p>
           </div>
         </section>
-      {/* </ScrollReveal> */}
+      </ScrollReveal>
 
-      {/* <ScrollReveal delay={0.2}> */}
+      <ScrollReveal delay={0.2}>
         <div className="mt-6 border-t border-[#CFC3B8] md:border-[#603812] md:mt-12">
           <div className=" relative mx-4 sm:mx-6 md:mx-8 lg:mx-[100px] py-12 md:py-11.5">
             <div className='flex flex-col md:flex-row mx-auto'>
@@ -88,9 +88,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-      {/* </ScrollReveal> */}
+      </ScrollReveal>
 
-      {/* <ScrollReveal direction="left" delay={0.3}> */}
+      <ScrollReveal direction="left" delay={0.3}>
         <div className="flex flex-col mt-12 md:mt-0 md:border-t
             border-b 
             border-[#CFC3B8] md:border-[#603812]
@@ -153,9 +153,9 @@ export default function Home() {
           </div>
 
         </div>
-      {/* </ScrollReveal> */}
+      </ScrollReveal>
 
-      {/* <ScrollReveal direction="up" delay={0.2}> */}
+      <ScrollReveal direction="up" delay={0.2}>
         <div className="border-b border-[#CFC3B8] md:border-[#603812]">
           <section className="text-center px-8 py-12 md:py-24 lg:py-32 ">
             <div className="md:px-55 mx-auto">
@@ -176,9 +176,9 @@ export default function Home() {
             </div>
           </section>
         </div>
-      {/* </ScrollReveal> */}
+      </ScrollReveal>
 
-      {/* <ScrollReveal delay={0.3} direction="right"> */}
+      <ScrollReveal delay={0.3} direction="right">
         <div className="mt-6 border-t border-[#CFC3B8] md:border-[#603812] border-b md:mt-12">
           <div className=" relative mx-4 sm:mx-6 md:mx-8 lg:mx-[100px] py-12 md:pt-11.5 md:pb-8">
             {/* Rest of the content for Mr. Teeku Singh Choudhary */}
@@ -264,9 +264,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-      {/* </ScrollReveal> */}
+      </ScrollReveal>
 
-      {/* <ScrollReveal direction="left" delay={0.2}> */}
+      <ScrollReveal direction="left" delay={0.2}>
         <div className="flex flex-col mt-12 md:mt-0
             border-b
             border-[#CFC3B8] md:border-[#603812]
@@ -333,9 +333,9 @@ export default function Home() {
             </p>
           </div>
         </div>
-      {/* </ScrollReveal> */}
+      </ScrollReveal>
 
-      {/* <ScrollReveal direction="up" delay={0.2}> */}
+      <ScrollReveal direction="up" delay={0.2}>
         <div className=" border-b border-[#CFC3B8] md:border-[#603812]">
           <section className="text-center px-8 py-12 md:py-24 lg:py-32 ">
             <div className="md:px-55 mx-auto">
@@ -356,9 +356,9 @@ export default function Home() {
             </div>
           </section>
         </div>
-      {/* </ScrollReveal> */}
+      </ScrollReveal>
 
-      {/* <ScrollReveal direction="up" delay={0.3}> */}
+      <ScrollReveal direction="up" delay={0.3}>
         <FeaturedSection 
           leftColumn={{
             sectionTitle: "Vision",
@@ -369,7 +369,7 @@ export default function Home() {
             paragraphText: '"Our mission is to create value through strategic investments, innovation, and responsible business practices. We strive to uphold excellence in every sector we operate in, ensuring growth for our businesses and stakeholders."'
           }}
         />
-      {/* </ScrollReveal> */}
+      </ScrollReveal>
     </div>
   );
 }
