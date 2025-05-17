@@ -1,15 +1,18 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 interface FeatureSectionProps {
   sectionTitle: string;
-  subtitle: string,
+  subtitle: string;
   sectionTitleLink?: string; // Optional link for the section title
   description: string;
   imageSrc: string;
   imageAlt: string;
   reverseLayout?: boolean;
+  objectFit?: string; // Allow any string value
 }
 
 const FeatureSection: React.FC<FeatureSectionProps> = ({
@@ -20,7 +23,38 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
   imageSrc,
   imageAlt,
   reverseLayout = false,
+  objectFit = "cover", // Default to cover
 }) => {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  // Add image extension validation
+  const validImageExtensions = ['.jpg', '.jpeg', '.png', '.svg', '.webp', '.gif', '.avif'];
+  const hasValidExtension = validImageExtensions.some(ext => 
+    imageSrc.toLowerCase().endsWith(ext)
+  );
+
+  // Preload the image when component mounts
+  useEffect(() => {
+    if (hasValidExtension) {
+      const img = new window.Image();
+      img.onload = () => setImageLoaded(true);
+      img.onerror = () => {
+        console.error(`Failed to load image: ${imageSrc}`);
+        // Still set as loaded to avoid blocking UI
+        setImageLoaded(true);
+      };
+      img.src = imageSrc;
+    }
+  }, [imageSrc, hasValidExtension]);
+
+  // Generate the object-fit class based on the prop
+  const getObjectFitClass = () => {
+    if (objectFit === "cover") return "object-cover";
+    if (objectFit === "contain") return "object-contain";
+    if (objectFit === "fit") return "object-fit";
+    // For any other string value, use it as a direct class
+    return `object-${objectFit}`;
+  };
 
   return (
     <>
@@ -77,7 +111,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
                     bottom-0`}
                 ></div>
 
-                {/* Image */}
+                {/* Image container */}
                 <div
                   className={`absolute mt-12 bottom-[0] md:mt-0 md:bottom-[50px] ${
                     reverseLayout
@@ -85,13 +119,22 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
                       : 'right-0'
                   } w-[95%] md:w-[40%] h-[37.3%] md:h-[77%]`}
                 >
-                  <Image
-                    src={imageSrc}
-                    alt={imageAlt}
-                    fill
-                    sizes="(max-width: 768px) 90vw, 40vw"
-                    className="object-cover"
-                  />
+                  {hasValidExtension ? (
+                    <Image
+                      src={imageSrc}
+                      alt={imageAlt}
+                      fill
+                      sizes="(max-width: 768px) 90vw, 40vw"
+                      className={`sm:object-fit md:${getObjectFitClass()} transition-opacity duration-300 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
+                      priority
+                    />
+                  ) : (
+                    <div className="absolute inset-0 bg-[#F8F7F6] flex items-center justify-center">
+                      <span className="text-[#8b7e66] text-center p-4">
+                        {imageAlt || "Company Image"}
+                      </span>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>

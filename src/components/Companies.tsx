@@ -11,7 +11,9 @@ export default function Companies() {
     { src: "/1.png", alt: "Prestige", width: 220, height: 150 },
     { src: "/6.png", alt: "SG", width: 220, height: 130 },
     { src: "/4.png", alt: "African", width: 220, height: 140 },
-    { src: "/5.png", alt: "GLM", width: 220, height: 120 },
+    { src: "/Aqua Logo.jpeg", alt: "Aqua", width: 220, height: 130 },
+    { src: "/Logo_NHT.pdf-image-003.png", alt: "FCC", width: 220, height: 150 },
+    { src: "/5.png", alt: "GLM", width: 220, height: 140 },
     { 
       src: "/NE-removebg-preview (1).png", 
       alt: "New Electronics", 
@@ -39,7 +41,8 @@ export default function Companies() {
       width: 170, 
       height: 70,
       extraMargin: true // Add a flag for extra margin
-    }
+    },
+    { src: "/nht-logo.png", alt: "NHT", width: 220, height: 80 },
   ];
 
   // Create multiple sets of logos to ensure smooth scrolling
