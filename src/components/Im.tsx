@@ -1,31 +1,55 @@
 import Image from "next/image";
 
-export default function ImageSection() {
+export default function ImageGridSection() {
+  // Array of images with their details
+  const images = [
+    {
+      src: "/image.svg", // First image - port with shipping containers
+      alt: "Port and Shipping Operations",
+      width: 384,
+      height: 516
+    },
+    {
+      src: "/image2.svg", // Second image - wooden furniture display
+      alt: "Fine Furniture and Woodcraft",
+      width: 334,
+      height: 516,
+      marginTop: true // Add margin-top to this image
+    },
+    {
+      src: "/image3.svg", // Third image - pink/coral colored building
+      alt: "Commercial Properties",
+      width: 384,
+      height: 516
+    },
+    {
+      src: "/image4.svg", // Fourth image - makeup palette
+      alt: "Cosmetics and Beauty Products",
+      width: 284,
+      height: 516,
+      marginTop: true // Add margin-top to this image
+    }
+  ];
+
   return (
-    <section className="mt-12 md:mt-16 w-full relative overflow-x-hidden">
-      {/* Top horizontal rule with proper positioning */}
-      <div className="relative hidden md:block pr-4 sm:pr-6 md:pr-8 lg:pr-[100px]">
-        <hr className="border-0 w-full h-px bg-[#603812] z-10" />
-      </div>
-      
-      {/* Image container with full width */}
+    <section className="pb-[10px] md:pb-0 w-full relative overflow-x-hidden">
+      {/* Image grid container */}
       <div className="w-full px-4 sm:px-6 md:px-8 lg:px-[100px] relative">
-        {/* Set fixed height for mobile (217px) and use aspect ratio for larger screens */}
-        <div className="h-[217px] sm:h-auto sm:aspect-[1161/402] md:aspect-[1161/402] w-full relative">
-          <Image
-            src="/Rectangle 2.png"
-            alt="Godara Banner"
-            fill
-            priority
-            // sizes="100vw"
-            className="object-cover"
-          />
+        <div className="flex gap-1 md:gap-6 h-[155px] md:h-[450px] md:overflow-hidden pb-4 md:pb-0 px-2 md:mx-0 md:px-14">
+          {images.map((image, index) => (
+            <div 
+              key={index}
+              className={`relative w-1/4 h-[140px] md:h-[400px] overflow-hidden ${image.marginTop ? 'mt-[15px] md:mt-[50px]' : ''}`}
+            >
+              <Image
+                src={image.src}
+                alt={image.alt}
+                fill
+                className="object-cover rounded-[6px] md:rounded-[14px]"
+              />
+            </div>
+          ))}
         </div>
-      </div>
-      
-      {/* Bottom horizontal rule */}
-      <div className="relative pl-4 sm:pl-6 md:pl-8 lg:pl-[100px] w-screen">
-      <hr className="border-0 h-px bg-[#CFC3B8] md:bg-[#603812] w-screen" />
       </div>
     </section>
   );

@@ -1,45 +1,65 @@
+import { useState } from "react";
 import IndustryCard from "./industrycard";
 
 export default function Industries() {
-  // Industry data for cleaner code
-  const industries = [
-    { title: "Industries We Operate In", isHeading: true },
+  const [showAll, setShowAll] = useState(false);
+  
+  // Industry data - only industry cards, no heading
+  const allIndustries = [
     { image: "/Rectangle 22.png", title: "General Trading" },
     { image: "/Rectangle 23.png", title: "Purified Water and Speciality Bevarages" },
     { image: "/Rectangle 24.png", title: "Retail & Distribution" },
     { image: "/Rectangle 25.png", title: "Cosmetics Trading" },
-    { image: "/Rectangle 26.png", title: "Import-Export" }
+    { image: "/Rectangle 26.png", title: "Import-Export" },
+    // Additional industries
+    { image: "/Rectangle 27.png", title: "Food & Beverage" },
+    { image: "/Rectangle 28.png", title: "Electronics" },
+    { image: "/Rectangle 29.png", title: "Textiles & Apparel" },
+    { image: "/Rectangle 30.png", title: "Automotive Parts" },
+    { image: "/Rectangle 31.png", title: "Home & Lifestyle" },
+    { image: "/Rectangle 32.png", title: "Health & Wellness" },
+    { image: "/Rectangle 33.png", title: "Construction Materials" },
+    { image: "/Rectangle 34.png", title: "Agricultural Products" },
+    { image: "/Rectangle 35.png", title: "Industrial Equipment" }
   ];
 
+  // Show only first 5 industry cards initially, or all when showAll is true
+  const industries = showAll ? allIndustries : allIndustries.slice(0, 5);
+
   return (
-    <div className="my-8 md:my-12 px-4 sm:px-6 md:px-8 lg:px-[100px] border-t border-b border-[#CFC3B8] md:border-[#603812]">
-      <div className="grid grid-cols-1 md:grid-cols-3">
+    <div className="my-8 border-t border-[#CFC3B8] md:border-[#603812] md:my-12 px-4 sm:px-6 md:px-8 lg:px-[100px]">
+      {/* Separate heading above the grid */}
+      <div className="text-center mt-25 mb-14 md:mt-30 md:mb-20">
+        <h2 className="text-2xl md:text-4xl">
+          <span className="bg-clip-text font-['Libre_Baskerville'] font-700 text-transparent font-bold" 
+            style={{
+              backgroundImage: "linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%)"
+            }}>
+            Industries We<span className="font-['Libre_Baskerville'] text-left font-[400] italic"> Operate In</span>
+          </span>
+        </h2>
+      </div>
+
+      {/* Grid with industry cards only */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {industries.map((industry, index) => (
           <div 
             key={index}
-            className={`
-              flex flex-col items-center 
-              ${industry.isHeading ? 'pb-0 pt-8 px-0 justify-center md:p-12 -mb-4 md:mb-0' : 'relative p-8 md:p-12 md:pt-6'}
-              ${industry.isHeading ? 'min-h-[160px] md:min-h-[300px]' : 'min-h-[300px]'}
-              ${index !== industries.length - 1 && index % 3 !== 2 ? 'md:border-r' : ''} 
-              ${index < 3 ? 'md:border-b' : ''} 
-              border-[#603812]
-            `}
+            className="flex flex-col items-center relative p-4 md:p-8 md:pt-6 min-h-[300px]"
           >
-            {industry.isHeading ? (
-              <h2 className="text-2xl md:text-4xl">
-                <span className="bg-clip-text font-['Libre_Baskerville'] font-700 text-transparent font-bold" 
-                  style={{
-                    backgroundImage: "linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%)"
-                  }}>
-                  Industries We<span className="font-['Libre_Baskerville'] text-left font-[400] italic"> Operate In</span>
-                </span>
-              </h2>
-            ) : (
-              <IndustryCard title={industry.title} image={industry.image!} />
-            )}
+            <IndustryCard title={industry.title} image={industry.image!} />
           </div>
         ))}
+      </div>
+      
+      {/* See More / See Less button */}
+      <div className="flex justify-center mt-6 mb-4">
+        <button
+          onClick={() => setShowAll(!showAll)}
+          className="text-[#603812] font-['Roboto'] text-sm underline font-medium"
+        >
+          {showAll ? "See Less" : "See More"}
+        </button>
       </div>
     </div>
   );

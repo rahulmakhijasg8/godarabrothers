@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="text-center px-4 py-12 md:py-24 lg:py-32">
+    <section className="text-center px-4 py-12 md:pt-24 pb-[32px] md:pb-[60px] lg:pt-32 lg:pb-[60px]">
       <div className="max-w-3xl mx-auto">
 <h1 
           className="font-['Libre_Baskerville'] text-2xl sm:text-3xl md:text-4xl lg:text-[44px] leading-tight"

@@ -3,8 +3,74 @@
 import Image from "next/image";
 import FeaturedSection from "@/components/AltDifferentiaton";
 import ScrollReveal from "@/components/ScrollReveal";
+import KeyAchievements, {AchievementPoint} from "@/components/keyachievements";
 
 export default function Home() {
+
+  const Nawalachievements: AchievementPoint[] = [
+    {
+      title: "Pioneered Business Diversification Across Sectors",
+      description: "Successfully led the strategic diversification of business ventures into diverse sectors, ensuring a well-balanced and resilient portfolio."
+    },
+    {
+      title: "Scaled Regional Businesses into Market Leaders",
+      description: "Directed the transformation of regional operations into leading players within their industries through a focus on long-term strategy and performance-driven growth."
+    },
+    {
+      title: "Established End-to-End Production Ecosystems",
+      description: "Designed and implemented robust supply chain and production networks to support high-volume operations, ensuring agility and responsiveness to market demands."
+    },
+    {
+      title: "Accelerated Brand Growth Through Strategic Positioning",
+      description: "Played a vital role in crafting brand strategies that improved visibility, customer loyalty, and long-term value in competitive markets."
+    },
+    {
+      title: "Cultivated a High-Impact Leadership Culture",
+      description: "Championed leadership development and team empowerment, fostering innovation and accountability across all levels of the organization."
+    },
+    {
+      title: "Anticipated Market Trends with Agile Business Models",
+      description: "Deployed flexible strategies that enabled businesses to pivot quickly and capitalize on emerging trends and shifts in consumer behavior."
+    },
+    {
+      title: "Spearheaded Cross-Border Business Alliances",
+      description: "Forged critical regional partnerships that enabled access to new markets, streamlined operations, and fueled sustainable growth."
+    }
+  ];
+
+
+  // Achievement points array
+const Teekuachievements: AchievementPoint[] = [
+  {
+    title: "Led Financial Transformation Across Business Units",
+    description: "Developed and implemented financial structures that enhanced profitability, ensured compliance, and supported long-term fiscal health across multiple ventures."
+  },
+  {
+    title: "Optimized Procurement with Cost-Effective Strategies",
+    description: "Revamped procurement systems, negotiated impactful supplier agreements, and reduced operational costs without compromising quality or timelines."
+  },
+  {
+    title: "Implemented Enterprise-Wide Administrative Efficiencies",
+    description: "Standardized and improved administrative workflows, increasing productivity and regulatory compliance across diverse business entities."
+  },
+  {
+    title: "Built Scalable Distribution Infrastructure",
+    description: "Oversaw the creation of integrated logistics and distribution systems capable of supporting large-scale, multi-country operations."
+  },
+  {
+    title: "Strengthened Internal Controls and Reporting Mechanisms",
+    description: "Introduced enhanced financial reporting and risk management protocols to ensure transparency, accountability, and operational integrity."
+  },
+  {
+    title: "Accelerated Operational Performance Through Process Reengineering",
+    description: "Streamlined core business processes, leading to measurable gains in efficiency, resource utilization, and output quality."
+  },
+  {
+    title: "Expanded Business Footprint Through Strategic Execution",
+    description: "Played a central role in executing business expansion plans that aligned with broader organizational goals, driving sustainable entry into new markets."
+  }
+];
+
   return (
     <div>
       <ScrollReveal>
@@ -91,72 +157,11 @@ export default function Home() {
       </ScrollReveal>
 
       <ScrollReveal direction="left" delay={0.3}>
-        <div className="flex flex-col mt-12 md:mt-0 md:border-t
-            border-b 
-            border-[#CFC3B8] md:border-[#603812]
-            border-solid px-4 sm:px-6 md:px-8 lg:px-[100px] md:flex-row h-auto md:h-[350px]">
-          {/* First column - Title */}
-          <div className="w-full px-4 md:px-4 md:w-1/4 md:border-r border-[#CFC3B8] md:border-[#603812] border-b md:border-b-0 flex flex-col items-center md:items-start pb-6 pt-1 md:pt-16">
-            <h2 
-              className="text-center md:text-left text-xl sm:text-2xl md:text-3xl leading-tight bg-clip-text text-transparent max-w-full overflow-hidden"
-              style={{
-                backgroundImage: "linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%)"
-              }}
-            >
-              <span className="font-['Libre_Baskerville'] font-[700]">Key</span>{" "}<br className="hidden md:block"/>
-              <span className="italic font-['Libre_Baskerville'] inline-block font-[400]">Achievements</span>
-            </h2>
-          </div>
-
-          <div className="w-full md:w-1/4 px-[100px] border-b md:border-b-0 md:px-8 pt-8 pb-6 text-center md:pt-[60px] md:border-r border-[#CFC3B8] md:border-[#603812] flex items-center">
-            <p className="font-['Roboto'] text-base md:text-lg text-[#A08871] font-normal">
-              <span className="text-[#603812] font-[300] inline">Successfully expanded Godara Brothers into</span>{' '}
-              <span 
-                className="font-bold inline bg-clip-text text-transparent"
-                style={{
-                  backgroundImage: "linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%)"
-                }}
-              >
-                5+ global markets.
-              </span>
-            </p>
-          </div>
-
-          <div className="w-full md:w-1/4 px-[100px] md:border-b-0 md:px-8 pt-8 pb-6 text-center md:pt-[60px] md:border-r border-[#CFC3B8] md:border-[#603812] flex items-center">
-            <p className="font-['Roboto'] text-base md:text-lg text-[#A08871] font-normal">
-              <span className="text-[#603812] font-[300] inline">Pioneered</span>{' '}
-              <span 
-                className="font-bold inline bg-clip-text text-transparent"
-                style={{
-                  backgroundImage: "linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%)"
-                }}
-              >
-                strategic trading enterprises
-              </span>
-              {' '}<span className="text-[#603812] font-[300] inline">with exceptional growth across multiple sectors.</span>
-            </p>
-          </div>
-
-          <div className="w-full md:w-1/4 px-[100px] md:border-b-0 md:px-8 pt-8 pb-6 border-b text-center md:pt-[60px] md:border-r border-[#CFC3B8] md:border-[#603812] flex items-center">
-            <p className="font-['Roboto'] text-base md:text-lg text-[#A08871] font-normal">
-              <span className="text-[#603812] font-[300] inline">Orchestrated</span>{' '}
-              <span 
-                className="font-bold inline bg-clip-text text-transparent"
-                style={{
-                  backgroundImage: "linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%)"
-                }}
-              >
-                strategic diversification
-              </span>
-              <span className="text-[#603812] font-[300] inline"> transforming the business into a global conglomerate.</span>
-            </p>
-          </div>
-
-        </div>
+        <KeyAchievements achievementPoints={Nawalachievements}/>
       </ScrollReveal>
 
       <ScrollReveal direction="up" delay={0.2}>
-        <div className="border-b border-[#CFC3B8] md:border-[#603812]">
+        <div className="border-b border-t border-[#CFC3B8] mt-8 md:mt-12 md:border-[#603812]">
           <section className="text-center px-8 py-12 md:py-24 lg:py-32 ">
             <div className="md:px-55 mx-auto">
               <h1 className="text-2xl sm:text-3xl md:text-3xl lg:text-[36px] leading-tight">
@@ -179,7 +184,7 @@ export default function Home() {
       </ScrollReveal>
 
       <ScrollReveal delay={0.3} direction="right">
-        <div className="mt-6 border-t border-[#CFC3B8] md:border-[#603812] border-b md:mt-12">
+        <div className="mt-6 border-t border-[#CFC3B8] md:border-[#603812] md:mt-12">
           <div className=" relative mx-4 sm:mx-6 md:mx-8 lg:mx-[100px] py-12 md:pt-11.5 md:pb-8">
             {/* Rest of the content for Mr. Teeku Singh Choudhary */}
             <div className='flex flex-col md:flex-row mx-auto'>
@@ -267,76 +272,11 @@ export default function Home() {
       </ScrollReveal>
 
       <ScrollReveal direction="left" delay={0.2}>
-        <div className="flex flex-col mt-12 md:mt-0
-            border-b
-            border-[#CFC3B8] md:border-[#603812]
-            border-solid px-4 sm:px-6 md:px-8 lg:px-[100px] md:flex-row h-auto md:h-[350px]">
-          {/* Key Achievements for Mr. Teeku Singh */}
-          {/* First column - Title */}
-          <div className="w-full px-4 md:px-4 md:w-1/4 md:border-r border-[#CFC3B8] md:border-[#603812] border-b md:border-b-0 flex flex-col items-center md:items-start pb-6 pt-1 md:pt-16">
-            <h2 
-              className="text-center inline md:text-left text-xl sm:text-2xl md:text-3xl leading-tight bg-clip-text text-transparent max-w-full overflow-hidden"
-              style={{
-                backgroundImage: "linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%)"
-              }}
-            >
-              <span className="font-['Libre_Baskerville'] font-[700]">Key</span>{" "}<br className="hidden md:block"/>
-              <span className="italic font-['Libre_Baskerville'] font-[400]">Achievements</span>
-            </h2>
-          </div>
-          
-          {/* Rest of achievement columns */}
-          {/* Second column */}
-          <div className="w-full md:w-1/4 px-[100px] border-b md:border-b-0 md:px-8 pt-8 pb-6 text-center md:pt-[60px] md:border-r border-[#CFC3B8] md:border-[#603812] flex items-center">
-            <p className="font-['Roboto'] text-base md:text-lg text-[#A08871] font-normal">
-              <span className="text-[#603812] font-[300] inline">Established</span>{' '}
-              <span 
-                className="font-bold inline bg-clip-text text-transparent"
-                style={{
-                  backgroundImage: "linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%)"
-                }}
-              >
-                market-leading beverage production
-              </span>
-              <span className="text-[#603812] font-[300] inline"> across Central Africa.</span>
-            </p>
-          </div>
-          
-          {/* Third column */}
-          <div className="w-full md:w-1/4 px-[100px] md:border-b-0 md:px-8 pt-8 pb-6 border-b text-center md:pt-[60px] md:border-r border-[#CFC3B8] md:border-[#603812] flex items-center">
-            <p className="font-['Roboto'] text-base md:text-lg text-[#A08871] font-normal">
-              <span className="text-[#603812] font-[300] inline">Spearheaded</span>{' '}
-              <span 
-                className="font-bold inline bg-clip-text text-transparent"
-                style={{
-                  backgroundImage: "linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%)"
-                }}
-              >
-                global expansion initiatives
-              </span>
-              <span className="text-[#603812] font-[300] inline"> across multiple sectors.</span>
-            </p>
-          </div>
-          
-          {/* Fourth column */}
-          <div className="w-full md:w-1/4 px-[100px] md:border-b-0 md:px-8 pt-8 pb-6 text-center md:pt-[60px] md:border-r border-[#CFC3B8] md:border-[#603812] flex items-center">
-            <p className="font-['Roboto'] text-base md:text-lg text-[#A08871] font-normal">
-              <span className="text-[#603812] font-[300] inline">Strong expertise in</span>{' '}
-              <span 
-                className="font-bold inline bg-clip-text text-transparent"
-                style={{
-                  backgroundImage: "linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%)"
-                }}
-              >
-                finance, risk management, and corporate governance.
-              </span>
-            </p>
-          </div>
-        </div>
+        <KeyAchievements achievementPoints={Teekuachievements}/>
       </ScrollReveal>
 
       <ScrollReveal direction="up" delay={0.2}>
-        <div className=" border-b border-[#CFC3B8] md:border-[#603812]">
+        <div className=" border-b border-t mt-8 md:mt-12 border-[#CFC3B8] md:border-[#603812]">
           <section className="text-center px-8 py-12 md:py-24 lg:py-32 ">
             <div className="md:px-55 mx-auto">
               <h1 className="text-2xl sm:text-3xl md:text-3xl lg:text-[36px] leading-tight">
