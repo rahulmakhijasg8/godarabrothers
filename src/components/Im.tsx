@@ -35,11 +35,11 @@ export default function ImageGridSection() {
     <section className="pb-[10px] md:pb-0 w-full relative overflow-x-hidden">
       {/* Image grid container */}
       <div className="w-full px-4 sm:px-6 md:px-8 lg:px-[100px] relative">
-        <div className="flex gap-1 md:gap-6 h-[155px] md:h-[450px] md:overflow-hidden pb-4 md:pb-0 px-2 md:mx-0 md:px-14">
+        <div className="flex gap-1 md:gap-2 min-[451px]:max-[639px]:h-[250px] lg:gap-6 h-[155px] sm:h-[220px] md:h-[450px] md:overflow-hidden pb-4 md:pb-0 px-2 md:mx-0 md:px-7 lg:px-14">
           {images.map((image, index) => (
             <div 
               key={index}
-              className={`relative w-1/4 h-[140px] md:h-[400px] overflow-hidden ${image.marginTop ? 'mt-[15px] md:mt-[50px]' : ''}`}
+              className={`relative w-1/4 h-[140px] min-[451px]:max-[639px]:h-[230px] sm:h-[205px] md:h-[400px] overflow-hidden ${image.marginTop ? 'mt-[15px] md:mt-[50px]' : ''}`}
             >
               <Image
                 src={image.src}

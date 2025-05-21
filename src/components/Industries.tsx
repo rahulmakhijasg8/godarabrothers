@@ -6,25 +6,27 @@ export default function Industries() {
   
   // Industry data - only industry cards, no heading
   const allIndustries = [
-    { image: "/Rectangle 22.png", title: "General Trading" },
+    { image: "/general_trading.svg", title: "General Trading" },
     { image: "/Rectangle 23.png", title: "Purified Water and Speciality Bevarages" },
-    { image: "/Rectangle 24.png", title: "Retail & Distribution" },
-    { image: "/Rectangle 25.png", title: "Cosmetics Trading" },
-    { image: "/Rectangle 26.png", title: "Import-Export" },
+    { image: "/Rectangle 26.png", title: "Retail & Distribution" },
+    { image: "/Rectangle 24.png", title: "Cosmetics Trading" },
+    { image: "/Rectangle 25.png", title: "Import-Export" },
+    { image: "/hotel.svg", title: "Hotel & Resort" },
     // Additional industries
-    { image: "/Rectangle 27.png", title: "Food & Beverage" },
-    { image: "/Rectangle 28.png", title: "Electronics" },
-    { image: "/Rectangle 29.png", title: "Textiles & Apparel" },
-    { image: "/Rectangle 30.png", title: "Automotive Parts" },
-    { image: "/Rectangle 31.png", title: "Home & Lifestyle" },
-    { image: "/Rectangle 32.png", title: "Health & Wellness" },
-    { image: "/Rectangle 33.png", title: "Construction Materials" },
-    { image: "/Rectangle 34.png", title: "Agricultural Products" },
-    { image: "/Rectangle 35.png", title: "Industrial Equipment" }
+    { image: "/mining.svg", title: "Mining" },
+    { image: "/transport.svg", title: "Transport" },
+    { image: "/construction.svg", title: "Construction & Hardware" },
+    { image: "/electronics.svg", title: "Electronics" },
+    { image: "/furniture.svg", title: "Furntiure" },
+    { image: "/mining_copper.svg", title: "Mining of copper cathode" },
+    { image: "/drilling.svg", title: "Drilling and bore well" },
+    { image: "/automobiles.svg", title: "Automobiles" },
+    { image: "/education.svg", title: "Education" },
+    { image: "/event_management.svg", title: "Evenet Management" }
   ];
 
   // Show only first 5 industry cards initially, or all when showAll is true
-  const industries = showAll ? allIndustries : allIndustries.slice(0, 5);
+  const industries = showAll ? allIndustries : allIndustries.slice(0, 6);
 
   return (
     <div className="my-8 border-t border-[#CFC3B8] md:border-[#603812] md:my-12 px-4 sm:px-6 md:px-8 lg:px-[100px]">

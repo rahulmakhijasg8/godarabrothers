@@ -27,13 +27,16 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
 }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
 
-  // Add image extension validation
+  // Check if image source is provided
+  const hasImageSrc = imageSrc && imageSrc.trim() !== "";
+  
+  // Add image extension validation only if image source is provided
   const validImageExtensions = ['.jpg', '.jpeg', '.png', '.svg', '.webp', '.gif', '.avif'];
-  const hasValidExtension = validImageExtensions.some(ext => 
+  const hasValidExtension = hasImageSrc && validImageExtensions.some(ext => 
     imageSrc.toLowerCase().endsWith(ext)
   );
 
-  // Preload the image when component mounts
+  // Preload the image when component mounts (only if valid image source exists)
   useEffect(() => {
     if (hasValidExtension) {
       const img = new window.Image();
@@ -62,12 +65,12 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
         <div className="relative mx-4 sm:mx-6 md:mx-8 lg:mx-[100px] py-12 md:py-11.5">
           <div className={`flex flex-col mx-auto ${reverseLayout ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
             {/* Content section */}
-            <div className={`w-full md:w-[65%] pl-4 ${reverseLayout ? 'md:pl-12' : 'md:pl-6'} mb-12 pb-6 md:mb-0 sm:px-6`}>
+            <div className={`w-full md:w-[65%] pl-4 ${reverseLayout ? 'md:pl-12' : 'md:pl-6'} md:mb-12 pb-6 md:mb-0 sm:px-6`}>
               <h3 className="text-[24px] mb-6 text-left">
                 {sectionTitleLink ? (
                   <Link href={sectionTitleLink} target="_blank" passHref>
                     <span
-                      className="font-['Libre_Baskerville'] font-[700] bg-clip-text text-transparent cursor-pointer"
+                      className="font-['Libre_Baskerville'] font-[700] bg-clip-text text-transparent pr-2 cursor-pointer"
                       style={{
                         backgroundImage:
                           "linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%)",
@@ -78,7 +81,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
                   </Link>
                 ) : (
                   <span
-                    className="font-['Libre_Baskerville'] font-[700] bg-clip-text text-transparent"
+                    className="font-['Libre_Baskerville'] font-[700] pr-2 bg-clip-text text-transparent"
                     style={{
                       backgroundImage:
                         "linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%)",
@@ -93,7 +96,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
                 {subtitle}
               </h4>
 
-              <p className="text-[#8b7e66] md:pr-5 font-['Roboto'] font-[300] text-[14px] italic leading-[24px]">
+              <p className="text-[#8b7e66] pr-2 md:pr-5 font-['Roboto'] font-[300] text-[14px] italic leading-[24px]">
                 {description}
               </p>
             </div>
@@ -101,41 +104,35 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
             {/* Image section */}
             <div className="w-full md:w-2/5">
               <div className="w-full z-[10] h-[300px] md:h-[300px]">
-                {/* Gray background */}
+                {/* Gray background - always show this */}
                 <div
                   className={`absolute ${
                     reverseLayout
                       ? 'left-0 '
                       : 'right-0'
-                  } w-[60%] md:w-[30%] h-[380px] md:h-[410px] bg-[#EFEBE7] 
+                  } w-[60%] md:w-[30%] h-[330px] md:h-[410px] bg-[#EFEBE7] 
                     bottom-0`}
                 ></div>
 
-                {/* Image container */}
-                <div
-                  className={`absolute mt-12 bottom-[0] md:mt-0 md:bottom-[50px] ${
-                    reverseLayout
-                      ? 'left-0 '
-                      : 'right-0'
-                  } w-[95%] md:w-[40%] h-[37.3%] md:h-[77%]`}
-                >
-                  {hasValidExtension ? (
+                {/* Image container - only show if imageSrc is provided */}
+                {hasImageSrc && hasValidExtension && (
+                  <div
+                    className={`absolute mt-12 bottom-[0] md:mt-0 md:bottom-[50px] ${
+                      reverseLayout
+                        ? 'left-0 '
+                        : 'right-0'
+                    } w-[95%] md:w-[40%] h-[31%] md:h-[77%]`}
+                  >
                     <Image
                       src={imageSrc}
                       alt={imageAlt}
                       fill
                       sizes="(max-width: 768px) 90vw, 40vw"
-                      className={`sm:object-fit md:${getObjectFitClass()} transition-opacity duration-300 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
+                      className={`object-cover md:${getObjectFitClass()} transition-opacity duration-300 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
                       priority
                     />
-                  ) : (
-                    <div className="absolute inset-0 bg-[#F8F7F6] flex items-center justify-center">
-                      <span className="text-[#8b7e66] text-center p-4">
-                        {imageAlt || "Company Image"}
-                      </span>
-                    </div>
-                  )}
-                </div>
+                  </div>
+                )}
               </div>
             </div>
           </div>

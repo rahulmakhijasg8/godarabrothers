@@ -220,20 +220,20 @@ const Teekuachievements: AchievementPoint[] = [
                 <div className="md:right-0 md:w-[35%] z-[10] h-[300px] md:h-[300px]">
                   {/* Gray background */}
                   <div
-                    className={`absolute w-[60%] left-0 md:bottom-[0px]  md:w-[30%] h-[300px] md:h-[200px] bg-[#EFEBE7] 
+                    className={`absolute w-[50%] left-0 md:bottom-[0px] sm:w-[45%]  md:w-[30%] h-[300px] md:h-[200px] bg-[#EFEBE7] 
                       bottom-35`}
                   ></div>
 
                   {/* Image */}
                   {/* Image for Mr. Teeku Singh Choudhary */}
                   <div
-                    className={`absolute mt-12 bottom-15 z-10 transition-transform duration-300 ease-out hover:scale-105 md:top-[70px] left-0 md:mt-0 sm:w-[62%] w-[83%] md:w-[38%] lg:w-[39%] h-[40%] md:h-[330px] xl:w-[35%] 2xl:h-[90%] 2xl:top-0 2xl:w-[32%] overflow-hidden`}
+                    className={`absolute mt-12 bottom-15 z-10 transition-transform duration-300 ease-out hover:scale-105 md:top-[70px] left-0 md:mt-0 sm:w-[51%] min-[470px]:max-[619px]:w-[60%] w-[90%] md:w-[38%] min-[620px]:max-[640px]:w-[57%] lg:w-[39%] h-[36%] md:h-[330px] xl:w-[35%] 2xl:h-[90%] 2xl:top-0 2xl:w-[32%] overflow-hidden`}
                   >
                     <Image
                       src={'/teeku_singh-removebg-preview.png'}
                       alt='Mr. Teeku Singh Choudhary'
                       fill
-                      // sizes="(max-width: 768px) 90vw, 40vw"
+                      sizes="(max-width: 768px) 90vw, 40vw"
                       className="md:object-cover lg:object-top"
                     />
                   </div>
