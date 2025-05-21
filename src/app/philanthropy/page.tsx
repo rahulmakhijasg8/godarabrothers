@@ -47,7 +47,7 @@ export default function Home() {
           description: "Funding libraries, coaching centers, and competitive exam preparation resources."
         }
       ],
-      imageSrc: "/classroom-image.png",
+      imageSrc: "/edu_skill.svg",
       imageAlt: "Students in a classroom setting with colorful decorations",
       reverseLayout: false
     },
@@ -64,7 +64,7 @@ export default function Home() {
           description: "A ₹20 lakh donation to national cleanliness campaigns."
         }
       ],
-      imageSrc: "/environmental-sustainability.png",
+      imageSrc: "/environmental.svg",
       imageAlt: "environmental",
       reverseLayout: true
     },
@@ -89,7 +89,7 @@ export default function Home() {
           description: "A ₹10 lakh financial support provided to the family of an employee who lost his life in a road accident."
         }
       ],
-      imageSrc: "/community.png",
+      imageSrc: "/community.svg",
       imageAlt: "community dev",
       reverseLayout: false
     }
