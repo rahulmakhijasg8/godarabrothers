@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from 'react';
 import CompanyComponent from '@/components/CompanyComponent';
 import ScrollReveal from '@/components/ScrollReveal';
-import Image from 'next/image';
 
 // Preload images function
 const preloadImages = (images: string[]) => {
@@ -34,7 +33,7 @@ type TabId = 'india' | 'africa' | 'dubai';
 const TabSelector = () => {
   const [selectedId, setSelectedId] = useState<TabId>('dubai');
   const [imagesLoaded, setImagesLoaded] = useState(false);
-  const [currentTabLoaded, setCurrentTabLoaded] = useState(false);
+  const [, setCurrentTabLoaded] = useState(false);
 
   const featuresData: Record<TabId, Feature[]> = {
     india: [
@@ -235,6 +234,7 @@ const TabSelector = () => {
         // Still set images as loaded to show content even if some fail
         setImagesLoaded(true);
       });
+      // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Track when tab changes to show a loading state
