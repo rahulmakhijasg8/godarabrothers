@@ -146,8 +146,7 @@ export default function ContactPage() {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    placeholder="John Trangely"
-                    className="p-2 border-b border-gray-200 rounded-md focus:outline-none focus:ring-1 focus:ring-[#B18A43]"
+                    className="p-2 border-[1px] border-gray-200 rounded-full focus:outline-none focus:ring-1 focus:ring-[#B18A43]"
                     required
                     disabled={isSubmitting}
                   />
@@ -160,8 +159,7 @@ export default function ContactPage() {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    placeholder="hello@rrs.com"
-                    className="p-2 border-b border-gray-200 rounded-md focus:outline-none focus:ring-1 focus:ring-[#B18A43]"
+                    className="p-2 border-[1px] border-gray-200 rounded-full focus:outline-none focus:ring-1 focus:ring-[#B18A43]"
                     required
                     disabled={isSubmitting}
                   />
@@ -175,7 +173,7 @@ export default function ContactPage() {
                   name="company"
                   value={formData.company}
                   onChange={handleChange}
-                  className="p-2 border-b border-gray-200 rounded-md focus:outline-none focus:ring-1 focus:ring-[#B18A43]"
+                  className="p-2 border-[1px] border-gray-200 rounded-full focus:outline-none focus:ring-1 focus:ring-[#B18A43]"
                   disabled={isSubmitting}
                 />
               </div>
@@ -187,9 +185,8 @@ export default function ContactPage() {
                   name="message"
                   value={formData.message}
                   onChange={handleTextAreaChange}
-                  placeholder="how may we help you ?"
-                  rows={1}
-                  className="p-2 border-b border-gray-200 rounded-md focus:outline-none focus:ring-1 focus:ring-[#B18A43] resize-none overflow-hidden min-h-[40px]"
+                  rows={4}
+                  className="p-2 border-[1px] border-gray-200 rounded-md focus:outline-none focus:ring-1 focus:ring-[#B18A43] resize-none overflow-hidden min-h-[40px]"
                   required
                   disabled={isSubmitting}
                   style={{ height: 'auto' }}
@@ -200,7 +197,7 @@ export default function ContactPage() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`px-6 py-2 border border-[#B18A43] text-[#B18A43] md:rounded-full hover:bg-[#B18A43] hover:text-white hover:scale-105 transition-all duration-300 ease-in-out ${
+                  className={`px-6 py-2 border border-[#B18A43] text-[#B18A43] rounded-full hover:bg-[#B18A43] hover:text-white hover:scale-105 transition-all duration-300 ease-in-out ${
                     isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
                   }`}
                 >
