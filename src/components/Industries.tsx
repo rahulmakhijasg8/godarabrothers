@@ -1,32 +1,57 @@
-import { useState } from "react";
+import { useState, useMemo, useEffect } from "react";
 import IndustryCard from "./industrycard";
 
 export default function Industries() {
   const [showAll, setShowAll] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   
   // Industry data - only industry cards, no heading
   const allIndustries = [
-    { image: "/general_trading.svg", title: "General Trading" },
+    { image: "/general_trading.png", title: "General Trading" },
     { image: "/Rectangle 23.png", title: "Purified Water and Speciality Bevarages" },
     { image: "/Rectangle 26.png", title: "Retail & Distribution" },
     { image: "/Rectangle 24.png", title: "Cosmetics Trading" },
     { image: "/Rectangle 25.png", title: "Import-Export" },
-    { image: "/hotel.svg", title: "Hotel & Resort" },
+    { image: "/hotel.png", title: "Hotel & Resort" },
     // Additional industries
-    { image: "/mining.svg", title: "Mining" },
-    { image: "/transport.svg", title: "Transport" },
-    { image: "/construction.svg", title: "Construction & Hardware" },
-    { image: "/electronics.svg", title: "Electronics" },
-    { image: "/furniture.svg", title: "Furntiure" },
-    { image: "/mining_copper.svg", title: "Mining of copper cathode" },
-    { image: "/drilling.svg", title: "Drilling and bore well" },
-    { image: "/automobiles.svg", title: "Automobiles" },
-    { image: "/education.svg", title: "Education" },
-    { image: "/event_management.svg", title: "Evenet Management" }
+    { image: "/mining.png", title: "Mining" },
+    { image: "/transport.png", title: "Transport" },
+    { image: "/construction.png", title: "Construction & Hardware" },
+    { image: "/electronics.png", title: "Electronics" },
+    { image: "/furniture.svg", title: "Furniture" }, // Fixed typo
+    { image: "/mining_copper.png", title: "Mining of copper cathode" },
+    { image: "/drilling.png", title: "Drilling and bore well" },
+    { image: "/automobiles.png", title: "Automobiles" },
+    { image: "/education.png", title: "Education" },
+    { image: "/event_management.png", title: "Event Management" } // Fixed typo
   ];
 
-  // Show only first 5 industry cards initially, or all when showAll is true
-  const industries = showAll ? allIndustries : allIndustries.slice(0, 6);
+  // Preload images when component mounts (for better performance)
+  useEffect(() => {
+    // Preload all images in the background
+    allIndustries.forEach((industry) => {
+      const img = new Image();
+      img.src = industry.image;
+    });
+  }, []);
+
+  // Show only first 6 industry cards initially, or all when showAll is true
+  const industries = useMemo(() => {
+    return showAll ? allIndustries : allIndustries.slice(0, 6);
+  }, [showAll, allIndustries]);
+
+  const handleToggleShow = () => {
+    if (!showAll) {
+      setIsLoading(true);
+      // Add a small delay to show loading state
+      setTimeout(() => {
+        setShowAll(true);
+        setIsLoading(false);
+      }, 300);
+    } else {
+      setShowAll(false);
+    }
+  };
 
   return (
     <div className="my-8 border-t border-[#CFC3B8] md:border-[#603812] md:my-12 px-4 sm:px-6 md:px-8 lg:px-[100px]">
@@ -46,21 +71,43 @@ export default function Industries() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {industries.map((industry, index) => (
           <div 
-            key={index}
-            className="flex flex-col items-center relative p-4 md:p-8 md:pt-6 min-h-[300px]"
+            key={`${industry.image}-${index}`} // More stable key
+            className={`flex flex-col items-center relative p-4 md:p-8 md:pt-6 min-h-[300px] transition-opacity duration-300 ${
+              showAll && index >= 6 ? 'animate-fadeIn' : ''
+            }`}
           >
-            <IndustryCard title={industry.title} image={industry.image!} />
+            <IndustryCard 
+              title={industry.title} 
+              image={industry.image}
+            />
           </div>
         ))}
       </div>
       
+      {/* Loading state for new cards */}
+      {isLoading && (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+          {[...Array(10)].map((_, index) => (
+            <div 
+              key={`skeleton-${index}`}
+              className="flex flex-col items-center relative p-4 md:p-8 md:pt-6 min-h-[300px]"
+            >
+              <div className="w-full h-full bg-gray-200 animate-pulse rounded-lg"></div>
+            </div>
+          ))}
+        </div>
+      )}
+      
       {/* See More / See Less button */}
       <div className="flex justify-center mt-6 mb-4">
         <button
-          onClick={() => setShowAll(!showAll)}
-          className="text-[#603812] font-['Roboto'] text-sm underline font-medium"
+          onClick={handleToggleShow}
+          disabled={isLoading}
+          className={`text-[#603812] font-['Roboto'] text-sm underline font-medium transition-opacity ${
+            isLoading ? 'opacity-50 cursor-not-allowed' : 'hover:opacity-80'
+          }`}
         >
-          {showAll ? "See Less" : "See More"}
+          {isLoading ? "Loading..." : showAll ? "See Less" : "See More"}
         </button>
       </div>
     </div>

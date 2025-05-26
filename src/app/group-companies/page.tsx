@@ -1,22 +1,8 @@
 "use client"
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import CompanyComponent from '@/components/CompanyComponent';
 import ScrollReveal from '@/components/ScrollReveal';
-
-// Preload images function
-const preloadImages = (images: string[]) => {
-  return Promise.all(
-    images.map(src => {
-      return new Promise((resolve, reject) => {
-        const img = new window.Image();
-        img.onload = () => resolve(src);
-        img.onerror = reject;
-        img.src = src;
-      });
-    })
-  );
-};
 
 type Feature = {
   sectionTitle: string;
@@ -32,8 +18,6 @@ type TabId = 'india' | 'africa' | 'dubai';
 
 const TabSelector = () => {
   const [selectedId, setSelectedId] = useState<TabId>('dubai');
-  const [imagesLoaded, setImagesLoaded] = useState(false);
-  const [, setCurrentTabLoaded] = useState(false);
 
   const featuresData: Record<TabId, Feature[]> = {
     india: [
@@ -42,9 +26,8 @@ const TabSelector = () => {
         sectionTitleLink: "https://www.sgmaart.com",
         subtitle: "Retail chain",
         description: "SG Maart, a well-established retail chain in Rajasthan, India, operates under the company name E2P Maart Private Limited. Renowned for its value-driven offerings, SG Maart provides an extensive range of products, from groceries and apparel to home goods, catering to the varied needs of its customers. With 18 outlets across western Rajasthan, SG Maart has built a strong reputation for offering affordable pricing, particularly in rural areas. Backed by a centralized warehouse, the company ensures streamlined and efficient operations. SG Maart is focused on delivering exceptional value and service to its growing customer base.",
-        imageSrc: "/sg.svg",
+        imageSrc: "/sg.png",
         imageAlt: "sgmaart",
-        // objectFit: "fit"
       },
       {
         sectionTitle: "Laxman Auto",
@@ -57,7 +40,7 @@ const TabSelector = () => {
         sectionTitle: "LRT Hotel And Resort LLP",
         subtitle: "Hotel And Resort",
         description: "LRT Hotel and Resort, incorporated in 2024 is an exciting hospitality venture based in Jodhpur, Rajasthan. We are dedicated to offering exceptional accommodation and dining experiences, with a focus on delivering a unique blend of comfort, luxury, and personalized service. Our goal is to ensure that every guest enjoys a truly memorable stay. With a vision to become a premier destination for travelers seeking exceptional hospitality, we are committed to building a strong foundation of quality and excellence. As we prepare to launch our services, we eagerly look forward to welcoming guests and creating unforgettable experiences that reflect our passion for hospitality.",
-        imageSrc: "/lrt.svg",
+        imageSrc: "/lrt.png",
         imageAlt: "LRT hotel",
       },
       {
@@ -65,7 +48,7 @@ const TabSelector = () => {
         sectionTitleLink: "https://saraswatividyamandireducationa.godaddysites.com/",
         subtitle: "Education",
         description: "Saraswati Vidya Mandir, is a prominent educational institution dedicated to nurturing young minds and fostering academic excellence. Located in the heart of Bhinyad, Rajasthan, we are committed to providing a holistic learning environment where students can thrive academically, socially, and personally. Our curriculum is designed to blend traditional values with modern educational practices, ensuring that each student receives a well-rounded education. With a strong focus on discipline, creativity, and critical thinking, Saraswati Vidya Mandir aims to equip students with the knowledge and skills necessary to excel in today's world. Our dedicated team of educators, state-of-the-art facilities, and a supportive learning atmosphere make us a trusted choice for parents seeking quality education for their children.",
-        imageSrc: "/Saraswati-Vidya-Mandir.webp",
+        imageSrc: "/svm.png",
         imageAlt: "Saraswati Vidya Mandir",
       }
     ],
@@ -82,7 +65,7 @@ const TabSelector = () => {
         sectionTitle: "Apex Group Int'L",
         subtitle: "General trading",
         description: "Apex Group Int'l has been a leader in the import-export sector since 2016, achieving steady growth and a strong turnover. The company thrives thanks to its dedicated team, whose commitment is key to our ongoing success. With a large warehouse supporting our operations, Apex Group Int'l is well-positioned for sustained growth and sustainability. Located in Kinshasa, DR Congo. We remain committed to providing efficient import-export services while upholding the highest standards of customer satisfaction.",
-        imageSrc: "/general_trading.svg",
+        imageSrc: "/general_trading.png",
         imageAlt: "Apex Group",
       },
       {
@@ -91,7 +74,6 @@ const TabSelector = () => {
         description: "Aqua Beverages is a prominent player in the beverage industry, with a large-scale water and juice plant located in Kinshasa, DR Congo. The company has rapidly established itself as a leader in the sector, manufacturing, distributing, and selling a wide range of carbonated soft drinks (CSDs) and a diverse selection of non-carbonated beverages (NCBs), including premium packaged jiuce and drinking water. Our dedicated team plays a vital role in driving the company's success, supported by a well-equipped warehouse that ensures efficient production and distribution. At Aqua Beverages Sarlu, we are committed to delivering high-quality softdrinks, water and juice products while upholding the highest standards of customer satisfaction.",
         imageSrc: "/Aqua.jpeg",
         imageAlt: "Aqua beverages",
-        objectFit: "fit"
       },
       {
         sectionTitle: "Global Trading Congo",
@@ -111,15 +93,14 @@ const TabSelector = () => {
         sectionTitle: "Fourtune Construction Congo",
         subtitle: "Mining",
         description: "Fourtune Construction Congo, located at DR Congo, has been a leading force in the mining industry since its establishment in 2014. The company has steadily grown and now operates with a skilled team of employees. Fourtune Construction's operations are supported by warehouses and a strong retail presence. We are committed to maintaining high standards in our mining operations while ensuring efficiency, safety, and sustainability. Our team works tirelessly to deliver exceptional results and contribute to the continued success of the company in DR Congo and beyond.",
-        imageSrc: "/FCC.jpeg",
+        imageSrc: "/FCC.png",
         imageAlt: "Fortune-construction",
-        objectFit: "fit"
       },
       {
         sectionTitle: "Ste SPPC",
         subtitle: "Transport",
         description: "Ste SPPC, based in Kinshasa, DR Congo, has quickly become a key player in the transport industry since its founding in 2021. As a leading provider of smart logistics solutions, we facilitate the smooth flow of trade across DR Congo. Our dedicated team ensures seamless operations, and we empower our people by providing opportunities to excel and grow. Ste SPPC is committed to upholding the highest standards in transport services, driving both the success and expansion of the company throughout DR Congo.",
-        imageSrc: "/SPPC.jpeg",
+        imageSrc: "/SPPC.png",
         imageAlt: "STE sppc",
       },
       {
@@ -164,14 +145,14 @@ const TabSelector = () => {
         sectionTitleLink: "https://www.goldendrc.com/",
         subtitle: "Mining of Copper Cathode",
         description: "Golden African Resources, located in Kinshasa, DR Congo, has been a leading force in the mining industry since its establishment in 2007. Specializing in the mining of copper cathodes, the company has steadily grown to become a key player in the sector. With a focus on efficiency, sustainability, and safety, Golden African Resources is committed to maintaining the highest standards in mining operations. Our team works tirelessly to deliver high-quality products while contributing to the continued success and growth of the company both within DR Congo and internationally. The Company has a Manufacturing unit and a Mine in DR Congo.",
-        imageSrc: "/golden_african.svg",
+        imageSrc: "/golden_african.png",
         imageAlt: "Golden African Resources",
       },
       {
         sectionTitle: "Ste Generale de Forage",
         subtitle: "Drilling and Bore well",
         description: "Ste Generale de Forage (SGF) is established in 2024, based in Kinshasa, DR Congo. Focused on drilling projects, water supply, purification, and related infrastructure development, SGF is committed to delivering high-quality services and contributing to the region's water infrastructure development.",
-        imageSrc: "/ste_generale.svg",
+        imageSrc: "/ste_generale.png",
         imageAlt: "Ste Generale de Forage",
       }
     ],
@@ -180,7 +161,7 @@ const TabSelector = () => {
         sectionTitle: "Godara Brothers Holdings Limited",
         subtitle: "Investment company",
         description: "Godara Brothers Holdings (Godara Brothers) is the flagship company of the Godara Family Office. With a legacy of strategic investments, Godara Brothers has successfully divested its holdings in a range of group companies across diversified sectors. As a forward-thinking entity, the company continues to focus on optimizing its portfolio, ensuring long-term growth and value creation. Driven by the vision of the Godara family, Godara Brothers remains committed to identifying and nurturing new opportunities for investment while maintaining a strong track record of financial success and corporate responsibility.",
-        imageSrc: "/gbhl.svg",
+        imageSrc: "/gbhl.png",
         imageAlt: "Godra Brothers Holdings Ltd.",
       },
       {
@@ -188,7 +169,7 @@ const TabSelector = () => {
         sectionTitleLink: "https://www.nhtae.com/",
         subtitle: "General trading",
         description: "NHT International Trading, incorporated in 2020 in Jabel Ali Free Zone, is a leading trading company specializing in import, export, and distribution across industries such as consumer goods, industrial supplies, construction materials, automotive products, and technology. With a global network, customer-centric approach, and commitment to quality, the company delivers innovative and efficient trading solutions tailored to client needs. Leveraging the UAE's strategic location and business-friendly environment, NHT ensures seamless operations and reliable service, driving growth and success for businesses worldwide.",
-        imageSrc: "/nht.svg",
+        imageSrc: "/nht.png",
         imageAlt: "NHT International Trading",
       },
       {
@@ -203,7 +184,7 @@ const TabSelector = () => {
         sectionTitle: "African Tradex",
         subtitle: "General Trading",
         description: "African Tradex, established in 2015 in Sharjah Free Zone, UAE, is a trusted and dynamic trading company specializing in bridging commerce between Africa, the UAE, and global markets. Leveraging the strategic advantages of the free zone—such as seamless logistics—the company offers a wide range of high-quality products and services, including agricultural goods, manufactured items, and raw materials. With a strong commitment to excellence, customer satisfaction, and reliable trading solutions, African Tradex continues to expand its reach, fostering international trade partnerships and meeting the evolving needs of diverse markets worldwide.",
-        imageSrc: "/african.svg",
+        imageSrc: "/african.png",
         imageAlt: "African Tradex",
       },
       {
@@ -215,39 +196,6 @@ const TabSelector = () => {
       }
     ]
   };
-
-  // Extract all image sources for preloading
-  const allImages = [
-    ...featuresData.india.map(item => item.imageSrc),
-    ...featuresData.africa.map(item => item.imageSrc),
-    ...featuresData.dubai.map(item => item.imageSrc)
-  ];
-
-  // Preload all images when the component mounts
-  useEffect(() => {
-    preloadImages(allImages)
-      .then(() => {
-        setImagesLoaded(true);
-      })
-      .catch(error => {
-        console.error("Failed to preload images:", error);
-        // Still set images as loaded to show content even if some fail
-        setImagesLoaded(true);
-      });
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  // Track when tab changes to show a loading state
-  useEffect(() => {
-    setCurrentTabLoaded(false);
-    // Simulate a fast tab transition - might not need a visible loading state
-    // but we prepare for it just in case
-    const timer = setTimeout(() => {
-      setCurrentTabLoaded(true);
-    }, 100);
-    
-    return () => clearTimeout(timer);
-  }, [selectedId]);
 
   return (
     <div className="w-full border-[#CFC3B8] mb-8 md:mb-12 border-b md:border-b-0 border-t md:border-[#603812] mt-16">
@@ -292,8 +240,8 @@ const TabSelector = () => {
         </div>
       </ScrollReveal>
 
-      {/* Content area - show directly without loading indicator */}
-      <div className={imagesLoaded ? 'opacity-100 transition-opacity duration-300' : 'opacity-0'}>
+      {/* Content area */}
+      <div>
         {featuresData[selectedId].map((feature, index) => (
           <ScrollReveal key={index} delay={0.1}>
             <CompanyComponent

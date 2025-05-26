@@ -4,26 +4,26 @@ export default function ImageGridSection() {
   // Array of images with their details
   const images = [
     {
-      src: "/image.svg", // First image - port with shipping containers
+      src: "/image.png", // First image - port with shipping containers
       alt: "Port and Shipping Operations",
       width: 384,
       height: 516
     },
     {
-      src: "/image2.svg", // Second image - wooden furniture display
+      src: "/image1.png", // Second image - wooden furniture display
       alt: "Fine Furniture and Woodcraft",
       width: 334,
       height: 516,
       marginTop: true // Add margin-top to this image
     },
     {
-      src: "/image3.svg", // Third image - pink/coral colored building
+      src: "/image3.png", // Third image - pink/coral colored building
       alt: "Commercial Properties",
       width: 384,
       height: 516
     },
     {
-      src: "/image4.svg", // Fourth image - makeup palette
+      src: "/image4.png", // Fourth image - makeup palette
       alt: "Cosmetics and Beauty Products",
       width: 284,
       height: 516,

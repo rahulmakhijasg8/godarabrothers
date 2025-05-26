@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 interface FeatureSectionProps {
   sectionTitle: string;
@@ -25,8 +25,6 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
   reverseLayout = false,
   objectFit = "cover", // Default to cover
 }) => {
-  const [imageLoaded, setImageLoaded] = useState(false);
-
   // Check if image source is provided
   const hasImageSrc = imageSrc && imageSrc.trim() !== "";
   
@@ -35,20 +33,6 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
   const hasValidExtension = hasImageSrc && validImageExtensions.some(ext => 
     imageSrc.toLowerCase().endsWith(ext)
   );
-
-  // Preload the image when component mounts (only if valid image source exists)
-  useEffect(() => {
-    if (hasValidExtension) {
-      const img = new window.Image();
-      img.onload = () => setImageLoaded(true);
-      img.onerror = () => {
-        console.error(`Failed to load image: ${imageSrc}`);
-        // Still set as loaded to avoid blocking UI
-        setImageLoaded(true);
-      };
-      img.src = imageSrc;
-    }
-  }, [imageSrc, hasValidExtension]);
 
   // Generate the object-fit class based on the prop
   const getObjectFitClass = () => {
@@ -93,7 +77,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
               </h3>
           
               <h4 className="text-[#603812] font-['Roboto'] text-[16px] md:text-[18px] font-[400] leading-[28px] capitalize mb-5">
-                {subtitle}
+                <span className="font-['Roboto']">{subtitle}</span>
               </h4>
 
               <p className="text-[#8b7e66] pr-2 md:pr-5 font-['Roboto'] font-[300] text-[14px] italic leading-[24px]">
@@ -128,7 +112,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
                       alt={imageAlt}
                       fill
                       sizes="(max-width: 768px) 90vw, 40vw"
-                      className={`object-cover md:${getObjectFitClass()} transition-opacity duration-300 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
+                      className={`object-cover md:${getObjectFitClass()}`}
                       priority
                     />
                   </div>
