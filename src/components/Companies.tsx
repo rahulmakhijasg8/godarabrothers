@@ -43,6 +43,7 @@ export default function Companies() {
       extraMargin: true // Add a flag for extra margin
     },
     { src: "/nht-logo.png", alt: "NHT", width: 220, height: 80 },
+    { src: "/golden_african_logo-removebg-preview.png", alt: "Golden African Resources", width: 220, height: 100, extraMargin: true},
   ];
 
   // Create multiple sets of logos to ensure smooth scrolling

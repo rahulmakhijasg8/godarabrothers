@@ -12,17 +12,25 @@ export default function Home() {
     { value: "50+", label: "Community Infrastructure Projects" }
   ];
 
-  interface FeatureSectionData {
-    sectionTitle: string;
-    sectionTitleLink?: string;
-    listItems: Array<{
-      title: string;
-      description: string;
-    }>;
-    imageSrc: string;
-    imageAlt: string;
-    reverseLayout?: boolean;
-  }
+  interface BeforeAfterImages {
+  beforeSrc: string;
+  afterSrc: string;
+  beforeAlt: string;
+  afterAlt: string;
+}
+
+interface FeatureSectionData {
+  sectionTitle: string;
+  sectionTitleLink?: string;
+  listItems: Array<{
+    title: string;
+    description: string;
+  }>;
+  imageSrc?: string; // Made optional
+  imageAlt?: string; // Made optional
+  beforeAfterImages?: BeforeAfterImages; // New optional property
+  reverseLayout?: boolean;
+}
   
   // Sample data for feature sections
   const featureSectionsData: FeatureSectionData[] = [
@@ -52,44 +60,48 @@ export default function Home() {
       reverseLayout: false
     },
     {
-      sectionTitle: "Environmental Sustainability",
-      sectionTitleLink: "https://www.connectedtoindia.com/nri-in-rajasthan-takes-forward-modis-swachch-bharat-campaign/#google_vignette",
-      listItems: [
-        {
-          title: "Reservoir Cleaning Initiative:",
-          description: "In 2018, a massive cleanup removed 35,000 metric tons of garbage from Kareli Nadi, restoring water access and promoting sustainability."
-        },
-        {
-          title: "Contributions to Swachh Bharat Abhiyan:",
-          description: "A ₹20 lakh donation to national cleanliness campaigns."
-        }
-      ],
-      imageSrc: "/environmental.svg",
-      imageAlt: "environmental",
-      reverseLayout: true
+  sectionTitle: "Environmental Sustainability",
+  sectionTitleLink: "https://www.connectedtoindia.com/nri-in-rajasthan-takes-forward-modis-swachch-bharat-campaign/#google_vignette",
+  listItems: [
+    {
+      title: "Reservoir Cleaning Initiative:",
+      description: "In 2018, a massive cleanup removed 35,000 metric tons of garbage from Kareli Nadi, restoring water access and promoting sustainability."
     },
+    {
+      title: "Contributions to Swachh Bharat Abhiyan:",
+      description: "A ₹20 lakh donation to national cleanliness campaigns."
+    }
+  ],
+  beforeAfterImages: {
+    beforeSrc: "/beforecleaning.png",
+    afterSrc: "/aftercleaning.png", 
+    beforeAlt: "Kareli Nadi before cleanup - polluted with garbage",
+    afterAlt: "Kareli Nadi after cleanup - clean flowing water"
+  },
+  reverseLayout: true,
+},
     {
       sectionTitle: "Community Development",
       sectionTitleLink: "https://www.jatland.com/home/Nawal_Kishor_Godara?utm_source=chatgpt.com",
       listItems: [
-        {
-          title: "Panchayat Infrastructure:",
-          description: "In 2021, a state-of-the-art ₹1.25 crore panchayat building was constructed."
-        },
-        {
-          title: "Financial Support for Development:",
-          description: "Donations exceeding ₹1.65 crore to enhance infrastructure across Bhinyad, Kanasar, and Undu villages."
-        },
-        {
-          title: "Prime Minister's Relief Fund:",
-          description: "A ₹1 crore contribution towards COVID-19 relief efforts nationwide."
-        },
-        {
-          title: "Employee Welfare Initiative:",
-          description: "A ₹10 lakh financial support provided to the family of an employee who lost his life in a road accident."
-        }
+  {
+    title: "Panchayat Infrastructure Development:",
+    description: "In 2021, a state-of-the-art ₹1.25 crore panchayat building was constructed to serve the community."
+  },
+  {
+    title: "Village Infrastructure Enhancement:", 
+    description: "Donations exceeding ₹1.65 crore to enhance infrastructure across Bhinyad, Kanasar, and Undu villages."
+  },
+  {
+    title: "COVID-19 Relief Contributions:",
+    description: "₹1 crore to the PM CARES Fund for nationwide relief efforts, ₹1 crore to the Rajasthan Chief Minister Relief Fund (RCMRF), and ₹20 lakh to the District Magistrate of Barmer, Rajasthan to support local COVID-19 relief efforts."
+  },
+  {
+    title: "Employee Welfare Initiative:",
+    description: "₹10 lakh financial support provided to the family of an employee who lost his life in a road accident."
+  }
       ],
-      imageSrc: "/community.svg",
+      imageSrc: "/Panchayat photo 2.jpeg",
       imageAlt: "community dev",
       reverseLayout: false
     }
@@ -212,6 +224,7 @@ export default function Home() {
           imageSrc={sectionData.imageSrc}
           imageAlt={sectionData.imageAlt}
           reverseLayout={sectionData.reverseLayout}
+          beforeAfterImages={sectionData.beforeAfterImages}
         />
         </ScrollReveal>
       ))}

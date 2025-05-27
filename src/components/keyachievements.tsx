@@ -9,9 +9,57 @@ export interface AchievementPoint {
 // Define props interface for the component
 interface KeyAchievementsProps {
   achievementPoints: AchievementPoint[];
+  markerType?: 'bullet' | 'dash' | 'arrow' | 'plus' | 'square'; // Simpler marker options
 }
 
-export default function KeyAchievements({ achievementPoints }: KeyAchievementsProps) {
+export default function KeyAchievements({ 
+  achievementPoints, 
+  markerType = 'bullet' // Default to bullet
+}: KeyAchievementsProps) {
+  
+  // Simple bullet point
+  const BulletPoint = () => (
+    <div className="w-2 h-2 rounded-full bg-[#603812]" />
+  );
+
+  // Simple dash
+  const Dash = () => (
+    <div className="w-4 h-0.5 bg-[#603812]" />
+  );
+
+  // Simple arrow
+  const Arrow = () => (
+    <span className="text-[#603812] font-bold text-lg">→</span>
+  );
+
+  // Plus sign
+  const Plus = () => (
+    <span className="text-[#603812] font-bold text-lg">+</span>
+  );
+
+  // Simple square
+  const Square = () => (
+    <div className="w-2 h-2 bg-[#603812]" />
+  );
+
+  // Function to render the appropriate marker
+  const renderMarker = () => {
+    switch(markerType) {
+      case 'bullet':
+        return <BulletPoint />;
+      case 'dash':
+        return <Dash />;
+      case 'arrow':
+        return <Arrow />;
+      case 'plus':
+        return <Plus />;
+      case 'square':
+        return <Square />;
+      default:
+        return <BulletPoint />;
+    }
+  };
+
   return (
     <div className="mt-12 md:mt-0 border-t border-b border-[#CFC3B8] md:border-[#603812] flex flex-col">
       {/* Heading */}
@@ -27,15 +75,15 @@ export default function KeyAchievements({ achievementPoints }: KeyAchievementsPr
         </h2>
       </div>
 
-      {/* Numbered points */}
+      {/* Achievement points with custom markers */}
       <div className="px-4 sm:px-6 md:mt-[60px] md:px-8 lg:px-[100px] mb-12">
         <div className="space-y-6 pl-5 md:pl-10 md:space-y-1">
           {achievementPoints.map((point, index) => (
             <div key={index} className="flex items-start pr-2 mb-8 md:mb-[28px]">
-              {/* Number instead of dot */}
-              <span className="font-['Libre_Baskerville'] text-[#603812] font-[700] text-[18px] md:text-[22px] mr-4 mt-1/2">
-                {index + 1}.
-              </span>
+              {/* Custom marker instead of number */}
+              <div className="mr-4 mt-1 flex-shrink-0">
+                {renderMarker()}
+              </div>
               
               <div className="flex flex-col">
                 {/* Title with Libre Baskerville font and #603812 color */}

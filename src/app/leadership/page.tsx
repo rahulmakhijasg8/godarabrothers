@@ -112,7 +112,7 @@ const Teekuachievements: AchievementPoint[] = [
                         "linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%)",
                     }}
                   >
-                    Mr. Nawal Kishore
+                    Mr. Nawal Kishore Godara
                   </span>
                 </h3>
                 <h4 style={{
@@ -123,7 +123,7 @@ const Teekuachievements: AchievementPoint[] = [
                     <span className="font-['Libre_Baskerville'] font-[400]">Founder & Visionary Leader</span>
                 </h4>
                 <p className="text-[#A08871] font-['Roboto'] pr-[10px] md:pr-[90px] mb-[120px] lg:pr-[110px] font-[300] text-[14px] italic leading-[24px]">
-                  With a strong background in international business and strategic investments, Mr. Nawal Kishore has been instrumental in transforming Godara Brothers into a diversified conglomerate. His leadership has steered multiple businesses toward sustained growth and industry leadership.
+                  With a strong background in international business and strategic investments, Mr. Nawal Kishore Godara has been instrumental in transforming Godara Brothers into a diversified conglomerate. His leadership has steered multiple businesses toward sustained growth and industry leadership.
                 </p>
               </div>
 
@@ -157,7 +157,7 @@ const Teekuachievements: AchievementPoint[] = [
       </ScrollReveal>
 
       <ScrollReveal direction="left" delay={0.3}>
-        <KeyAchievements achievementPoints={Nawalachievements}/>
+        <KeyAchievements achievementPoints={Nawalachievements} markerType="arrow"/>
       </ScrollReveal>
 
       <ScrollReveal direction="up" delay={0.2}>
@@ -198,7 +198,7 @@ const Teekuachievements: AchievementPoint[] = [
                         "linear-gradient(127deg, #B18A43 0%, #C8A563 19.71%, #D7B676 31.73%, #C39F5A 44.71%, #A88037 56.25%, #C49E4A 71.15%, #FCDE81 79.81%, #DAB04B 90.38%, #C5952F 100%)",
                     }}
                   >
-                    Mr. Teeku Singh Choudhary
+                    Mr. Teeku Singh Godara
                   </span>
                 </h3>
                 {/* Rest of the mobile content */}
@@ -211,7 +211,7 @@ const Teekuachievements: AchievementPoint[] = [
                 </h4>
 
                 <p className="text-[#A08871] font-['Roboto'] pr-[10px]  mb-[0px] font-[300] text-[14px] italic leading-[24px]">
-                  A dynamic entrepreneur with decades of experience, Mr. Teeku Singh Choudhary has been a driving force in expanding the operations of Godara Brothers across diverse industries. His expertise in business operations, strategic expansion, and financial management has played a crucial role in scaling the company&apos;s global footprint.
+                  A dynamic entrepreneur with decades of experience, Mr. Teeku Singh Godara has been a driving force in expanding the operations of Godara Brothers across diverse industries. His expertise in business operations, strategic expansion, and financial management has played a crucial role in scaling the company&apos;s global footprint.
                 </p>
               </div>
               
@@ -272,7 +272,7 @@ const Teekuachievements: AchievementPoint[] = [
       </ScrollReveal>
 
       <ScrollReveal direction="left" delay={0.2}>
-        <KeyAchievements achievementPoints={Teekuachievements}/>
+        <KeyAchievements achievementPoints={Teekuachievements} markerType="arrow"/>
       </ScrollReveal>
 
       <ScrollReveal direction="up" delay={0.2}>

@@ -91,8 +91,8 @@ const TabSelector = () => {
       },
       {
         sectionTitle: "Fourtune Construction Congo",
-        subtitle: "Mining",
-        description: "Fourtune Construction Congo, located at DR Congo, has been a leading force in the mining industry since its establishment in 2014. The company has steadily grown and now operates with a skilled team of employees. Fourtune Construction's operations are supported by warehouses and a strong retail presence. We are committed to maintaining high standards in our mining operations while ensuring efficiency, safety, and sustainability. Our team works tirelessly to deliver exceptional results and contribute to the continued success of the company in DR Congo and beyond.",
+        subtitle: "Mining Of Stone",
+        description: "Fourtune Construction Congo, located at DR Congo, has been a leading force in the mining industry since its establishment in 2014. Specializing in the mining of stone, the company has steadily grown and now operates with a skilled team of employees. Fourtune Construction's operations are supported by warehouses and a strong retail presence. We are committed to maintaining high standards in our stone mining operations while ensuring efficiency, safety, and sustainability. Our team works tirelessly to deliver exceptional results and contribute to the continued success of the company in DR Congo and beyond.",
         imageSrc: "/FCC.png",
         imageAlt: "Fortune-construction",
       },
@@ -108,7 +108,7 @@ const TabSelector = () => {
         sectionTitleLink: "https://group-pgc.com/index.html",
         subtitle: "Electronics, Construction & Hardware",
         description: "Prestige Group Congo, based in Kinshasa, DR Congo, has been a leading force in the construction and hardware industry since its establishment in 2015. The company has experienced consistent growth and is recognized for its commitment to delivering high-quality products and services. Supported by a dedicated team of employees and a strong operational framework, Prestige Group continues to thrive in both retail and distribution. We are committed to maintaining the highest standards in electronics, construction and hardware solutions while driving the ongoing success and expansion of the company across DR Congo.",
-        imageSrc: "/prestigegroup.jpg",
+        imageSrc: "/PGC.jpg",
         imageAlt: "Prestige Group",
       },
       {
@@ -138,15 +138,16 @@ const TabSelector = () => {
         description: "Nadco Trading Internacional (Nadco), based in Kinshasa, DR Congo, has quickly become a prominent leader in the construction and hardware industry since its founding in 2020. The company has seen steady growth and is widely recognized for its dedication to providing high-quality products and services. With a committed team and a robust operational framework, Nadco continues to excel in both retail and distribution. We remain focused on upholding the highest standards in construction and hardware solutions while driving the company's continued success and expansion across DR Congo.",
         imageSrc: "/nadco.svg",
         imageAlt: "Nadco Trading Internacional",
-        objectFit: "fit"
+        // objectFit: "fit"
       },
       {
         sectionTitle: "Golden African Resources",
         sectionTitleLink: "https://www.goldendrc.com/",
         subtitle: "Mining of Copper Cathode",
         description: "Golden African Resources, located in Kinshasa, DR Congo, has been a leading force in the mining industry since its establishment in 2007. Specializing in the mining of copper cathodes, the company has steadily grown to become a key player in the sector. With a focus on efficiency, sustainability, and safety, Golden African Resources is committed to maintaining the highest standards in mining operations. Our team works tirelessly to deliver high-quality products while contributing to the continued success and growth of the company both within DR Congo and internationally. The Company has a Manufacturing unit and a Mine in DR Congo.",
-        imageSrc: "/golden_african.png",
+        imageSrc: "/golden african.png",
         imageAlt: "Golden African Resources",
+        objectFit: 'contain'
       },
       {
         sectionTitle: "Ste Generale de Forage",

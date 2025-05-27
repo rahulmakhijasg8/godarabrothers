@@ -40,6 +40,18 @@ export default function Industries() {
     return showAll ? allIndustries : allIndustries.slice(0, 6);
   }, [showAll, allIndustries]);
 
+  // Function to determine if an item should be centered (when it's the only item in the last row)
+  const getItemGridColumn = (index: number, totalItems: number): string => {
+    const itemsInLastRow: number = totalItems % 3;
+    const isLastRow: boolean = index >= totalItems - itemsInLastRow;
+    const isOnlyItemInLastRow: boolean = itemsInLastRow === 1 && isLastRow;
+    
+    if (isOnlyItemInLastRow) {
+      return "md:col-start-2"; // Start at the second column (center position)
+    }
+    return "";
+  };
+
   const handleToggleShow = () => {
     if (!showAll) {
       setIsLoading(true);
@@ -74,7 +86,7 @@ export default function Industries() {
             key={`${industry.image}-${index}`} // More stable key
             className={`flex flex-col items-center relative p-4 md:p-8 md:pt-6 min-h-[300px] transition-opacity duration-300 ${
               showAll && index >= 6 ? 'animate-fadeIn' : ''
-            }`}
+            } ${getItemGridColumn(index, industries.length)}`}
           >
             <IndustryCard 
               title={industry.title} 
